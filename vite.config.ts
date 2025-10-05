@@ -1,11 +1,10 @@
-﻿import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
+﻿import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-const rawBase = process.env.VITE_REPO_BASE?.trim() ?? ""
-const repoBase = rawBase && rawBase !== "/" ? rawBase.replace(/\/+$/, "") : ""
-
-export default defineConfig(({ command }) => ({
-  base: command === "serve" ? "/" : repoBase ? `${repoBase}/` : "/",
+// https://vitejs.dev/config/
+export default defineConfig({
   plugins: [react()],
-}))
+  // ▼▼▼ 이 부분을 추가하세요 ▼▼▼
+  base: '/typinggame/', 
+  // ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+})

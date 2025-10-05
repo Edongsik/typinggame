@@ -1,4 +1,4 @@
-import type { FC } from "react"
+import { FC, useState } from "react" // useState를 import 합니다.
 
 type StatsPanelProps = {
   score: number
@@ -11,8 +11,6 @@ type StatsPanelProps = {
   timeLeft: number
 }
 
-const formatNumber = (value: number) => Math.round(value * 10) / 10
-
 const StatsPanel: FC<StatsPanelProps> = ({
   score,
   accuracy,
@@ -23,45 +21,62 @@ const StatsPanel: FC<StatsPanelProps> = ({
   timerEnabled,
   timeLeft,
 }) => {
+  // 추가: 통계 패널의 표시 여부를 관리하는 state (기본값은 false로 숨김)
+  const [isVisible, setIsVisible] = useState(false)
+
+  // 토글 버튼 클릭 핸들러
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible)
+  }
+
   return (
-    <section className="stats" aria-live="polite">
-      <div className="stats__grid">
-        <div className="stats__item">
-          <span className="stats__label">점수</span>
-          <span className="stats__value">{score}</span>
-        </div>
-        <div className="stats__item">
-          <span className="stats__label">정확도</span>
-          <span className="stats__value">{formatNumber(isFinite(accuracy) ? accuracy : 0)}%</span>
-        </div>
-        <div className="stats__item">
-          <span className="stats__label">WPM</span>
-          <span className="stats__value">{formatNumber(isFinite(wpm) ? wpm : 0)}</span>
-        </div>
-        <div className="stats__item">
-          <span className="stats__label">연속 성공</span>
-          <span className="stats__value">{streak}</span>
-        </div>
-        <div className="stats__item">
-          <span className="stats__label">최대 스테이크</span>
-          <span className="stats__value">{maxStreak}</span>
-        </div>
-        {timerEnabled && (
-          <div className="stats__item">
-            <span className="stats__label">남은 시간</span>
-            <span className="stats__value">{timeLeft}s</span>
-          </div>
-        )}
+    <div className="stats-panel">
+      {/* 추가: 통계 보기/숨기기 토글 버튼 */}
+      <div className="stats-panel__header">
+        <button onClick={toggleVisibility} className="stats-panel__toggle-button">
+          {isVisible ? "통계 숨기기" : "통계 보기"}
+        </button>
+        {timerEnabled && <div className="stats-panel__timer">남은 시간: {timeLeft}초</div>}
       </div>
-      <div className="stats__progress" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.min(100, Math.max(0, Math.round(progress)))}>
+
+      {/* isVisible 상태에 따라 조건부 렌더링 */}
+      {isVisible && (
+        <div className="stats-panel__grid">
+          <div className="stats-panel__item">
+            <span className="stats-panel__label">점수</span>
+            <span className="stats-panel__value">{score}</span>
+          </div>
+          <div className="stats-panel__item">
+            <span className="stats-panel__label">정확도</span>
+            <span className="stats-panel__value">{Math.round(accuracy)}%</span>
+          </div>
+          <div className="stats-panel__item">
+            <span className="stats-panel__label">WPM</span>
+            <span className="stats-panel__value">{Math.round(wpm)}</span>
+          </div>
+          <div className="stats-panel__item">
+            <span className="stats-panel__label">연속 성공</span>
+            <span className="stats-panel__value">{streak}</span>
+          </div>
+          <div className="stats-panel__item">
+            <span className="stats-panel__label">최대 스트릭</span>
+            <span className="stats-panel__value">{maxStreak}</span>
+          </div>
+        </div>
+      )}
+
+      {/* 진행률 표시줄은 항상 보이도록 유지 */}
+      <div className="progress-bar">
         <div
-          className="stats__progress-bar"
-          style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+          className="progress-bar__fill"
+          style={{ width: `${progress}%` }}
+          aria-valuenow={progress}
+          aria-valuemin={0}
+          aria-valuemax={100}
         />
       </div>
-    </section>
+    </div>
   )
 }
 
 export default StatsPanel
-

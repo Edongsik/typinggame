@@ -9,8 +9,7 @@
 } from "react"
 import Controls from "./Controls"
 import StatsPanel from "./StatsPanel"
-import TextDisplay from "./TextDisplay"
-import DaySidebar from "./DaySidebar"
+import Wordbook from "./Wordbook" // DaySidebar 대신 Wordbook을 import
 import { loadDays, loadManifest, type PracticeWord } from "../lib/csv"
 import { speak } from "../lib/tts"
 import { playPronunciation } from "../lib/pronounce"
@@ -50,6 +49,7 @@ function calculateWpm(correct: number, elapsedMs: number): number {
 }
 
 const Game = () => {
+  const wordContainerRef = useRef<HTMLHeadingElement>(null);
   const timerIntervalRef = useRef<ReturnType<typeof window.setInterval> | null>(null)
   const elapsedIntervalRef = useRef<ReturnType<typeof window.setInterval> | null>(null)
   const autoAdvanceRef = useRef<ReturnType<typeof window.setTimeout> | null>(null)
@@ -87,6 +87,17 @@ const Game = () => {
   const [showCompletionModal, setShowCompletionModal] = useState(false)
   const [showReviewChoiceModal, setShowReviewChoiceModal] = useState(false)
   const [autoStartPending, setAutoStartPending] = useState(false)
+  const [isInteracted, setIsInteracted] = useState(false)
+  const [view, setView] = useState<"wordbook" | "game">("wordbook")
+
+  const handleDaySelect = (dayId: string) => {
+    setSelectedDayId(dayId)
+    setView("game")
+  }
+  
+  const handleBackToWordbook = () => {
+    setView("wordbook")
+  }
 
   useEffect(() => {
     isRunningRef.current = isRunning
@@ -197,6 +208,7 @@ const Game = () => {
     setIsRunning(false)
     isRunningRef.current = false
     setTimeLeft(TIMED_MODE_SECONDS)
+    setIsInteracted(false); 
   }, [clearAutoAdvance, clearElapsedTicker, clearTimedMode])
 
   const handleStart = useCallback(() => {
@@ -278,9 +290,6 @@ const Game = () => {
           return
         }
         setManifest(days)
-        if (!selectedDayId && days.length > 0) {
-          setSelectedDayId(days[0].id)
-        }
       })
       .catch((error) => {
         if (cancelled) {
@@ -297,7 +306,7 @@ const Game = () => {
     return () => {
       cancelled = true
     }
-  }, [selectedDayId])
+  }, [])
 
   useEffect(() => {
     if (!selectedDayId) {
@@ -339,17 +348,39 @@ const Game = () => {
     wordsError,
   ])
 
+  const currentWord = sessionWords[queueIndex] ?? null
+
+  useEffect(() => {
+    const container = wordContainerRef.current;
+    if (!container) return;
+
+    container.style.fontSize = ''; 
+
+    const containerWidth = container.clientWidth;
+    const scrollWidth = container.scrollWidth;
+
+    if (scrollWidth > containerWidth) {
+      const currentFontSize = parseFloat(getComputedStyle(container).fontSize);
+      const newFontSize = (currentFontSize * containerWidth / scrollWidth) * 0.95;
+      container.style.fontSize = `${newFontSize}px`;
+    }
+  }, [currentWord]);
+
   const handleModeChange = useCallback((next: PracticeMode) => {
     setMode(next)
   }, [])
 
   const handlePlayAudioClick = useCallback(() => {
+    if (!isInteracted) {
+      setIsInteracted(true);
+    }
+
     const current = sessionWords[queueIndex]
     if (!current) {
       return
     }
     pronounceWord(current.word).catch(() => {})
-  }, [pronounceWord, queueIndex, sessionWords])
+  }, [isInteracted, pronounceWord, queueIndex, sessionWords]);
 
   const handleToggleTimer = useCallback(() => {
     setTimerEnabled((previous) => {
@@ -413,7 +444,11 @@ const Game = () => {
       return
     }
     clearAutoAdvance()
-    pronounceWord(current.word).catch(() => {})
+    
+    if (isInteracted) {
+      pronounceWord(current.word).catch(() => {})
+    }
+    
     setScore((previous) => previous + 10 + streak * 2)
     setStreak((previous) => {
       const next = previous + 1
@@ -435,6 +470,7 @@ const Game = () => {
     clearAutoAdvance,
     currentStat.lastIndex,
     handleNext,
+    isInteracted,
     isReviewMode,
     mode,
     pronounceWord,
@@ -471,42 +507,42 @@ const Game = () => {
 
   const handleInputChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
-      const value = event.target.value
+      const newValue = event.target.value
       const current = sessionWords[queueIndex]
       if (!isRunning || !current) {
-        setTypedValue(value)
+        setTypedValue(newValue)
         return
       }
 
-      const previous = typedValue
-      if (value.length > previous.length) {
-        const delta = value.slice(previous.length)
-        const startIndex = previous.length
-        let correctDelta = 0
-        for (let index = 0; index < delta.length; index += 1) {
-          if (current.word[startIndex + index] === delta[index]) {
-            correctDelta += 1
+      setTypedValue((previous) => {
+        if (newValue.length > previous.length) {
+          const delta = newValue.slice(previous.length)
+          const startIndex = previous.length
+          let correctDelta = 0
+          for (let index = 0; index < delta.length; index += 1) {
+            if (current.word[startIndex + index] === delta[index]) {
+              correctDelta += 1
+            }
+          }
+          if (delta.length > 0) {
+            setTotalInputs((prev) => prev + delta.length)
+          }
+          if (correctDelta > 0) {
+            setCorrectInputs((prev) => prev + correctDelta)
           }
         }
-        if (delta.length > 0) {
-          setTotalInputs((prev) => prev + delta.length)
-        }
-        if (correctDelta > 0) {
-          setCorrectInputs((prev) => prev + correctDelta)
-        }
-      }
-      setTypedValue(value)
+        return newValue
+      })
 
-      if (value === current.word && autoAdvanceRef.current == null) {
+      if (newValue === current.word && autoAdvanceRef.current == null) {
         handleCorrectWord()
       }
     },
     [
-            handleCorrectWord,
+      handleCorrectWord,
       isRunning,
       queueIndex,
       sessionWords,
-      typedValue,
     ]
   )
 
@@ -532,7 +568,7 @@ const Game = () => {
       }
     },
     [
-            handleCorrectWord,
+      handleCorrectWord,
       handleIncorrectAttempt,
       isRunning,
       queueIndex,
@@ -624,230 +660,193 @@ const Game = () => {
     return (queueIndex / sessionWords.length) * 100
   }, [currentStat.lastIndex, isReviewMode, mode, queueIndex, sessionWords.length])
 
-  const currentWord = sessionWords[queueIndex] ?? null
   const dayMeta = manifest.find((day) => day.id === selectedDayId) ?? null
 
   const isNextDisabled = !isRunning || sessionWords.length === 0
   const isResetDisabled = isLoadingWords
 
   return (
-    <div className="game-layout">
-      <DaySidebar
-        days={manifest}
-        selectedDayId={selectedDayId}
-        onSelect={setSelectedDayId}
-        refreshKey={progressKey}
-      />
-      <div className="game">
-        <h1 className="game__title">토익 단어 타자 게임</h1>
+    <div className="app-layout">
+      <h1 className="app-title">토익 단어 타자 게임</h1>
 
-        <div className="game__status-bar">
-          <div className="mode-toggle" role="group" aria-label="출제 모드">
-            <button
-              type="button"
-              className={`mode-toggle__button${mode === "sequence" ? " mode-toggle__button--active" : ""}`}
-              onClick={() => handleModeChange("sequence")}
-              disabled={isLoadingWords}
-            >
-              순서
+      {view === "wordbook" ? (
+        <Wordbook days={manifest} onSelect={handleDaySelect} />
+      ) : (
+        <div className="game-layout" style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className="game">
+            <button onClick={handleBackToWordbook} className="back-to-list-button">
+              ← 단어집으로 돌아가기
             </button>
-            <button
-              type="button"
-              className={`mode-toggle__button${mode === "random" ? " mode-toggle__button--active" : ""}`}
-              onClick={() => handleModeChange("random")}
-              disabled={isLoadingWords}
-            >
-              랜덤
-            </button>
-          </div>
-          {isReviewMode && <span className="mode-toggle__badge">복습 모드</span>}
-          {dayMeta && (
-            <span className="mode-toggle__meta">{dayMeta.label}</span>
-          )}
-        </div>
+            
+            {manifestError && (
+              <div className="game__error">
+                <p>Day 정보를 불러오지 못했습니다.</p>
+                <p className="game__error-message">{manifestError}</p>
+              </div>
+            )}
 
-        {manifestError && (
-          <div className="game__error">
-            <p>Day 정보를 불러오지 못했습니다.</p>
-            <p className="game__error-message">{manifestError}</p>
-          </div>
-        )}
-
-        {wordsError ? (
-          <div className="game__error">
-            <p>단어를 불러오지 못했습니다.</p>
-            <p className="game__error-message">{wordsError}</p>
-            <button type="button" onClick={handleRetry} className="game__error-button">
-              재시도
-            </button>
-          </div>
-        ) : (
-          <>
-            <StatsPanel
-              score={score}
-              accuracy={accuracy}
-              wpm={wpm}
-              streak={streak}
-              maxStreak={maxStreak}
-              progress={progress}
-              timerEnabled={timerEnabled}
-              timeLeft={timeLeft}
-            />
-
-
-
- <div className="game__card">
-              {/* ▼▼▼▼▼▼▼ 아래의 새로운 코드를 적용하세요 ▼▼▼▼▼▼▼ */}
-              <div className="game__word">
-                {/* 스크린샷 레이아웃에 맞게 순서 및 구조 변경 */}
-                <p className="game__meaning">{currentWord?.meaning ?? "뜻"}</p>
-                
-
-                {/* 변경점 1: 타이핑 여부에 따라 단어 표시를 다르게 함 */}
-            <div className="game__target-word-display">
-                  <h2 className="game__target-word--static">
-                    {/* 단어를 글자 배열로 변환하여 map으로 처리합니다.
-                      각 글자는 <span> 태그로 감싸지고, 타이핑 상태에 따라 다른 클래스를 가집니다.
-                    */}
-                    {currentWord?.word.split('').map((char, index) => {
-                      // 현재 인덱스의 클래스 결정 로직
-                      let className = 'char-neutral'; // 기본 상태 (아직 타이핑 안 한 글자)
-                      if (index < typedValue.length) {
-                        // 사용자가 타이핑한 부분
-                        className = typedValue[index] === char ? 'char-correct' : 'char-incorrect';
-                      }
-                      return (
-                        <span key={index} className={className}>
-                          {char}
-                        </span>
-                      );
-                    })}
-                  </h2>
-                  <button
-                    type="button"
-                    className="game__audio-button"
-                    onClick={handlePlayAudioClick}
-                    disabled={!currentWord}
-                  >
-                    🔊<span className="sr-only">발음 듣기</span>
-                  </button>
-                </div>
-
-
-                <div className="game__pronunciation">
-                  {currentWord?.pronunciation && `[${currentWord.pronunciation}]`}
-                </div>
-                <div className="game__syllables">
-                  {currentWord?.syllables}
-                </div>
-
-                {/* 변경점 2: 품사를 배지(badge) 형태로 표시 */}
-                {currentWord?.partOfSpeech && (
-                  <span className="game__pos-badge">{currentWord.partOfSpeech}</span>
-                )}
-                
-                {/* 변경점 3: 예문과 입력 필드 순서 변경 */}
-                <div className="game__example-box">
-                  <p className="game__example">{currentWord?.example ?? "-"}</p>
-                </div>
-                
-                <input
-                  ref={inputRef}
-                  className="game__input"
-                  type="text"
-                  value={typedValue}
-                  onChange={handleInputChange}
-                  onKeyDown={handleKeyDown}
-                  disabled={!isRunning}
-                  placeholder={isRunning ? "여기에 단어를 입력 하세요..." : "단어를 불러오는 중입니다"}
-                  autoComplete="off"
-                  autoCorrect="off"
-                  autoCapitalize="none"
+            {wordsError ? (
+              <div className="game__error">
+                <p>단어를 불러오지 못했습니다.</p>
+                <p className="game__error-message">{wordsError}</p>
+                <button type="button" onClick={handleRetry} className="game__error-button">
+                  재시도
+                </button>
+              </div>
+            ) : (
+              <>
+                <StatsPanel
+                  score={score}
+                  accuracy={accuracy}
+                  wpm={wpm}
+                  streak={streak}
+                  maxStreak={maxStreak}
+                  progress={progress}
+                  timerEnabled={timerEnabled}
+                  timeLeft={timeLeft}
                 />
+                <div className="game__card">
+                  <div className="game__word">
+                    <p className="game__meaning">{currentWord?.meaning ?? "뜻"}</p>
+                    
+                    <div className="game__target-word-display">
+                      <h2 ref={wordContainerRef} className="game__target-word--static">
+                        {currentWord?.word.split('').map((char, index) => {
+                          let className = 'char-neutral';
+                          if (index < typedValue.length) {
+                            className = typedValue[index] === char ? 'char-correct' : 'char-incorrect';
+                          }
+                          return (
+                            <span key={index} className={className}>
+                              {char}
+                            </span>
+                          );
+                        })}
+                      </h2>
+                      <button
+                        type="button"
+                        className="game__audio-button"
+                        onClick={handlePlayAudioClick}
+                        disabled={!currentWord}
+                      >
+                        🔊<span className="sr-only">발음 듣기</span>
+                      </button>
+                    </div>
+
+                    <div className="game__pronunciation">
+                      {currentWord?.pronunciation && `[${currentWord.pronunciation}]`}
+                    </div>
+                    <div className="game__syllables">
+                      {currentWord?.syllables}
+                    </div>
+
+                    {currentWord?.partOfSpeech && (
+                      <span className="game__pos-badge">{currentWord.partOfSpeech}</span>
+                    )}
+                    
+                    <div className="game__example-box">
+                      <p className="game__example">{currentWord?.example ?? "-"}</p>
+                    </div>
+                    
+                    <input
+                      ref={inputRef}
+                      className="game__input"
+                      type="text"
+                      value={typedValue}
+                      onChange={handleInputChange}
+                      onKeyDown={handleKeyDown}
+                      disabled={!isRunning}
+                      placeholder={isRunning ? "여기에 단어를 입력 하세요..." : "단어를 불러오는 중입니다"}
+                      autoComplete="off"
+      
+                      autoCorrect="off"
+                      autoCapitalize="none"
+                    />
+                  </div>
+                </div>
+                <Controls
+                  onNext={handleNext}
+                  onReset={handleReset}
+                  isNextDisabled={isNextDisabled}
+                  isResetDisabled={isResetDisabled}
+                  timerEnabled={timerEnabled}
+                  onToggleTimer={handleToggleTimer}
+                  isLoading={isLoadingWords}
+                  mode={mode}
+                  onModeChange={handleModeChange}
+                  dayMeta={dayMeta}
+                  isReviewMode={isReviewMode}
+                />
+              </>
+            )}
+
+            {summary && (
+              <div className="game__overlay">
+                <div className="game__summary">
+                  <h2>결과 요약</h2>
+                  <p>점수: {summary.score}</p>
+                  <p>정확도: {Math.round(summary.accuracy)}%</p>
+                  <p>최대 스트릭: {summary.maxStreak}</p>
+                  <div className="game__summary-actions">
+                    <button type="button" onClick={closeSummary} className="game__summary-button">
+                      닫기
+                    </button>
+                    <button type="button" onClick={restartFromSummary} className="game__summary-button game__summary-button--primary">
+                      다시 시작
+                    </button>
+                  </div>
+                </div>
               </div>
-              {/* ▲▲▲▲▲▲▲ 여기까지가 새로운 코드입니다 ▲▲▲▲▲▲▲ */}
-            </div>
+            )}
 
-
-
-
-            <Controls
-              onNext={handleNext}
-              onReset={handleReset}
-              isNextDisabled={isNextDisabled}
-              isResetDisabled={isResetDisabled}
-              timerEnabled={timerEnabled}
-              onToggleTimer={handleToggleTimer}
-              isLoading={isLoadingWords}
-            />
-          </>
-        )}
-
-        {summary && (
-          <div className="game__overlay">
-            <div className="game__summary">
-              <h2>결과 요약</h2>
-              <p>점수: {summary.score}</p>
-              <p>정확도: {Math.round(summary.accuracy)}%</p>
-              <p>최대 스테이크: {summary.maxStreak}</p>
-              <div className="game__summary-actions">
-                <button type="button" onClick={closeSummary} className="game__summary-button">
-                  닫기
-                </button>
-                <button type="button" onClick={restartFromSummary} className="game__summary-button game__summary-button--primary">
-                  다시 시작
-                </button>
+            {showCompletionModal && (
+              <div className="game__overlay">
+                <div className="game__summary">
+                  <h2>오늘의 연습 완료</h2>
+                  <p>오늘의 연습을 끝냈습니다. 복습하시겠습니까?</p>
+                  <div className="game__summary-actions">
+                    <button type="button" onClick={() => setShowCompletionModal(false)} className="game__summary-button">
+                      나중에
+                    </button>
+                    <button
+                      type="button"
+                      onClick={beginReview}
+                      className="game__summary-button game__summary-button--primary"
+                    >
+                      복습하기
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
+
+            {showReviewChoiceModal && (
+              <div className="game__overlay">
+                <div className="game__summary">
+                  <h2>복습 완료</h2>
+                  <p>wrongSet을 비울까요, 아니면 유지할까요?</p>
+                  <div className="game__summary-actions">
+                    <button
+                      type="button"
+                      onClick={() => finalizeReview(false)}
+                      className="game__summary-button game__summary-button--primary"
+                    >
+                      비우기
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => finalizeReview(true)}
+                      className="game__summary-button"
+                    >
+                      유지하기
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-        )}
-
-        {showCompletionModal && (
-          <div className="game__overlay">
-            <div className="game__summary">
-              <h2>오늘의 연습 완료</h2>
-              <p>오늘의 연습을 끝냈습니다. 복습하시겠습니까?</p>
-              <div className="game__summary-actions">
-                <button type="button" onClick={() => setShowCompletionModal(false)} className="game__summary-button">
-                  나중에
-                </button>
-                <button
-                  type="button"
-                  onClick={beginReview}
-                  className="game__summary-button game__summary-button--primary"
-                >
-                  복습하기
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {showReviewChoiceModal && (
-          <div className="game__overlay">
-            <div className="game__summary">
-              <h2>복습 완료</h2>
-              <p>wrongSet을 비울까요, 아니면 유지할까요?</p>
-              <div className="game__summary-actions">
-                <button
-                  type="button"
-                  onClick={() => finalizeReview(false)}
-                  className="game__summary-button game__summary-button--primary"
-                >
-                  비우기
-                </button>
-                <button
-                  type="button"
-                  onClick={() => finalizeReview(true)}
-                  className="game__summary-button"
-                >
-                  유지하기
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }

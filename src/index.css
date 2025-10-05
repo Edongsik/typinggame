@@ -193,3 +193,255 @@ button {
 .char-incorrect {
   color: #e74c3c; /* 밝은 빨간색 */
 }
+
+/* 전체 앱 레이아웃 */
+.app-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #34495e;
+}
+
+/* 단어집 스타일 */
+.wordbook {
+  width: 100%;
+}
+
+.wordbook__title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 0.5rem;
+}
+
+.wordbook__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Day 카드 스타일 */
+.day-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.day-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.day-card__button {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.day-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.day-card__label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.day-card__description {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  min-height: 40px;
+}
+
+.day-card__progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+}
+
+.day-card__progress-fill {
+  height: 100%;
+  background-color: #2ecc71;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.day-card__progress-label {
+  font-size: 0.8rem;
+  color: #95a5a6;
+  text-align: right;
+}
+
+/* 목록으로 돌아가기 버튼 */
+.back-to-list-button {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.back-to-list-button:hover {
+  text-decoration: underline;
+}
+
+/* 기존 CSS 파일에 추가 */
+
+.stats-panel {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #dee2e6;
+}
+
+.stats-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stats-panel__toggle-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.stats-panel__toggle-button:hover {
+  background-color: #5a6268;
+}
+
+.stats-panel__timer {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.stats-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stats-panel__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.stats-panel__label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+.stats-panel__value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #212529;
+}
+
+/* 진행률 표시줄 스타일은 기존 것을 사용하거나 아래를 참고하세요 */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.game__target-word--static {
+  /* ... 기존 스타일 ... */
+  white-space: nowrap; /* 단어가 길어도 줄바꿈되지 않도록 설정 */
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝으로 요소를 분산 */
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.controls__main {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 왼쪽과 오른쪽 영역의 너비를 고정하여 중앙 영역이 자리를 잡도록 함 */
+.mode-toggle, .controls__meta {
+  flex: 1;
+}
+
+.mode-toggle {
+  display: flex;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  gap: 0.5rem;
+}
+
+.controls__meta {
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 기존 버튼 스타일은 그대로 사용 */
+.controls__button {
+  /* ... */
+}
+
+/* 기존 모드 토글, 배지, 메타 정보 스타일은 그대로 사용 */
+.mode-toggle__button {
+  /* ... */
+}
+.mode-toggle__badge {
+  /* ... */
+}
+.mode-toggle__meta {
+  font-weight: bold;
+  color: #495057;
+}
