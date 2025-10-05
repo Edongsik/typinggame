@@ -1,0 +1,195 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background-color: #f5f7fb;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f5f7fb;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* 기존 스타일이 있다면, 필요한 부분을 덮어쓰거나 추가하세요. */
+
+/* 단어 '카드' 전체 레이아웃 */
+.game__card {
+  background-color: #2c3e50; /* 어두운 배경색 */
+  color: #ecf0f1; /* 밝은 글자색 */
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game__word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem; /* 요소 간의 간격 */
+}
+
+/* 뜻 */
+.game__meaning {
+  font-size: 1.2rem;
+  color: #bdc3c7;
+  margin: 0;
+}
+
+/* 단어와 오디오 버튼을 감싸는 컨테이너 */
+.game__target-word-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: -0.5rem; /* 아래 요소와 간격 미세 조정 */
+}
+
+/* 타이핑 전, 일반 텍스트로 보이는 단어 스타일 */
+.game__target-word--static {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* TextDisplay 컴포넌트의 크기를 h2와 유사하게 맞춤 */
+.text-display {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.game__audio-button {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #bdc3c7;
+  transition: color 0.2s;
+}
+.game__audio-button:hover {
+  color: #ffffff;
+}
+.game__audio-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 발음 기호 및 음절 */
+.game__pronunciation, .game__syllables {
+  color: #95a5a6;
+  font-size: 1rem;
+}
+
+/* 품사 배지 스타일 */
+.game__pos-badge {
+  background-color: #f39c12;
+  color: #2c3e50;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+/* 예문 상자 */
+.game__example-box {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #34495e;
+  border-radius: 8px;
+  background-color: #34495e;
+  margin: 1rem 0;
+  min-height: 50px; /* 예문이 없을 때도 최소 높이 유지 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game__example {
+  margin: 0;
+  color: #ecf0f1;
+  text-align: center;
+}
+
+/* 입력 필드 스타일 */
+.game__input {
+  width: 100%;
+  background-color: #2c3e50;
+  border: none;
+  border-bottom: 2px solid #7f8c8d;
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.game__input:focus {
+  border-bottom-color: #f39c12;
+}
+
+.game__input::placeholder {
+  color: #7f8c8d;
+}
+
+/* 기존 h1 태그가 있다면 스타일 조정 (선택 사항) */
+.game__title {
+  text-align: center;
+  color: #34495e;
+}
+
+/* Game.css 또는 관련 CSS 파일에 아래 코드를 추가하거나 수정하세요. */
+
+/* h2 태그 자체의 스타일은 유지합니다. */
+.game__target-word--static {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin: 0;
+  display: flex; /* span들이 옆으로 나열되도록 flex 사용 */
+}
+
+/* 각 글자(span)의 기본 스타일 및 트랜지션 효과 */
+.game__target-word--static span {
+  transition: color 0.2s ease-in-out;
+}
+
+/* 아직 타이핑되지 않은 글자 스타일 */
+.char-neutral {
+  color: #7f8c8d; /* 약간 흐린 회색 */
+}
+
+/* 올바르게 타이핑된 글자 스타일 */
+.char-correct {
+  color: #2ecc71; /* 밝은 녹색 */
+}
+
+/* 틀리게 타이핑된 글자 스타일 */
+.char-incorrect {
+  color: #e74c3c; /* 밝은 빨간색 */
+}
