@@ -1,0 +1,184 @@
+﻿{
+    "days":  [
+                 {
+                     "id":  "day01",
+                     "label":  "Day 1",
+                     "csv":  "day01.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day02",
+                     "label":  "Day 2",
+                     "csv":  "day02.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day03",
+                     "label":  "Day 3",
+                     "csv":  "day03.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day04",
+                     "label":  "Day 4",
+                     "csv":  "day04.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day05",
+                     "label":  "Day 5",
+                     "csv":  "day05.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day06",
+                     "label":  "Day 6",
+                     "csv":  "day06.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day07",
+                     "label":  "Day 7",
+                     "csv":  "day07.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day08",
+                     "label":  "Day 8",
+                     "csv":  "day08.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day09",
+                     "label":  "Day 9",
+                     "csv":  "day09.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day10",
+                     "label":  "Day 10",
+                     "csv":  "day10.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day11",
+                     "label":  "Day 11",
+                     "csv":  "day11.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day12",
+                     "label":  "Day 12",
+                     "csv":  "day12.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day13",
+                     "label":  "Day 13",
+                     "csv":  "day13.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day14",
+                     "label":  "Day 14",
+                     "csv":  "day14.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day15",
+                     "label":  "Day 15",
+                     "csv":  "day15.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day16",
+                     "label":  "Day 16",
+                     "csv":  "day16.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day17",
+                     "label":  "Day 17",
+                     "csv":  "day17.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day18",
+                     "label":  "Day 18",
+                     "csv":  "day18.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day19",
+                     "label":  "Day 19",
+                     "csv":  "day19.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day20",
+                     "label":  "Day 20",
+                     "csv":  "day20.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day21",
+                     "label":  "Day 21",
+                     "csv":  "day21.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day22",
+                     "label":  "Day 22",
+                     "csv":  "day22.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day23",
+                     "label":  "Day 23",
+                     "csv":  "day23.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day24",
+                     "label":  "Day 24",
+                     "csv":  "day24.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day25",
+                     "label":  "Day 25",
+                     "csv":  "day25.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day26",
+                     "label":  "Day 26",
+                     "csv":  "day26.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day27",
+                     "label":  "Day 27",
+                     "csv":  "day27.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day28",
+                     "label":  "Day 28",
+                     "csv":  "day28.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day29",
+                     "label":  "Day 29",
+                     "csv":  "day29.csv",
+                     "total":  22
+                 },
+                 {
+                     "id":  "day30",
+                     "label":  "Day 30",
+                     "csv":  "day30.csv",
+                     "total":  22
+                 }
+             ]
+}
