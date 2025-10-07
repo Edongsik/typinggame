@@ -445,3 +445,29 @@ button {
 .game-card {
   margin-top: 0;
 }
+
+/**
+ * =============================================
+ * MOBILE KEYBOARD FIX (모바일 키보드 문제 해결)
+ * =============================================
+ * 화면 너비가 768px 이하일 때 적용됩니다.
+ */
+@media (max-width: 768px) {
+
+  /* 게임 카드의 상하 여백을 줄여서 키보드가 차지할 공간을 확보합니다. */
+  .game-card {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem; /* 하단 여백을 줄입니다. 0으로 해도 괜찮습니다. */
+  }
+
+  /* 입력창의 위쪽 여백과 폰트 크기를 약간 줄입니다. */
+  .game-card__input {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* 단어의 폰트 크기를 화면 너비에 맞게 조절합니다. */
+  .game-card__word {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+}
