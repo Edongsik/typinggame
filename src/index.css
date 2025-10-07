@@ -38,6 +38,12 @@
  * GLOBAL & BASE STYLES
  * =============================================
  */
+
+ html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -57,9 +63,29 @@ button {
  * =============================================
  */
 .app-layout {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--spacing-xl);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-layout {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.game {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xl);
 }
 
 /**
@@ -68,6 +94,7 @@ button {
  * =============================================
  */
 .game-card {
+  flex-grow: 1;
   background-color: var(--color-bg-card-dark);
   color: var(--color-text-on-dark);
   border-radius: var(--border-radius-md);
@@ -79,6 +106,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-sm);
 }
 .game-card__meaning {
