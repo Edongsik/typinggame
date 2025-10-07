@@ -1,24 +1,41 @@
 word,meaning,pronunciation,syllables,partOfSpeech,example
-accommodate,"To render fit, suitable, or correspondent; to adapt.",/??k?m??det/,acc-omm-od-at-e,verb,to accommodate ourselves to circumstances
-participate,"To join in, to take part, to involve oneself (in something).",/p???tspet/,p-art-ic-ip-at-e,verb,
-require,To ask (someone) for something; to request.,/?kwa?/,r-eq-uir-e,verb,
-provide,To make a living; earn money for necessities.,/p??vad/,pr-ov-id-e,verb,It is difficult to provide for my family working on minimum wage.
-ensure,"To make a pledge to (someone); to promise, guarantee (someone of something); to assure.",/n????/,ens-ur-e,verb,I use an alarm clock to ensure that I get up on time.
-consider,To think about seriously.,/k?n?sd?/,c-ons-id-er,verb,Consider that we?셶e had three major events and the year has hardly begun.
-offer,A proposal that has been made.,/??f?/,off-er,noun,I decline your offer to contract.
-recommend,"To bestow commendation on; to represent favourably; to suggest, endorse or encourage as an appropriate choice.",/?k??m?nd/,r-ec-omm-end,verb,"The board recommends Philips, given his ample experience in similar positions."
-allow,"To grant, give, admit, accord, afford, or yield; to let one have.",/??la?/,all-ow,verb,to allow a servant his liberty;혻 to allow a free passage;혻 to allow one day for rest
-audit,A judicial examination.,/??.dt/,aud-it,noun,National Assembly audit
-client,"A customer, a buyer or receiver of goods or services.",/?kl??nt/,cl-ient,noun,
-achieve,"To succeed in something, now especially in academic performance.",/??t?i?v/,ach-iev-e,verb,Show all the spoils by valiant kings achieved.
-allocate,To set aside for a purpose.,/?챈l.?.ket/,all-oc-at-e,verb,The bulk of K??2 education funds are allocated to school districts that in turn pay for the cost of operating schools.
-assemble,To put together.,/??s?mbl揭/,ass-embl-e,verb,He assembled the model ship.
-candidate,A person who is running in an election.,/?k챈n.dd?t/,c-and-id-at-e,noun,
-comprehensive,A comprehensive school.,/?k?m.p?h?n.sv/,c-ompr-eh-ens-iv-e,noun,"When there are diametrically opposing views on a big issue that concerns millions of people, doing comprehensive research just makes sense."
-contribute,To give something that is or becomes part of a larger whole.,/k?n?t(?)b.ju?t/,c-ontr-ib-ut-e,verb,to contribute articles to a journal
-deficit,Deficiency in amount or quality; a falling short; lack.,/?d?fst/,d-ef-ic-it,noun,
-invoice,"A bill; a commercial document issued by a seller to a buyer indicating the products, quantities and agreed prices for products or services that the seller has already provided the buyer with. An invoice indicates that, unless paid in advance, payment is due by the buyer to the seller, according to the agreed terms.",/?n?v?s/,inv-oic-e,noun,The merchant receives a large invoice of goods.
-productive,"Capable of producing something, especially in abundance; fertile.",/p??d?ktv/,pr-od-uct-iv-e,adjective,a productive set
-revenue,The income returned by an investment.,/??v?nju?/,r-ev-en-ue,noun,
-substantial,Anything having substance; an essential part.,/s?b?st챈n??l/,s-ubst-ant-ial,noun,substantial life
-
+yield,"산출하다, 양보하다",/jiːld/,yield,verb,"'yield'는 농작물이나 결과물 등을 '산출하다', '내다'라는 의미와, 요구에 못 이겨 '양보하다' 또는 권리 등을 '양도하다'는 두 가지 주요 의미를 가집니다."
+yearly,"매년의, 연간의",/ˈjɪəli/,yearl-y,adjective,"'yearly'는 일 년에 한 번씩 일어나는, 즉 '매년의' 또는 '연례의'라는 의미의 형용사 및 부사입니다. (예: yearly report - 연간 보고서)"
+zone,"구역",/zəʊn/,z-on-e,noun,"'zone'은 특정 목적이나 특징에 따라 구분된 '구역'이나 '지대'를 의미합니다. (예: loading zone - 하역 구역)"
+waive,"(권리 등을) 포기하다",/weɪv/,w-aiv-e,verb,"'waive'는 법적인 권리나 요구 사항을 스스로 '포기하다' 또는 적용하지 않기로 하다라는 의미의 동사입니다. (예: waive a fee - 요금을 면제해주다)"
+warranty,"품질 보증(서)",/ˈwɒ.ɹən.ti/,w-arr-ant-y,noun,"'warranty'는 제품에 결함이 있을 경우 일정 기간 동안 무상으로 수리 또는 교환을 약속하는 '품질 보증' 또는 그 '보증서'를 의미합니다."
+withhold,"주지 않다, 보류하다",/wɪðˈhəʊld/,w-ithh-old,verb,"'withhold'는 지불해야 할 돈이나 제공해야 할 정보 등을 의도적으로 '주지 않다' 또는 '보류하다'라는 의미의 동사입니다."
+verify,"확인하다, 입증하다",/ˈvɛrɪfaɪ/,v-er-if-y,verb,"'verify'는 어떤 정보가 사실인지 아닌지를 '확인하다' 또는 '진실임을 입증하다'라는 의미의 동사입니다."
+validate,"입증하다; 유효하게 만들다",/ˈvælɪdeɪt/,v-al-id-at-e,verb,"'validate'는 어떤 것이 사실이거나 정확함을 공식적으로 '증명하다' 또는 문서나 계약을 '법적으로 유효하게 만들다'라는 의미의 동사입니다."
+unanimous,"만장일치의",/juːˈnænɪməs/,un-an-im-ous,adjective,"'unanimous'는 모든 관련자들이 완전히 동의하는, 즉 '만장일치의'라는 의미의 형용사입니다."
+tentative,"잠정적인, 임시의",/ˈtɛntətɪv/,t-ent-at-iv-e,adjective,"'tentative'는 아직 확정되지 않아 변경될 가능성이 있는, 즉 '잠정적인' 또는 '임시의'라는 의미의 형용사입니다."
+tangible,"유형의, 만질 수 있는",/ˈtænʤəbl/,t-ang-ibl-e,adjective,"'tangible'은 형태가 있어 만지거나 볼 수 있는, 즉 '실체가 있는', '유형의'라는 의미입니다. (예: tangible assets - 유형 자산)"
+subsidy,"보조금",/ˈsʌbsɪdi/,s-ubs-id-y,noun,"'subsidy'는 정부나 공공 기관이 특정 산업이나 활동을 지원하기 위해 지급하는 돈, 즉 '보조금'을 의미합니다."
+subordinate,"부하 직원; 하위의",/səˈbɔːdnɪt/,s-ub-ord-in-at-e,noun,"'subordinate'는 직장에서 자신보다 직급이 낮은 사람, 즉 '부하 직원'을 의미하는 명사와, 중요도나 계급이 '더 낮은', '부수적인'이라는 의미의 형용사로 쓰입니다."
+sequentially,"순차적으로",/sɪˈkwɛnʃəli/,s-equ-ent-iall-y,adverb,"'sequentially'는 정해진 순서에 따라서 차례대로, 즉 '순차적으로'라는 의미의 부사입니다."
+scrutinize,"세밀히 조사하다",/ˈskruːtɪnaɪz/,scr-ut-in-iz-e,verb,"'scrutinize'는 무언가를 매우 주의 깊고 철저하게 '조사하다', '살펴보다'라는 의미의 동사입니다."
+renovate,"(낡은 건물·가구 등을) 개조하다, 보수하다",/ˈrɛnəʊveɪt/,r-en-ov-at-e,verb,"'renovate'는 낡은 건물이나 가구를 수리하고 새롭게 꾸며 더 좋은 상태로 만드는 것, 즉 '개조하다' 또는 '보수하다'라는 의미의 동사입니다."
+reluctantly,"마지못해, 꺼려하여",/rɪˈlʌktəntli/,r-el-uct-antl-y,adverb,"'reluctantly'는 하고 싶지 않은 일을 '마지못해' 또는 '꺼려하며' 함을 나타내는 부사입니다."
+reimburse,"변제하다, 상환하다",/ˌriːɪmˈbɜːs/,r-eimb-urs-e,verb,"'reimburse'는 다른 사람이 먼저 지출한 비용을 나중에 다시 갚아주는 것, 즉 '변제하다' 또는 '상환하다'라는 의미의 동사입니다."
+redundant,"불필요한, 정리 해고된",/rɪˈdʌndənt/,r-ed-und-ant,adjective,"'redundant'는 더 이상 필요 없게 되어 '불필요한'이라는 의미와, 직장에서 인력 감축으로 인해 '정리 해고된'이라는 두 가지 주요 의미를 가집니다."
+proficient,"능숙한",/prəˈfɪʃənt/,pr-of-ic-ient,adjective,"'proficient'는 특정 기술이나 분야에 대한 경험과 연습을 통해 '능숙한' 또는 '숙달된' 상태를 묘사하는 형용사입니다. 'be proficient in ~' 형태로 쓰입니다."
+preliminary,"예비의",/prɪˈlɪmɪnəri/,pr-el-im-in-ar-y,adjective,"'preliminary'는 더 중요하고 본격적인 것을 하기 전에 준비 단계로서 행해지는, 즉 '예비의' 또는 '사전의'라는 의미를 가진 형용사입니다."
+perishable,"상하기 쉬운",/ˈpɛrɪʃəbl/,p-er-ish-abl-e,adjective,"'perishable'은 음식물 등이 쉽게 부패하거나 '상하기 쉬운' 성질을 나타내는 형용사입니다."
+pertinent,"관련된, 적절한",/ˈpɜːtɪnənt/,p-ert-in-ent,adjective,"'pertinent'는 현재 논의 중인 주제와 직접적인 관계가 있어 '관련 있는' 또는 '적절한'이라는 의미를 가진 격식 있는 단어입니다."
+outsource,"외주를 주다, 아웃소싱하다",/ˈaʊtsɔːs/,outs-ourc-e,verb,"'outsource'는 회사의 특정 업무를 외부 전문 업체에 맡기는 것, 즉 '아웃소싱하다' 또는 '외주 제작하다'라는 의미의 동사입니다."
+obsolete,"더 이상 쓸모없는, 구식의",/ˈɒbsəliːt/,obs-ol-et-e,adjective,"'obsolete'은 새로운 기술이나 방식으로 인해 더 이상 사용되지 않고 '시대에 뒤떨어진', '구식의'라는 의미의 형용사입니다."
+liaise,"연락을 유지하다",/liˈeɪz/,l-iais-e,verb,"'liaise'는 두 개 이상의 조직이나 부서가 원활하게 협력할 수 있도록 정보를 교환하고 '연락하다'라는 의미의 동사입니다. 주로 'liaise with' 형태로 쓰입니다."
+leverage,"영향력; 활용하다",/ˈliːvərɪʤ/,l-ev-er-ag-e,noun,"'leverage'는 목표를 달성하기 위해 사용하는 '영향력'이나 '수단'을 의미하는 명사와, 그것을 '최대한 활용하다'라는 의미의 동사로 쓰입니다."
+jeopardize,"위태롭게 하다",/ˈʤɛpədaɪz/,j-eop-ard-iz-e,verb,"'jeopardize'는 어떤 계획이나 상황을 위험에 빠뜨리거나 '위태롭게 하다'라는 의미의 동사입니다."
+itinerary,"여행 일정표",/aɪˈtɪnərəri/,it-in-er-ar-y,noun,"'itinerary'는 여행 중 방문할 장소, 시간, 교통편 등의 세부 계획을 순서대로 적어 놓은 '여행 일정표'를 의미합니다."
+itemize,"항목별로 적다",/ˈaɪtəmaɪz/,it-em-iz-e,verb,"'itemize'는 목록이나 계산서의 내용을 개별 '항목으로 나누어 상세히 적다'라는 의미의 동사입니다."
+invoice,"송장, 청구서",/ˈɪnvɔɪs/,inv-oic-e,noun,"'invoice'는 판매자가 구매자에게 제공한 상품이나 서비스의 내역과 가격을 명시하여 대금 지급을 요청하는 공식적인 문서, 즉 '송장'이나 '청구서'를 의미합니다."
+inevitable,"불가피한, 필연적인",/ɪnˈɛvɪtəbl/,in-ev-it-abl-e,adjective,"'inevitable'은 어떤 상황이나 결과가 반드시 일어나게 되어 있어 '피할 수 없는' 또는 '필연적인'이라는 의미의 형용사입니다."
+incur,"(손실·비용 등을) 발생시키다, 초래하다",/ɪnˈkɜː/,inc-ur,verb,"'incur'는 주로 좋지 않은 결과(비용, 손실, 비난 등)를 스스로에게 '가져오다' 또는 '초래하다'라는 의미의 격식 있는 동사입니다."
+implement,"시행하다",/ˈɪmplɪmənt/,impl-em-ent,verb,"'implement'는 계획, 정책, 시스템 등을 실제로 '실행하다' 또는 '시행하다'라는 의미의 동사입니다."
+gauge,"측정하다; 측정기",/geɪʤ/,gaug-e,verb,"'gauge'는 압력, 두께, 양 등을 정밀하게 '측정하다'라는 의미의 동사와, '측정 장치'를 의미하는 명사로 쓰입니다. 비유적으로 사람의 감정이나 반응을 '판단하다'는 의미로도 쓰입니다."
+flawless,"흠 없는, 완벽한",/ˈflɔːlɪs/,fl-awl-ess,adjective,"'flawless'는 결점이나 흠이 전혀 없는, 즉 '완벽한' 상태를 묘사하는 형용사입니다."
+excerpt,"발췌(문)",/ˈɛksɜːpt/,exc-erpt,noun,"'excerpt'는 책, 연설, 영화 등에서 일부를 따온 '발췌' 또는 '인용문'을 의미합니다."
+discrepancy,"차이, 불일치",/dɪsˈkrɛpənsi/,d-iscr-ep-anc-y,noun,"'discrepancy'는 서로 같아야 할 두 개의 보고서, 계산, 사실 등에서 발견되는 '차이'나 '불일치'를 의미합니다."
+consecutive,"연속적인",/kənˈsɛkjʊtɪv/,c-ons-ec-ut-iv-e,adjective,"'consecutive'는 중간에 끊어짐 없이 순서대로 계속 이어지는, 즉 '연속적인'이라는 의미의 형용사입니다."
+allocate,"할당하다",/ˈæləkeɪt/,all-oc-at-e,verb,"'allocate'는 자금, 자원, 업무 등을 특정 목적을 위해 공식적으로 '배분하다' 또는 '할당하다'라는 의미의 동사입니다."

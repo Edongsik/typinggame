@@ -1,24 +1,43 @@
 word,meaning,pronunciation,syllables,partOfSpeech,example
-whale,Any of several species of large sea mammals of the infraorder Cetacea.,/weɪl/,wh-al-e,noun,
-wheelchair,A chair mounted on large wheels for the transportation or use of a sick or disabled person.,/ˈwiːlt͡ʃɛə(ɹ)/,wh-eelch-air,noun,
-whoever,(interrogative) Who ever: an emphatic form of who.,/huˈɛvə/,wh-oev-er,pronoun,Whoever thought up that stupid idea?
-wildlife,"Animals, plants, and fungi, not normally domesticated, often to the exclusion of plants, fungi, fish, insects and other invertebrates, and microscopic plants and animals; hence:",/ˈwaɪldlaɪf/,w-ildl-if-e,noun,
-willingness,The state of being willing,/ˈwɪlɪŋnəs/,w-ill-ingn-ess,noun,All it takes is a willingness to learn.
-windy,Fart,/ˈwɪndi/,w-ind-y,noun,It was a long and windy night.
-wireless,The medium of radio communication.,/ˈwaɪ.ə(ɹ).ləs/,w-ir-el-ess,noun,"Only about a hundred years ago, wireless was a new technology."
-wisely,In a wise manner; using good judgement.,/ˈwaɪzli/,w-is-el-y,adverb,She wisely decided to re-check her homework before submitting it.
-withdrawal,Receiving from someone's care what one has earlier entrusted to them. Usually refers to money.,/wɪðˈdɹɔːəl/,w-ithdr-aw-al,noun,caffeine withdrawal
-wool,"The hair of the sheep, llama and some other ruminants.",/wʊl/,w-ool,noun,
-workbook,"A book, used by a student, in which answers and workings may be entered besides questions and exercises.",,w-orkb-ook,noun,
-workforce,"All the workers employed by a specific organization or state, or on a specific project",,w-orkf-orc-e,noun,
-workplace,The place where someone works.,,w-orkpl-ac-e,noun,
-workshop,"A room, especially one which is not particularly large, used for manufacturing or other light industrial work.",/ˈwɜːk.ʃɒp/,w-orksh-op,noun,
-worldwide,Spanning the world; global.,/ˈwɜːldwaɪd/,w-orldw-id-e,adjective,A large meteorite impact would cause worldwide extinction of life.
-worthwhile,"Good and important enough to spend time, effort, or money on.",/wɜː(ɹ)θˈwaɪl/,w-orthwh-il-e,adjective,Doing volunteer work to help others is truly worthwhile.
-wrinkle,"A small furrow, ridge or crease in an otherwise smooth surface.",/ˈɹɪŋkl̩/,wr-inkl-e,noun,Spending time out in the sun may cause you to develop wrinkles sooner.
-wristwatch,A watch that is worn on a strap or band fastened around the wrist,,wr-istw-atch,noun,
-yearly,Something that is published once a year.,/ˈjɪəli/,yearl-y,noun,Christmas is a yearly celebration.
-yen,"The unit of Japanese currency (symbol: ¥) since 1871, divided into 100 sen.",/jɛn/,yen,noun,
-yoga,Any of several Hindu or Buddhist disciplines aimed at training the consciousness for a state of perfect spiritual insight and tranquillity; especially a system of exercises practiced to promote control of the body and mind.,/ˈjoʊɡə/,yog-a,noun,
-zoo,A park where live animals are exhibited.,/zuː/,z-oo,noun,The shopping center was a zoo the week before Christmas.
-
+whale,"고래",/weɪl/,wh-al-e,noun,"'whale'은 바다에 사는 세상에서 가장 큰 포유동물, 즉 '고래'를 의미합니다."
+wheelchair,"휠체어",/ˈwiːlt͡ʃɛə(ɹ)/,wh-eelch-air,noun,"'wheelchair'는 몸이 불편한 사람들이 앉아서 이동할 수 있도록 바퀴를 단 의자, 즉 '휠체어'를 의미합니다."
+whoever,"누구든지",/huˈɛvə/,wh-oev-er,pronoun,"'whoever'는 '~하는 사람은 누구든지'라는 의미로, 특정하지 않은 사람을 가리킬 때 사용되는 대명사입니다."
+wildlife,"야생 동물",/ˈwaɪldlaɪf/,w-ildl-if-e,noun,"'wildlife'는 사람에게 길들여지지 않고 자연에서 살아가는 동물들을 총칭하는 단어, 즉 '야생 동물'을 의미하는 셀 수 없는 명사입니다."
+willingness,"기꺼이 하는 마음, 자발성",/ˈwɪlɪŋnəs/,w-ill-ingn-ess,noun,"'willingness'는 어떤 일을 불평 없이 기꺼이 하려는 태도나 마음, 즉 '자발성'을 의미하는 명사입니다."
+windy,"바람이 많이 부는",/ˈwɪndi/,w-ind-y,adjective,"'windy'는 바람이 강하게 부는 날씨를 묘사하는 형용사입니다."
+wireless,"무선의",/ˈwaɪ.ə(ɹ).ləs/,w-ir-el-ess,adjective,"'wireless'는 전선 없이 전파를 이용하여 신호를 주고받는, 즉 '무선의'라는 의미를 가진 형용사입니다."
+wisely,"현명하게",/ˈwaɪzli/,w-is-el-y,adverb,"'wisely'는 좋은 판단력과 경험을 바탕으로 '슬기롭게' 또는 '현명하게' 행동하는 방식을 나타내는 부사입니다."
+withdrawal,"인출; 철수",/wɪðˈdɹɔːəl/,w-ithdr-aw-al,noun,"'withdrawal'은 은행 계좌에서 돈을 빼는 '인출'이라는 의미와, 군대나 조직이 특정 지역에서 물러나는 '철수'라는 두 가지 주요 의미를 가집니다."
+wool,"양모, 울",/wʊl/,w-ool,noun,"'wool'은 주로 양의 털로 만든 섬유, 즉 '양모'나 그것으로 짠 '모직물'을 의미합니다."
+workbook,"연습 문제집",,w-orkb-ook,noun,"'workbook'은 학생들이 수업 내용을 복습하고 연습할 수 있도록 문제와 활동으로 구성된 책, 즉 '워크북'이나 '연습장'을 의미합니다."
+workforce,"노동력, 노동 인구",,w-orkf-orc-e,noun,"'workforce'는 특정 회사, 산업, 국가에서 일하는 모든 사람, 즉 '노동 인구'나 '인력'을 의미합니다."
+workplace,"직장",,w-orkpl-ac-e,noun,"'workplace'는 사람들이 일하는 장소, 즉 '직장'이나 '일터'를 의미합니다."
+workshop,"워크숍, 연수; 작업장",/ˈwɜːk.ʃɒp/,w-orksh-op,noun,"'workshop'은 특정 기술이나 주제에 대해 소수의 사람들이 모여 실습 위주로 배우는 '워크숍'이나 '연수'를 의미하며, 물건을 만들거나 수리하는 '작업장'을 뜻하기도 합니다."
+worldwide,"전 세계적인",/ˈwɜːldwaɪd/,w-orldw-id-e,adjective,"'worldwide'는 전 세계에 걸쳐 영향을 미치거나 해당되는, 즉 '세계적인'이라는 의미의 형용사 및 부사입니다."
+worthwhile,"~할 가치가 있는",/wɜː(ɹ)θˈwaɪl/,w-orthwh-il-e,adjective,"'worthwhile'은 시간, 노력, 돈을 들일 만한 충분한 '가치가 있는' 또는 '보람 있는' 일임을 나타내는 형용사입니다."
+wrinkle,"주름",/ˈɹɪŋkl̩/,wr-inkl-e,noun,"'wrinkle'는 피부 노화로 인해 생기는 '주름'이나 옷 등이 구겨져서 생긴 '구김'을 의미합니다."
+wristwatch,"손목시계",,wr-istw-atch,noun,"'wristwatch'는 손목에 차는 시계, 즉 '손목시계'를 의미합니다."
+wage,"임금",/weɪʤ/,wage,noun,"'wage'는 보통 시간이나 일 단위로 계산하여 지급되는 '노동의 대가', 즉 '임금'을 의미하며, 주로 복수형 'wages'로 사용됩니다."
+walk-in,"예약 없이 방문하는",/ˈwɔːkɪn/,walk-in,adjective,"'walk-in'은 미리 예약하지 않고 직접 방문하는 고객이나 환자를 위한 시스템을 의미하는 형용사입니다. (예: walk-in clinic - 예약 없이 진료 가능한 병원)"
+wardrobe,"옷장",/ˈwɔːdrəʊb/,ward-robe,noun,"'wardrobe'는 옷을 보관하는 대형 '옷장'을 의미하며, 한 개인이 가지고 있는 '모든 옷'을 통칭하기도 합니다."
+warrant,"정당화하다; 보증하다",/ˈwɒrənt/,warr-ant,verb,"'warrant'는 특정 행동이나 조치를 '정당화하다'는 의미와, 제품의 품질을 '보증하다'는 의미를 가진 동사입니다. 명사로는 '영장' 또는 '보증서'를 뜻합니다."
+whereas,"~인 반면에",/weərˈæz/,where-as,conjunction,"'whereas'는 두 가지 사실이나 상황을 대조할 때 사용하는 접속사로, '~인 반면에'라고 해석됩니다."
+whereby,"그것에 의하여, ~하는",/weəˈbaɪ/,where-by,conjunction,"'whereby'는 '그것을 통해 ~하는'이라는 의미로, 앞서 언급된 방법이나 시스템을 설명할 때 사용하는 격식 있는 관계부사입니다."
+wholesale,"도매(의)",/ˈhəʊlseɪl/,whole-sale,noun,"'wholesale'은 상품을 소매업자에게 대량으로 판매하는 '도매'를 의미합니다. 형용사나 부사로도 쓰입니다."
+widely,"널리",/ˈwaɪdli/,wide-ly,adverb,"'widely'는 지리적으로 '넓은 지역에 걸쳐' 또는 많은 사람들에게 '널리' 알려져 있거나 사용됨을 나타내는 부사입니다."
+withdraw,"(돈을) 인출하다; 철수하다",/wɪðˈdrɔː/,with-draw,verb,"'withdraw'는 은행 계좌에서 돈을 '인출하다'라는 의미와, 군대나 조직이 특정 장소에서 '물러나다', '철수하다'는 두 가지 주요 의미를 가집니다."
+withstand,"견디다, 이겨내다",/wɪðˈstænd/,with-stand,verb,"'withstand'는 어려운 상황이나 강력한 압력을 '버텨내다' 또는 '견뎌내다'라는 의미의 동사입니다."
+workmanship,"솜씨, 기술",/ˈwɜːkmənʃɪp/,work-man-ship,noun,"'workmanship'은 장인이나 기술자가 보여주는 높은 수준의 '솜씨'나 '기량'을 의미하는 명사입니다."
+workstation,"작업 공간",/ˈwɜːkˌsteɪʃən/,work-sta-tion,noun,"'workstation'은 한 사람이 업무를 보는 데 필요한 책상, 컴퓨터, 의자 등이 갖추어진 '작업 공간'을 의미합니다."
+wrap up,"마무리 짓다",/ræp ʌp/,wrap up,phrasal verb,"'wrap up'은 회의나 프로젝트 등을 '끝내다', '마무리 짓다'라는 의미의 구동사입니다."
+year-end,"연말의",/ˈjɪər ɛnd/,year-end,adjective,"'year-end'는 한 해가 끝나는 시기, 즉 '연말의'라는 의미를 가진 형용사입니다. (예: year-end party - 송년회)"
+yearn,"갈망하다, 동경하다",/jɜːn/,yearn,verb,"'yearn'은 무언가를 매우 강렬하게 원하고 그리워하는 것, 즉 '갈망하다'라는 의미의 동사입니다."
+yearly,"매년의, 연간의",/ˈjɪəli/,yearl-y,adjective,"'yearly'는 일 년에 한 번씩 일어나는, 즉 '매년의' 또는 '연례의'라는 의미의 형용사 및 부사입니다."
+yen,"엔 (일본 화폐 단위)",/jɛn/,yen,noun,"'yen'은 일본의 공식 화폐 단위인 '엔(¥)'을 의미합니다."
+yoga,"요가",/ˈjoʊɡə/,yog-a,noun,"'yoga'는 특정한 자세와 호흡법을 통해 몸과 마음을 단련하는 인도의 수행법, 즉 '요가'를 의미합니다."
+zoo,"동물원",/zuː/,z-oo,noun,"'zoo'는 여러 종류의 살아있는 동물들을 대중에게 전시하는 공원, 즉 '동물원'을 의미합니다."
+zeal,"열의, 열성",/ziːl/,zeal,noun,"'zeal'은 어떤 목표나 신념에 대한 강한 에너지와 열정, 즉 '열의'를 의미하는 명사입니다."
+zealous,"열성적인",/ˈzɛləs/,zeal-ous,adjective,"'zealous'는 어떤 일에 대해 매우 열정적이고 헌신적인 태도를 보이는, 즉 '열성적인'이라는 의미의 형용사입니다."
+zip code,"우편번호",/ˈzɪp ˌkəʊd/,zip code,noun,"'zip code'는 우편물을 효율적으로 분류하고 배달하기 위해 사용하는 지역별 숫자 코드, 즉 '우편번호'를 의미하며, 주로 미국에서 사용됩니다."
+zoning,"지역제, 구역제",/ˈzəʊnɪŋ/,zon-ing,noun,"'zoning'은 도시 계획의 일환으로 토지의 용도(주거용, 상업용 등)를 법적으로 구분하고 규제하는 '지역제'를 의미합니다."
+zoom,"(카메라 렌즈로) 확대/축소하다",/zuːm/,zoom,verb,"'zoom'은 카메라 렌즈를 조절하여 피사체를 '가깝게 당겨 촬영하거나(zoom in)' '멀리서 촬영하다(zoom out)'라는 의미의 동사입니다."
