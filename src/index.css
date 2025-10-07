@@ -63,9 +63,10 @@ button {
  * =============================================
  */
 .app-layout {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  max-width: 1200px; /* 콘텐츠의 최대 너비를 1200px로 제한합니다. */
+  margin: 0 auto;    /* 좌우 여백을 'auto'로 설정하여 블록을 가운데 정렬합니다. */
+  padding: var(--spacing-xl, 2rem); /* 콘텐츠와 화면 가장자리 사이의 여백을 줍니다. */
+  min-height: 100vh;
 }
 
 .game-layout {

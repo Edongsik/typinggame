@@ -563,52 +563,38 @@ const Game = () => {
     setQueueIndex(queueIndex - 1);
   }, [clearAutoAdvance, queueIndex, sessionWords.length]);
 
-  const handleCorrectWord = useCallback(() => {
-    const current = sessionWords[queueIndex]
-    if (!current || !selectedDayId) return
-    
-    clearAutoAdvance()
-    
+ const handleCorrectWord = useCallback(async () => { // 1. async 추가
+    const current = sessionWords[queueIndex];
+    if (!current || !selectedDayId) return;
+
+    // 기존 타이머 로직을 모두 제거합니다.
+    clearAutoAdvance();
+
+    // 2. 사운드 재생이 끝날 때까지 기다립니다.
     if (isInteracted) {
-      pronounceWord(current.word).catch(() => {})
-    }
-    
-    setScore((previous) => previous + 10 + streak * 2)
-    setStreak((previous) => {
-      const next = previous + 1
-      setMaxStreak((maxValue) => Math.max(maxValue, next))
-      return next
-    })
-    
-    const nextProgressIndex = !isReviewMode && mode === "sequence"
-      ? Math.min(current.orderIndex + 1, baseWords.length)
-      : currentStat.lastIndex
-    
-    markAnswer(selectedDayId, current.word, true, nextProgressIndex)
-    refreshStat(selectedDayId)
-    
-    setTypedValue("")
-    
-    autoAdvanceRef.current = window.setTimeout(() => {
-      if (isRunningRef.current) {
-        handleNext()
+      try {
+        await pronounceWord(current.word);
+      } catch (e) {
+        console.error("사운드 재생 실패:", e);
       }
-    }, AUTO_ADVANCE_DELAY_MS)
+    }
+
+    // 3. 마지막 글자가 초록색으로 보이는 것을 인지할 수 있도록 짧은 지연시간을 줍니다.
+    await new Promise(resolve => setTimeout(resolve, 300)); // 0.3초 대기
+
+    // 4. 모든 작업이 끝난 후, 다음 단어로 넘어갑니다.
+    if (isRunningRef.current) {
+      handleNext();
+    }
   }, [
-    baseWords.length,
     clearAutoAdvance,
-    currentStat.lastIndex,
     handleNext,
     isInteracted,
-    isReviewMode,
-    mode,
     pronounceWord,
     queueIndex,
-    refreshStat,
     selectedDayId,
     sessionWords,
-    streak,
-  ])
+  ]);
 
   const handleIncorrectAttempt = useCallback(() => {
     const current = sessionWords[queueIndex]
