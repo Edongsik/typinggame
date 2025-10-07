@@ -482,3 +482,644 @@ button {
     padding: 1rem;
   }
 }
+
+/* index.css 또는 App.css에 추가할 스타일 */
+
+/* Day 카드 컨텐츠 래퍼 */
+.day-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 단어 추가 버튼 스타일 */
+.day-card__add-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  margin-top: -1px; /* 위쪽 버튼과 자연스럽게 연결 */
+}
+
+.day-card__add-button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.day-card__add-button:active {
+  transform: translateY(0);
+}
+
+/* Day 카드 메인 버튼의 border-radius 조정 */
+.day-card__button {
+  border-radius: 8px 8px 0 0; /* 아래쪽 모서리를 직각으로 */
+}
+
+/* Day 카드 전체 hover 효과 조정 */
+.day-card:hover .day-card__add-button {
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .day-card__add-button {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+}
+
+/* index.css 또는 App.css에 추가할 스타일 */
+
+/* 단어 카운트 컨테이너 */
+.stats-panel__word-count {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* 현재 단어 번호 */
+.stats-panel__word-count-current {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 구분자 (/) */
+.stats-panel__word-count-separator {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0.1rem;
+}
+
+/* 총 단어 수 */
+.stats-panel__word-count-total {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* "단어" 레이블 */
+.stats-panel__word-count-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 0.25rem;
+}
+
+
+/* ===================================== */
+
+/* 대안 3: 프로그레스바와 결합한 디자인 */
+.stats-panel__word-count {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #f5f7fb 0%, #e5e7eb 100%);
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.stats-panel__word-count-text {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+.stats-panel__word-count-current {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+.stats-panel__word-count-separator {
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.stats-panel__word-count-total {
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.stats-panel__word-count-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-left: 0.25rem;
+}
+
+.stats-panel__word-count-bar {
+  flex: 1;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  min-width: 100px;
+}
+
+.stats-panel__word-count-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  transition: width 0.3s ease;
+  border-radius: 999px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 640px) {
+  .stats-panel__word-count {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .stats-panel__word-count-current {
+    font-size: 1.2rem;
+  }
+  
+  .stats-panel__word-count-separator {
+    font-size: 1rem;
+  }
+  
+  .stats-panel__word-count-total {
+    font-size: 0.95rem;
+  }
+  
+  .stats-panel__word-count-label {
+    font-size: 0.75rem;
+  }
+  
+  .stats-panel__header {
+    justify-content: center;
+  }
+}
+
+/* index.css 또는 App.css에 추가 */
+
+/* 모달 오버레이 */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 모달 컨텐츠 */
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 모달 헤더 */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+/* 검색 영역 */
+.modal-search {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: #f9fafb;
+}
+
+.modal-search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modal-search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.modal-search-info {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 모달 바디 */
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 2rem 2rem;
+}
+
+/* 단어 아이템 */
+.word-item {
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+
+.word-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+.word-item--current {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-color: #3b82f6;
+}
+
+/* 단어 아이템 헤더 */
+.word-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.word-item-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.word-item-number {
+  background: #6b7280;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.word-item-word {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.word-item-badge {
+  background: #3b82f6;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+/* 단어 아이템 액션 버튼 */
+.word-item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.word-item-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.word-item-btn--jump {
+  background: #3b82f6;
+  color: white;
+}
+
+.word-item-btn--jump:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.word-item-btn--edit {
+  background: #f59e0b;
+  color: white;
+}
+
+.word-item-btn--edit:hover {
+  background: #d97706;
+  transform: translateY(-1px);
+}
+
+.word-item-btn--save {
+  background: #10b981;
+  color: white;
+}
+
+.word-item-btn--save:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.word-item-btn--cancel {
+  background: #6b7280;
+  color: white;
+}
+
+.word-item-btn--cancel:hover {
+  background: #4b5563;
+}
+
+/* 단어 상세 정보 */
+.word-item-details {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.word-detail-row {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.word-detail-row strong {
+  color: #1f2937;
+  margin-right: 0.5rem;
+}
+
+/* 편집 필드 */
+.word-edit-field {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: start;
+  gap: 1rem;
+}
+
+.word-edit-field label {
+  font-weight: 600;
+  color: #374151;
+  padding-top: 0.5rem;
+}
+
+.word-edit-field input,
+.word-edit-field textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.word-edit-field input:focus,
+.word-edit-field textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.word-edit-field textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .modal-content {
+    max-height: 95vh;
+    border-radius: 16px 16px 0 0;
+    margin-top: auto;
+  }
+
+  .modal-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal-search {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-body {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .word-item {
+    padding: 1rem;
+  }
+
+  .word-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .word-item-actions {
+    width: 100%;
+  }
+
+  .word-item-btn {
+    flex: 1;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .word-edit-field {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .word-edit-field label {
+    padding-top: 0;
+  }
+}
+
+/* 스크롤바 스타일링 */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* index.css 또는 App.css에 추가할 스타일 */
+
+/* 단어 카운트 컨테이너 - 버튼으로 변경 */
+.stats-panel__word-count {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  border: none;  /* 버튼 기본 스타일 제거 */
+  cursor: pointer;  /* 클릭 가능 표시 */
+  transition: all 0.2s ease;  /* 호버 효과 */
+}
+
+.stats-panel__word-count:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.stats-panel__word-count:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+/* 현재 단어 번호 */
+.stats-panel__word-count-current {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 구분자 (/) */
+.stats-panel__word-count-separator {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0.1rem;
+}
+
+/* 총 단어 수 */
+.stats-panel__word-count-total {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* "단어" 레이블 */
+.stats-panel__word-count-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 0.25rem;
+}
+
+/* 헤더 레이아웃 조정 */
+.stats-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 640px) {
+  .stats-panel__word-count {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .stats-panel__word-count-current {
+    font-size: 1.2rem;
+  }
+  
+  .stats-panel__word-count-separator {
+    font-size: 1rem;
+  }
+  
+  .stats-panel__word-count-total {
+    font-size: 0.95rem;
+  }
+  
+  .stats-panel__word-count-label {
+    font-size: 0.75rem;
+  }
+  
+  .stats-panel__header {
+    justify-content: center;
+  }
+}

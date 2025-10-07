@@ -1,5 +1,6 @@
 import Papa from 'papaparse'
 import type { DayMeta, PracticeMode, Word } from '../types'
+import { getAllCustomWords } from './customWords'
 
 // ??BASE_URL??직접 지??(Vite??public ?더?기??로 ??
 const BASE_PUBLIC_PATH = (import.meta.env.BASE_URL ?? '/').replace(/\/+$/, '') || '/'
@@ -109,8 +110,14 @@ export async function loadDays(
     const dayMeta = manifest.find((d) => d.id === dayId)
     if (!dayMeta) throw new Error(`Unknown day id: ${dayId}`)
 
+    // 기본 CSV에서 단어 로드
     const words = await loadWordsForDay(dayMeta.id, dayMeta.csv)
-    return words.map<PracticeWord>((word, index) => ({
+    
+    // 커스텀 단어 추가
+    const customWords = getAllCustomWords(dayId)
+    const allWords = [...words, ...customWords]
+    
+    return allWords.map<PracticeWord>((word, index) => ({
       ...word,
       dayId: dayMeta.id,
       orderIndex: index,

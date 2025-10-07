@@ -7,9 +7,10 @@ const todayKey = () => new Date().toISOString().slice(0, 10)
 type WordbookProps = {
   days: DayMeta[]
   onSelect: (dayId: string) => void
+  onAddWord: (dayId: string) => void // 새로 추가
 }
 
-const Wordbook: FC<WordbookProps> = ({ days, onSelect }) => {
+const Wordbook: FC<WordbookProps> = ({ days, onSelect, onAddWord }) => {
   const today = todayKey()
 
   return (
@@ -25,24 +26,39 @@ const Wordbook: FC<WordbookProps> = ({ days, onSelect }) => {
 
           return (
             <li key={day.id} className="day-card">
-              <button
-                type="button"
-                className="day-card__button"
-                onClick={() => onSelect(day.id)}
-              >
-                <div className="day-card__header">
-                  <span className="day-card__label">{day.label}</span>
-                  {completedToday && <span className="day-card__badge" aria-label="오늘 완료">✅</span>}
-                </div>
-                <div className="day-card__description">{day.description}</div>
-                <div className="day-card__progress-bar">
-                  <div 
-                    className="day-card__progress-fill" 
-                    style={{ width: `${progressPercent}%` }}
-                  />
-                </div>
-                <div className="day-card__progress-label">{progressLabel}</div>
-              </button>
+              <div className="day-card__content">
+                <button
+                  type="button"
+                  className="day-card__button"
+                  onClick={() => onSelect(day.id)}
+                >
+                  <div className="day-card__header">
+                    <span className="day-card__label">{day.label}</span>
+                    {completedToday && <span className="day-card__badge" aria-label="오늘 완료">✅</span>}
+                  </div>
+                  <div className="day-card__description">{day.description}</div>
+                  <div className="day-card__progress-bar">
+                    <div 
+                      className="day-card__progress-fill" 
+                      style={{ width: `${progressPercent}%` }}
+                    />
+                  </div>
+                  <div className="day-card__progress-label">{progressLabel}</div>
+                </button>
+                
+                {/* 단어 추가 버튼 */}
+                <button
+                  type="button"
+                  className="day-card__add-button"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    onAddWord(day.id)
+                  }}
+                  title="단어 추가"
+                >
+                  ➕ 단어 추가
+                </button>
+              </div>
             </li>
           )
         })}

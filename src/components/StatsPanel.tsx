@@ -1,4 +1,4 @@
-import { FC, useState } from "react" // useState를 import 합니다.
+import { FC, useState } from "react"
 
 type StatsPanelProps = {
   score: number
@@ -9,6 +9,9 @@ type StatsPanelProps = {
   progress: number
   timerEnabled: boolean
   timeLeft: number
+  currentIndex: number
+  totalWords: number
+  onWordCountClick: () => void
 }
 
 const StatsPanel: FC<StatsPanelProps> = ({
@@ -20,26 +23,42 @@ const StatsPanel: FC<StatsPanelProps> = ({
   progress,
   timerEnabled,
   timeLeft,
+  currentIndex,
+  totalWords,
+  onWordCountClick,
 }) => {
-  // 추가: 통계 패널의 표시 여부를 관리하는 state (기본값은 false로 숨김)
   const [isVisible, setIsVisible] = useState(false)
 
-  // 토글 버튼 클릭 핸들러
   const toggleVisibility = () => {
     setIsVisible(!isVisible)
   }
 
   return (
     <div className="stats-panel">
-      {/* 추가: 통계 보기/숨기기 토글 버튼 */}
       <div className="stats-panel__header">
         <button onClick={toggleVisibility} className="stats-panel__toggle-button">
           {isVisible ? "통계 숨기기" : "통계 보기"}
         </button>
+        
+        {/* 단어 카운트 표시 - 클릭 가능 */}
+        <button 
+          className="stats-panel__word-count"
+          onClick={() => {
+            console.log("🟢 StatsPanel 버튼 클릭!")
+            console.log("onWordCountClick 타입:", typeof onWordCountClick)
+            onWordCountClick()
+          }}
+          title="클릭하여 전체 단어 목록 보기"
+        >
+          <span className="stats-panel__word-count-current">{currentIndex + 1}</span>
+          <span className="stats-panel__word-count-separator">/</span>
+          <span className="stats-panel__word-count-total">{totalWords}</span>
+          <span className="stats-panel__word-count-label">단어</span>
+        </button>
+        
         {timerEnabled && <div className="stats-panel__timer">남은 시간: {timeLeft}초</div>}
       </div>
 
-      {/* isVisible 상태에 따라 조건부 렌더링 */}
       {isVisible && (
         <div className="stats-panel__grid">
           <div className="stats-panel__item">
@@ -65,7 +84,6 @@ const StatsPanel: FC<StatsPanelProps> = ({
         </div>
       )}
 
-      {/* 진행률 표시줄은 항상 보이도록 유지 */}
       <div className="progress-bar">
         <div
           className="progress-bar__fill"
