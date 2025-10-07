@@ -31,4 +31,5 @@ export type DayStat = {
   lastIndex: number
   completedDates: string[]
   wrongSet: string[]
+  reviewCount: number  // ⭐ 추가: 복습 횟수
 }

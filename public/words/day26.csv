@@ -1,42 +1,41 @@
 word,meaning,pronunciation,syllables,partOfSpeech,example
-tablecloth,"A cloth used to cover and protect a table, especially for a dining table.",,t-abl-ecl-oth,noun,
-tablet,A slab of clay used for inscription.,/ˈtæblət/,t-abl-et,noun,Many people take vitamin tablets as a food supplement.
-tactic,"A maneuver, or action calculated to achieve some end.",/ˈtæktɪk/,t-act-ic,noun,
-tag,A small label.,/teɪɡ/,t-ag,noun,"The subwoofer in the trunk was so loud, it vibrated the tag like an aluminum can."
-tailor,"A person who makes, repairs, or alters clothes professionally, especially suits and men's clothing.",/ˈteɪlə/,t-ail-or,noun,He works as a tailor on Swanston Street.
-takeover,"The purchase of one company by another; a merger without the formation of a new company, especially where some stakeholders in the purchased company oppose the purchase.",,t-ak-eov-er,noun,
-taker,One who takes something.,/ˈteɪkɚ/,t-ak-er,noun,She is known as quite a risk taker.
-tasty,Having a pleasant or satisfying flavor; delicious.,/ˈteɪsti/,t-ast-y,adjective,You could make this tasty meal for breakfast.
-tech,Technology,/tɛk/,t-ech,noun,
-technician,A person who studies or practises technology.,/tekˈnɪʃən/,t-echn-ic-ian,noun,
-teen,A teenager.,/tiːn/,t-een,noun,teen fashion
-telecommunication,"The science and technology of the communication of messages over a distance using electric, electronic or electromagnetic impulses.",,t-el-ec-omm-un-ic-at-ion,noun,
-teller,A device that provides bank customers with cash withdrawal and other services without the need for a human teller.,/ˈtɛlə/,t-ell-er,noun,
-temporarily,For a limited period of time; not permanently.,/ˈtɛmp(ə)ɹəɹəli/,t-emp-or-ar-il-y,adverb,
-tempt,"To provoke someone to do wrong, especially by promising a reward; to entice.",/tɛmpt/,t-empt,verb,She tempted me to eat the apple.
-tenant,"One who pays a fee (rent) in return for the use of land, buildings, or other property owned by others.",/ˈtɛ.nənt/,t-en-ant,noun,
-terminal,A building in an airport where passengers transfer from ground transportation to the facilities that allow them to board airplanes.,/ˈtɚmɪnəl/,t-erm-in-al,noun,terminal cancer
-terminate,"To end, especially in an incomplete state.",/ˈtɜːmɪneɪt/,t-erm-in-at-e,verb,to terminate a surface by a line
-termination,The process of terminating or the state of being terminated.,/tɚmɪˈneɪʃən/,t-erm-in-at-ion,noun,
-terrific,"Terrifying, causing terror; terrible; sublime, awe-inspiring.",/təˈɹɪfɪk/,t-err-if-ic,adjective,I've got a terrific hangover this morning.
-textbook,"A coursebook, a formal manual of instruction in a specific subject, especially one for use in schools or colleges.",/ˈtɛkst.bʊk/,t-extb-ook,noun,
-theft,The act of stealing property.,/θɛft/,th-eft,noun,
-thirsty,Needing to drink.,/ˈθɜː(ɹ)st.i/,th-irst-y,adjective,After all that work I am really thirsty.
-thorough,"A furrow between two ridges, to drain off the surface water.",/ˈθʌɹə/,th-or-ough,noun,He is the most thorough worker I have ever seen.
-thoroughly,In a thorough or complete manner.,/θʌ.ɹə.liː/,th-or-oughl-y,adverb,He went out in the rain and came back thoroughly drenched.
-thrill,"A trembling or quivering, especially one caused by emotion.",[t̪ɾ̪̊ɪl],thr-ill,noun,
-thunderstorm,"A storm consisting of thunder and lightning produced by a cumulonimbus, usually accompanied with heavy rain, wind, and sometimes hail; and in rarer cases sleet, freezing rain, or snow.",/ˈθʌn.də(ɹ)ˌstɔː(ɹ)m/,th-und-erst-orm,noun,
-tidy,A tabletop container for pens and stationery.,/ˈtaɪdi/,t-id-y,noun,a desk tidy
-tile,"A regularly-shaped slab of clay or other material, affixed to cover or decorate a surface, as in a roof-tile, glazed tile, stove tile, carpet tile etc.",/taɪl/,t-il-e,noun,Each tile within Google Maps consists of 256 × 256 pixels.
-timeline,A graphical representation of a chronological sequence of events (past or future); a chronology.,/ˈtaɪmˌlaɪn/,t-im-el-in-e,noun,"By killing his great-grandfather, the time traveller disrupted the timestream."
-timely,Done at the proper time or within the proper time limits; prompt.,/ˈtaɪmli/,t-im-el-y,adjective,
-timer,Someone or something which times.,/ˈtaɪmɚ/,t-im-er,noun,
-timetable,"A tabular schedule of events with the times at which they occur, especially times of arrivals and departures",/ˈtaɪmˌteɪbəl/,t-im-et-abl-e,noun,The timetable has been changed several times since it was first announced.
-toiletry,Any item used for personal hygiene or grooming.,/ˈtɔɪlɪtɹi/,t-oil-etr-y,noun,
-toll,Loss or damage incurred through a disaster.,/toʊl/,t-oll,noun,The war has taken its toll on the people.
-tomato,"A widely cultivated plant, Solanum lycopersicum, having edible fruit.",[tʰə̥ˈmɐːtʰɐʉ],t-om-at-o,noun,Lookit the legs on that hot tomato!
-ton,A unit of weight (mass) equal to 2240 pounds (a long ton) or 2000 pounds (a short ton) or 1000 kilograms (a metric ton).,/tʌn/,t-on,noun,I've got tons of work to do.
-toner,Powder used in laser printers and photocopiers to form the text and images on the printed paper.,/ˈtoʊnɚ/,t-on-er,noun,
-tow,,,t-ow,,
-towel,"A cloth used for wiping, especially one used for drying anything wet, as a person after a bath.",/taʊl/,t-ow-el,noun,He got out of the shower and toweled himself dry.
-
+tablecloth,"식탁보",,t-abl-ecl-oth,noun,"'tablecloth'는 식탁을 덮는 천, 즉 '식탁보'를 의미합니다."
+tablet,"알약; 태블릿 (컴퓨터)",/ˈtæblət/,t-abl-et,noun,"'tablet'은 둥글고 납작한 모양의 '알약'이라는 의미와, 터치스크린 방식의 휴대용 컴퓨터인 '태블릿 PC'라는 두 가지 주요 의미를 가집니다."
+tactic,"전술, 전략",/ˈtæktɪk/,t-act-ic,noun,"'tactic'은 특정 목표를 달성하기 위한 구체적인 방법이나 계획, 즉 '전술'이나 '전략'을 의미합니다."
+tag,"꼬리표, 태그",/teɪɡ/,t-ag,noun,"'tag'는 상품에 붙어 있는 가격이나 정보를 담은 '꼬리표'를 의미하며, 소셜 미디어에서 다른 사람을 '지목'하거나 콘텐츠를 분류하는 '태그'를 뜻하기도 합니다."
+tailor,"재단사; (요구에) 맞추다",/ˈteɪlə/,t-ail-or,noun,"'tailor'는 옷을 만들거나 수선하는 사람, 즉 '재단사'를 의미하는 명사와, 특정 목적이나 필요에 맞게 무언가를 '변경하다', '맞추다'라는 의미의 동사로 쓰입니다."
+takeover,"(기업) 인수",,t-ak-eov-er,noun,"'takeover'는 한 회사가 다른 회사의 경영권을 사들이는 것, 즉 '기업 인수'를 의미합니다."
+taker,"받는 사람, 가져가는 사람",/ˈteɪkɚ/,t-ak-er,noun,"'taker'는 무언가를 받거나 가져가는 사람을 의미합니다. 'risk-taker'는 '위험을 감수하는 사람'이라는 뜻의 흔한 표현입니다."
+tasty,"맛있는",/ˈteɪsti/,t-ast-y,adjective,"'tasty'는 음식이 '맛있다'는 것을 표현하는 비격식적인 형용사입니다. 'delicious'와 유사한 의미입니다."
+tech,"기술",/tɛk/,t-ech,noun,"'tech'는 'technology'의 줄임말로, 과학 지식을 실생활에 응용하는 '기술', 특히 정보 기술(IT) 분야를 가리키는 비격식적인 단어입니다."
+technician,"기술자",/tekˈnɪʃən/,t-echn-ic-ian,noun,"'technician'은 특정 장비나 시스템에 대한 전문적인 기술을 가지고 설치, 유지, 보수 등의 일을 하는 '기술자'나 '기사'를 의미합니다."
+teen,"십대 (13-19세)",/tiːn/,t-een,noun,"'teen'은 'teenager'의 줄임말로, 13세부터 19세까지의 청소년, 즉 '십대'를 의미합니다."
+telecommunication,"원거리 통신",,t-el-ec-omm-un-ic-at-ion,noun,"'telecommunication'은 전화, 인터넷, 방송 등 전기 신호를 이용하여 먼 거리에서 정보를 주고받는 '원거리 통신' 기술을 의미하며, 보통 복수형 'telecommunications'로 쓰입니다."
+teller,"(은행) 창구 직원",/ˈtɛlə/,t-ell-er,noun,"'teller'는 은행 창구에서 고객의 입출금 업무 등을 처리하는 직원을 의미합니다."
+temporarily,"일시적으로, 임시로",/ˈtɛmp(ə)ɹəɹəli/,t-emp-or-ar-il-y,adverb,"'temporarily'는 영구적이 아닌, 짧은 기간 동안만 지속되는, 즉 '일시적으로' 또는 '임시로'라는 의미의 부사입니다."
+tempt,"유혹하다",/tɛmpt/,t-empt,verb,"'tempt'는 옳지 않거나 불필요한 일을 하도록 다른 사람을 부추기거나 꾀는 것, 즉 '유혹하다'라는 의미의 동사입니다."
+tenant,"세입자, 임차인",/ˈtɛ.nənt/,t-en-ant,noun,"'tenant'는 집주인에게 돈을 내고 집이나 건물을 빌려 쓰는 사람, 즉 '세입자'나 '임차인'을 의미합니다."
+terminal,"터미널, 종점; 말기의",/ˈtɚmɪnəl/,t-erm-in-al,noun,"'terminal'은 공항, 버스, 기차 등의 '종점'이나 '터미널'을 의미하는 명사와, 질병이 치료 불가능한 '말기의' 상태임을 나타내는 형용사로 쓰입니다."
+terminate,"끝내다, 종료하다",/ˈtɜːmɪneɪt/,t-erm-in-at-e,verb,"'terminate'는 계약, 서비스, 임신 등을 공식적으로 '끝내다' 또는 '종료시키다'라는 의미의 격식 있는 동사입니다."
+termination,"종료",/tɚmɪˈneɪʃən/,t-erm-in-at-ion,noun,"'termination'은 계약이나 서비스 등이 끝나는 것, 즉 '종료'를 의미하는 명사입니다."
+terrific,"아주 멋진, 훌륭한",/təˈɹɪfɪk/,t-err-if-ic,adjective,"'terrific'은 '굉장히 좋은', '아주 멋진'이라는 긍정적인 의미를 나타내는 비격식적인 형용사입니다. 원래는 '끔찍한'이라는 뜻이었으나, 현대 영어에서는 주로 긍정적인 의미로 쓰입니다."
+textbook,"교과서",/ˈtɛkst.bʊk/,t-extb-ook,noun,"'textbook'은 학교나 특정 과정에서 교육을 위해 공식적으로 사용하는 주된 교재, 즉 '교과서'를 의미합니다."
+theft,"절도, 도둑질",/θɛft/,th-eft,noun,"'theft'는 다른 사람의 물건을 불법적으로 훔치는 행위, 즉 '절도'나 '도둑질'을 의미하는 명사입니다."
+thirsty,"목마른",/ˈθɜː(ɹ)st.i/,th-irst-y,adjective,"'thirsty'는 물을 마시고 싶어 하는 상태, 즉 '목마른'을 의미하는 형용사입니다."
+thorough,"철저한, 빈틈없는",/ˈθʌɹə/,th-or-ough,adjective,"'thorough'는 모든 세부 사항에 주의를 기울여 빠뜨리는 부분이 없는, 즉 '철저한' 또는 '완전한' 상태를 묘사하는 형용사입니다."
+thoroughly,"철저하게, 완전히",/θʌ.ɹə.liː/,th-or-oughl-y,adverb,"'thoroughly'는 어떤 일을 '완전히' 또는 '철저하게' 함을 나타내는 부사입니다."
+thrill,"흥분, 전율",/[t̪ɾ̪̊ɪl]/,thr-ill,noun,"'thrill'은 매우 신나거나 무서운 경험을 할 때 느끼는 강렬한 '흥분'이나 '전율'을 의미합니다."
+thunderstorm,"뇌우 (천둥과 번개를 동반한 비)",/ˈθʌn.də(ɹ)ˌstɔː(ɹ)m/,th-und-erst-orm,noun,"'thunderstorm'은 천둥, 번개, 강한 비바람을 동반하는 악천후, 즉 '뇌우'를 의미합니다."
+tidy,"깔끔한, 정돈된",/ˈtaɪdi/,t-id-y,adjective,"'tidy'는 물건이 제자리에 잘 정리되어 있어 '깔끔한' 또는 '단정한' 상태를 묘사하는 형용사입니다."
+tile,"타일",/taɪl/,t-il-e,noun,"'tile'은 욕실 바닥이나 벽, 지붕 등에 붙이는 얇고 평평한 조각, 즉 '타일'을 의미합니다."
+timeline,"연대표",/ˈtaɪmˌlaɪn/,t-im-el-in-e,noun,"'timeline'은 과거의 주요 사건들을 시간 순서대로 보여주는 표나 그림, 즉 '연대표'를 의미하며, 프로젝트의 '진행 일정'을 뜻하기도 합니다."
+timely,"시기적절한, 때맞춘",/ˈtaɪmli/,t-im-el-y,adjective,"'timely'는 어떤 일이 가장 필요한 때에 정확히 일어나는, 즉 '시기적절한' 또는 '때맞춘'이라는 긍정적인 의미의 형용사입니다."
+timer,"타이머, 계시원",/ˈtaɪmɚ/,t-im-er,noun,"'timer'는 정해진 시간이 지나면 소리나 신호로 알려주는 장치, 즉 '타이머'를 의미합니다."
+timetable,"시간표",/ˈtaɪmˌteɪbəl/,t-im-et-abl-e,noun,"'timetable'은 기차, 버스, 비행기 등의 운행 시간이나, 학교의 수업 시간을 정리해 놓은 표, 즉 '시간표'를 의미합니다."
+toiletry,"세면도구",/ˈtɔɪlɪtɹi/,t-oil-etr-y,noun,"'toiletry'는 몸을 씻고 단장하는 데 사용하는 물품(칫솔, 치약, 비누, 샴푸 등)을 총칭하며, 보통 복수형 'toiletries'로 사용됩니다."
+toll,"(도로·다리 등의) 통행료",/toʊl/,t-oll,noun,"'toll'은 고속도로나 다리 등을 이용할 때 내는 '통행료'를 의미하며, 재난이나 사고로 인한 '사상자 수'나 '피해'를 뜻하기도 합니다."
+tomato,"토마토",[tʰə̥ˈmɐːtʰɐʉ],t-om-at-o,noun,"'tomato'는 붉은색의 과일 채소인 '토마토'를 의미합니다."
+ton,"톤 (무게 단위)",/tʌn/,t-on,noun,"'ton'은 무게를 재는 단위로, 1000킬로그램에 해당하는 '톤'을 의미합니다. 비격식적으로는 '아주 많은 양'을 뜻하기도 합니다."
+toner,"토너 (화장수); (프린터) 토너",/ˈtoʊnɚ/,t-on-er,noun,"'toner'는 세안 후 피부를 정돈하기 위해 바르는 '화장수'를 의미하며, 레이저 프린터나 복사기에서 인쇄를 위해 사용하는 가루 잉크인 '토너'를 뜻하기도 합니다."
+tow,"(차·배 등을) 끌다, 견인하다",/təʊ/,t-ow,verb,"'tow'는 고장 나거나 불법 주차된 자동차 등을 다른 차로 '끌고 가다' 또는 '견인하다'라는 의미의 동사입니다."
+towel,"수건",/taʊl/,t-ow-el,noun,"'towel'은 몸이나 물건의 물기를 닦는 데 사용하는 천, 즉 '수건'을 의미합니다."

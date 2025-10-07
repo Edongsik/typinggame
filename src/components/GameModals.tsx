@@ -12,6 +12,7 @@ type GameModalsProps = {
   currentStat: DayStat
   onCloseCompletion: () => void
   onBeginReview: () => void
+  onRetryFromCompletion: () => void
   
   // Review Choice 모달
   showReviewChoiceModal: boolean
@@ -26,6 +27,7 @@ const GameModals: FC<GameModalsProps> = ({
   currentStat,
   onCloseCompletion,
   onBeginReview,
+  onRetryFromCompletion,
   showReviewChoiceModal,
   onFinalizeReview,
 }) => {
@@ -81,6 +83,13 @@ const GameModals: FC<GameModalsProps> = ({
                 className="game__summary-button"
               >
                 나중에
+              </button>
+              <button
+                type="button"
+                onClick={onRetryFromCompletion}
+                className="game__summary-button"
+              >
+                다시하기
               </button>
               {currentStat.wrongSet.length > 0 && (
                 <button

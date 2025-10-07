@@ -1,41 +1,40 @@
 word,meaning,pronunciation,syllables,partOfSpeech,example
-lobby,An entryway or reception area; vestibule; passageway; corridor.,/lɒbi/,l-obb-y,noun,I had to wait in the lobby for hours before seeing the doctor.
-locally,With respect to place; in place.,,l-oc-all-y,adverb,These things are locally separated.
-locker,"A type of storage compartment with a lock, usually used to store clothing, equipment, or books.",,l-ock-er,noun,The student placed her books in her locker when she arrived at school.
-logical,In agreement with the principles of logic.,/ˈlɒdʒɪkəɫ/,l-og-ic-al,adjective,"Logical memory appears contiguous to an application program, but may well be stored on several physical devices, including in RAM and on hard-disks, as determined by the operating system."
-login,"A combination of a user's identification and password used to enter a computer, program, network, etc.",/ˈlɒɡ.ɪn/,l-og-in,noun,I've forgotten my login again.
-logo,A visual symbol or emblem that acts as a trademark or a means of identification of a company or organization.,/ˈləʊɡəʊ/,l-og-o,noun,
-loudly,In a loud manner; at a high volume.,/ˈlaʊdli/,l-oudl-y,adverb,He spoke loudly so that his brother could hear him from across the street.
-lounge,"A waiting room in an office, airport etc.",/laʊndʒ/,l-oung-e,noun,
-loyal,Having or demonstrating undivided and constant support for someone or something.,/ˈlɔɪəl/,l-oyal,adjective,
-loyalty,The state of being loyal; fidelity.,/ˈlɔɪəlti/,l-oyalt-y,noun,
-luggage,The bags and other containers that hold a traveller's belongings.,/ˈlʌɡɪd͡ʒ/,l-ugg-ag-e,noun,
-luncheon,A formal meal served in the middle of the day.,/ˈlʌntʃ.ən/,l-unch-eon,noun,
-lunchtime,The time or hour at or around which lunch is normally eaten.,/ˈlʌnt͡ʃtaɪm/,l-uncht-im-e,noun,"It's almost lunchtime, so I think I'll finish up later this afternoon."
-ma'am,"To address (someone) using ""ma'am"".",/mæm/,m-a'am,verb,"Later, Mrs Grey was sitting in her favourite tea shop. “Would madam like the usual cream cakes and patisserie with her tea?” the waitress asked."
-machinery,"The machines constituting a production apparatus, in a plant etc., collectively.",/məˈʃiːnəɹi/,m-ach-in-er-y,noun,
-malfunction,Faulty functioning,/ˌmælˈfʌŋk.ʃən/,m-alf-unct-ion,noun,"She told him the machine was poorly built, but they both knew that she was the one who had malfunctioned."
-mall,"A pedestrianised street, especially a shopping precinct.",/mɔːl/,m-all,noun,
-managerial,Of or relating to a manager or management; involving management-like duties.,,m-an-ag-er-ial,adjective,
-mandatory,"A sign or line that require the path of the disc to be above, below or to one side of it.",/ˈmæn.də.t(ə)ɹi/,m-and-at-or-y,noun,Attendance at a school is usually mandatory for children.
-manual,A handbook.,/ˈman.j(ʊ)əl/,m-an-ual,noun,The dishwasher isn't working; can you remember where we put the manual?
-mask,"A cover, or partial cover, for the face, used for disguise or protection.",/mæsk/,m-ask,noun,a dancer's mask; a fencer's mask; a ball player's mask
-massage,"The action of rubbing, kneading or hitting someone's body, to help the person relax, prepare for muscular action (as in contact sports) or to relieve aches.",/ˈmæsɑːʒ/,m-ass-ag-e,noun,Having a massage can have many beneficial effects.
-maximize,To make as large as possible,,m-ax-im-iz-e,verb,
-meaningful,"Having meaning, significant.",/ˈminɪŋfʊl/,m-ean-ingf-ul,adjective,I think we made a meaningful contribution to this project today.
-meantime,The time spent waiting for another event; time in between.,/ˈmiːntaɪm/,m-eant-im-e,noun,"I'll get started tomorrow but, in the meantime, let's see if we can get a few more opinions."
-mechanic,A manual worker; a labourer or artisan.,/məˈkænɪk/,m-ech-an-ic,noun,This game has a mechanic where if you run toward a ledge you automatically jump off rather than just falling.
-mechanical,Manually created layout of artwork that is camera ready for photographic reproduction.,/mɪˈkanɪk(ə)l/,m-ech-an-ic-al,noun,mechanical engineering
-media,The middle layer of the wall of a blood vessel or lymph vessel which is composed of connective and muscular tissue.,/ˈmiːdɪə/,m-ed-ia,noun,
-medication,"A medicine, or all the medicines regularly taken by a patient.",/mɛdɪˈkeɪʃən/,m-ed-ic-at-ion,noun,
-memo,A short note; a memorandum.,/ˈmɛməʊ̯/,m-em-o,noun,I made sure to memo him about the client's complaints.
-memorandum,A short note serving as a reminder.,,m-em-or-and-um,noun,
-memorize,"To learn by heart, commit to memory.",/ˈmɛm.əɹˌaɪ̯z/,m-em-or-iz-e,verb,
-mentor,A wise and trusted counselor or teacher,/ˈmɛn.tɔː/,m-ent-or,noun,
-merchandise,Commodities offered for sale.,/ˈmɜːtʃənˌdaɪs/,m-erch-and-is-e,noun,good business depends on having good merchandise
-merchant,A person who traffics in commodities for profit.,/ˈmɜːtʃənt/,m-erch-ant,noun,a merchanting service
-merge,The joining together of multiple sources.,/mɜːdʒ/,m-erg-e,noun,The merge of the two documents failed.
-merger,One that merges.,/ˈmɜːdʒə/,m-erg-er,noun,
-merit,A claim to commendation or a reward.,/ˈmɛɹət/,m-er-it,noun,"For her good performance in the examination, her teacher gave her ten merits."
-messenger,One who brings messages.,/ˈmɛs.n̩.d͡ʒə/,m-ess-eng-er,noun,I'll messenger over the signed documents.
-
+lobby,"로비",/lɒbi/,l-obb-y,noun,"'lobby'는 호텔, 극장, 사무실 건물 등의 입구에 위치한 넓은 휴게 공간인 '로비'를 의미합니다. 동사로는 정치적인 목적으로 의원 등에게 '로비를 하다'라는 의미로도 쓰입니다."
+locally,"현지에서, 그 지역에서",,l-oc-all-y,adverb,"'locally'는 특정 지역이나 동네 안에서, 즉 '현지에서' 또는 '그 지역 내에서'라는 의미를 가진 부사입니다."
+locker,"사물함",,l-ock-er,noun,"'locker'는 학교, 헬스장, 수영장 등에서 개인 물품을 안전하게 보관할 수 있도록 잠금장치가 달린 '사물함'을 의미합니다."
+logical,"논리적인",/ˈlɒdʒɪkəɫ/,l-og-ic-al,adjective,"'logical'은 생각이나 주장이 이치에 맞고 합리적인, 즉 '논리적인' 상태를 묘사하는 형용사입니다."
+login,"로그인",/ˈlɒɡ.ɪn/,l-og-in,noun,"'login'은 컴퓨터 시스템이나 웹사이트에 접속하기 위해 사용자 아이디와 비밀번호를 입력하는 행위 또는 그 정보를 의미합니다."
+logo,"로고",/ˈləʊɡəʊ/,l-og-o,noun,"'logo'는 회사, 단체, 상품 등을 알아볼 수 있도록 독특하게 디자인된 상징적인 기호나 글자, 즉 '로고'를 의미합니다."
+loudly,"큰 소리로",/ˈlaʊdli/,l-oudl-y,adverb,"'loudly'는 다른 사람이 쉽게 들을 수 있을 만큼 '소리를 크게 하여'라는 의미의 부사입니다."
+lounge,"라운지, 휴게실",/laʊndʒ/,l-oung-e,noun,"'lounge'는 공항, 호텔, 사무실 등에서 사람들이 편안하게 앉아 쉴 수 있도록 마련된 공간, 즉 '라운지'나 '휴게실'을 의미합니다."
+loyal,"충성스러운, 의리 있는",/ˈlɔɪəl/,l-oyal,adjective,"'loyal'은 어떤 사람, 단체, 국가 등에 대해 변함없는 지지와 믿음을 보이는, 즉 '충성스러운' 또는 '의리 있는' 태도를 묘사하는 형용사입니다."
+loyalty,"충성심, 의리",/ˈlɔɪəlti/,l-oyalt-y,noun,"'loyalty'는 충성스러운 마음이나 상태, 즉 '충성심' 또는 '신의'를 의미하는 명사입니다."
+luggage,"수하물, 짐",/ˈlʌɡɪd͡ʒ/,l-ugg-ag-e,noun,"'luggage'는 여행할 때 가지고 가는 가방이나 짐을 총칭하는 단어, 즉 '수하물'을 의미하는 셀 수 없는 명사입니다. 'baggage'와 거의 같은 의미입니다."
+luncheon,"오찬",/ˈlʌntʃ.ən/,l-unch-eon,noun,"'luncheon'은 점심 식사를 뜻하는 'lunch'의 격식 있는 표현으로, 주로 공식적인 모임이나 행사에서 제공되는 '오찬'을 의미합니다."
+lunchtime,"점심시간",/ˈlʌnt͡ʃtaɪm/,l-uncht-im-e,noun,"'lunchtime'은 점심을 먹는 시간대, 즉 '점심시간'을 의미합니다."
+ma'am,"부인 (madam의 줄임말)",/mæm/,m-a'am,noun,"'ma'am'은 'madam'의 줄임말로, 잘 모르는 손윗 여성이나 손님을 정중하게 부를 때 사용하는 호칭입니다."
+machinery,"기계류",/məˈʃiːnəɹi/,m-ach-in-er-y,noun,"'machinery'는 공장 등에서 사용되는 여러 종류의 기계들을 통틀어 이르는 말, 즉 '기계류'를 의미하는 셀 수 없는 명사입니다."
+malfunction,"오작동, 기능 불량",/ˌmælˈfʌŋk.ʃən/,m-alf-unct-ion,noun,"'malfunction'은 기계나 시스템이 제대로 작동하지 않는 것, 즉 '오작동'이나 '기능 불량'을 의미하는 명사입니다. 동사로도 쓰입니다."
+mall,"쇼핑몰",/mɔːl/,m-all,noun,"'mall'은 다양한 상점, 식당, 영화관 등이 한 건물 안에 모여 있는 대형 복합 쇼핑 공간, 즉 '쇼핑몰'을 의미합니다."
+managerial,"관리의, 경영의",,m-an-ag-er-ial,adjective,"'managerial'은 관리자(manager)나 경영(management)과 관련된 역할을 나타내는 형용사입니다. (예: managerial skills - 관리 능력)"
+mandatory,"의무적인",/ˈmæn.də.t(ə)ɹi/,m-and-at-or-y,adjective,"'mandatory'는 법이나 규정에 의해 반드시 따라야 하는, 즉 '의무적인' 또는 '필수적인'이라는 의미의 형용사입니다."
+manual,"설명서; 수동의",/ˈman.j(ʊ)əl/,m-an-ual,noun,"'manual'은 기계나 제품의 사용 방법을 설명해 놓은 책자인 '사용 설명서'를 의미하는 명사와, 기계를 손으로 직접 조작하는 '수동의'라는 의미의 형용사로 쓰입니다."
+mask,"마스크, 가면",/mæsk/,m-ask,noun,"'mask'는 위생, 보호, 변장 등의 목적으로 얼굴의 일부나 전체를 가리는 '마스크' 또는 '가면'을 의미합니다."
+massage,"마사지",/ˈmæsɑːʒ/,m-ass-ag-e,noun,"'massage'는 피로를 풀거나 통증을 완화하기 위해 몸을 주무르거나 두드리는 행위, 즉 '마사지' 또는 '안마'를 의미합니다."
+maximize,"극대화하다",,m-ax-im-iz-e,verb,"'maximize'는 이익, 효율, 가능성 등을 가능한 한 가장 큰 수준으로 만드는 것, 즉 '극대화하다'라는 의미의 동사입니다."
+meaningful,"의미 있는",/ˈminɪŋfʊl/,m-ean-ingf-ul,adjective,"'meaningful'은 중요하거나 가치가 있어 특별한 '의미가 있는' 관계, 경험, 대화 등을 묘사하는 형용사입니다."
+meantime,"그 동안",/ˈmiːntaɪm/,m-eant-im-e,adverb,"'meantime'은 단독으로 쓰이기보다는 주로 'in the meantime'의 형태로, 어떤 일이 일어나기를 기다리는 '그 동안에'라는 의미를 나타냅니다."
+mechanic,"정비사",/məˈkænɪk/,m-ech-an-ic,noun,"'mechanic'은 자동차나 기계를 수리하고 유지 보수하는 일을 전문으로 하는 사람, 즉 '기계공'이나 '정비사'를 의미합니다."
+mechanical,"기계적인, 기계의",/mɪˈkanɪk(ə)l/,m-ech-an-ic-al,adjective,"'mechanical'은 기계 장치와 관련되거나 기계로 작동하는, 즉 '기계의' 또는 '기계적인'이라는 의미의 형용사입니다."
+media,"대중 매체 (medium의 복수형)",/ˈmiːdɪə/,m-ed-ia,noun,"'media'는 신문, 텔레비전, 라디오, 인터넷과 같이 많은 사람들에게 정보를 전달하는 수단, 즉 '대중 매체'를 의미합니다. 'medium'의 복수형이지만 보통 단수 취급하기도 합니다."
+medication,"약, 약물",/mɛdɪˈkeɪʃən/,m-ed-ic-at-ion,noun,"'medication'은 질병을 치료하거나 증상을 완화하기 위해 사용하는 '약'이나 '약물'을 총칭하는 단어입니다."
+memo,"메모",/ˈmɛməʊ̯/,m-em-o,noun,"'memo'는 'memorandum'의 줄임말로, 주로 회사 내에서 간단한 정보를 전달하기 위해 작성하는 짧은 글, 즉 '메모'를 의미합니다."
+memorandum,"메모, 각서",,m-em-or-and-um,noun,"'memorandum'은 기억을 돕거나 정보를 전달하기 위한 짧은 기록, 즉 '메모'나, 법적인 합의 내용을 담은 '각서'를 의미하는 공식적인 단어입니다."
+memorize,"암기하다, 외우다",/ˈmɛm.əɹˌaɪ̯z/,m-em-or-iz-e,verb,"'memorize'는 정보나 내용을 잊지 않도록 의식적으로 노력하여 머릿속에 넣는 것, 즉 '암기하다' 또는 '외우다'라는 의미의 동사입니다."
+mentor,"멘토, 스승",/ˈmɛn.tɔː/,m-ent-or,noun,"'mentor'는 자신의 경험과 지혜를 바탕으로 다른 사람, 특히 후배에게 조언과 지도를 해주는 믿음직한 조력자, 즉 '멘토'를 의미합니다."
+merchandise,"상품",/ˈmɜːtʃənˌdaɪs/,m-erch-and-is-e,noun,"'merchandise'는 상점에서 판매를 목적으로 진열해 놓은 '상품'이나 '물품'을 총칭하는 셀 수 없는 명사입니다. 'goods'와 유사한 의미입니다."
+merchant,"상인",/ˈmɜːtʃənt/,m-erch-ant,noun,"'merchant'는 물건을 대량으로 사서 다른 사람에게 판매하여 이익을 얻는 사람, 즉 '상인'을 의미합니다. 특히 과거의 무역상을 가리킬 때 자주 쓰입니다."
+merge,"합병하다, 합치다",/mɜːdʒ/,m-erg-e,verb,"'merge'는 두 개 이상의 회사나 조직이 하나로 합쳐지는 것, 즉 '합병하다'라는 의미와, 여러 갈래의 길이나 정보 등이 하나로 '합쳐지다'는 의미로 사용됩니다."
+merger,"(기업) 합병",/ˈmɜːdʒə/,m-erg-er,noun,"'merger'는 둘 이상의 회사가 하나로 합쳐지는 것, 즉 '(기업) 합병'을 의미하는 명사입니다."
+merit,"장점, 가치",/ˈmɛɹət/,m-er-it,noun,"'merit'는 칭찬이나 보상을 받을 만한 '훌륭함'이나 '가치', '장점'을 의미하는 명사입니다."
+messenger,"메신저, 배달원",/ˈmɛs.n̩.d͡ʒə/,m-ess-eng-er,noun,"'messenger'는 메시지, 편지, 소포 등을 직접 전달하는 사람, 즉 '배달원'을 의미하며, 온라인 '메신저' 프로그램을 뜻하기도 합니다."

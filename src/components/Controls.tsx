@@ -57,7 +57,7 @@ const Controls: FC<ControlsProps> = ({
       {/* 중앙 컨트롤 버튼들 */}
       <div className="controls__main">
         <button type="button" onClick={onReset} disabled={isResetDisabled} className="controls__button">
-          {isLoading ? "로딩중..." : "리셋"}
+          {isLoading ? "로딩중..." : "학습내용초기화"}
         </button>
         <button type="button" onClick={onNext} disabled={isNextDisabled} className="controls__button controls__button--primary">
           다음 단어

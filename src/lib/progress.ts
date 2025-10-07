@@ -8,6 +8,7 @@ const defaultStat: DayStat = {
   lastIndex: 0,
   completedDates: [],
   wrongSet: [],
+    reviewCount: 0,  // ⭐ 추가
 }
 
 type ProgressState = Record<string, DayStat>
@@ -48,6 +49,7 @@ function normalizeStat(stat?: DayStat): DayStat {
     lastIndex: stat.lastIndex ?? 0,
     completedDates: Array.isArray(stat.completedDates) ? [...new Set(stat.completedDates)] : [],
     wrongSet: Array.isArray(stat.wrongSet) ? [...new Set(stat.wrongSet)] : [],
+      reviewCount: stat.reviewCount ?? 0,  // ⭐ 추가
   }
 }
 
@@ -101,5 +103,13 @@ export function resetDay(dayId: string, options: { keepWrongSet?: boolean } = {}
     completedDates: current.completedDates,
     wrongSet,
   }
+  writeState(state)
+}
+
+export function incrementReviewCount(dayId: string) {
+  const state = readState()
+  const stat = normalizeStat(state[dayId])
+  stat.reviewCount += 1
+  state[dayId] = stat
   writeState(state)
 }

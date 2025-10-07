@@ -18,6 +18,7 @@ import {
   markAnswer,
   markDayCompleted,
   resetDay,
+    incrementReviewCount,  // ⭐ 추가
 } from "../lib/progress"
 import { getCustomWords, updateCustomWord } from "../lib/customWords"
 import { getCompletedWords } from "../lib/completedWords"
@@ -91,10 +92,19 @@ const Game = () => {
   const [addWordDayId, setAddWordDayId] = useState<string | null>(null)
 
   // View 핸들러들
-  const handleDaySelect = (dayId: string) => {
-    setSelectedDayId(dayId)
-    setView("game")
+const handleDaySelect = (dayId: string) => {
+  const stat = getStat(dayId)
+  const today = new Date().toISOString().slice(0, 10)
+  const isCompletedToday = stat.completedDates.includes(today)
+  
+  setSelectedDayId(dayId)
+  setView("game")
+  
+  // 완료된 Day는 복습 모드로 시작
+  if (isCompletedToday) {
+    void initializeDay(dayId, mode, true)  // ⭐ 복습 모드로 시작
   }
+}
   
   const handleBackToWordbook = () => {
     setView("wordbook")
@@ -303,27 +313,29 @@ const Game = () => {
     wordsError,
   ])
 
-  const initializeDay = useCallback(
-    async (dayId: string, selectedMode: PracticeMode) => {
-      resetScoreboard()
-      setIsReviewMode(false)
-      setShowCompletionModal(false)
-      setShowReviewChoiceModal(false)
-      setIsLoadingWords(true)
-      setWordsError(null)
+const initializeDay = useCallback(
+  async (dayId: string, selectedMode: PracticeMode, isReviewSession: boolean = false) => {
+    resetScoreboard()
+    setIsReviewMode(isReviewSession)  // ⭐ 복습 모드 설정
+    setShowCompletionModal(false)
+    setShowReviewChoiceModal(false)
+    setIsLoadingWords(true)
+    setWordsError(null)
+    
+    try {
+      const loaded = await loadDays([dayId], selectedMode)
+      if (!loaded.length) {
+        setBaseWords([])
+        setSessionWords([])
+        setWordsError("선택한 Day에 단어가 없습니다.")
+        return
+      }
       
-      try {
-        const loaded = await loadDays([dayId], selectedMode)
-        if (!loaded.length) {
-          setBaseWords([])
-          setSessionWords([])
-          setWordsError("선택한 Day에 단어가 없습니다.")
-          return
-        }
-        
-        // 학습 완료된 단어 필터링
+      // 복습 모드가 아닐 때만 완료된 단어 필터링
+      let filteredWords = loaded
+      if (!isReviewSession) {
         const completedWords = getCompletedWords(dayId)
-        const filteredWords = loaded.filter(word => !completedWords.includes(word.word))
+        filteredWords = loaded.filter(word => !completedWords.includes(word.word))
         
         if (filteredWords.length === 0) {
           setBaseWords(loaded)
@@ -331,28 +343,34 @@ const Game = () => {
           setWordsError("모든 단어를 학습 완료했습니다! 🎉\n완료 체크를 해제하거나 새로운 단어를 추가하세요.")
           return
         }
-        
-        setBaseWords(loaded)
-        setSessionWords(filteredWords)
-        const stat = getStat(dayId)
-        setCurrentStat(stat)
-        setProgressKey((value) => value + 1)
-        const startIndex = selectedMode === "sequence" 
-          ? Math.min(stat.lastIndex, Math.max(filteredWords.length - 1, 0)) 
-          : 0
-        setQueueIndex(startIndex)
-        setAutoStartPending(true)
-      } catch (error) {
-        const message = error instanceof Error ? error.message : "단어를 불러오지 못했습니다."
-        setBaseWords([])
-        setSessionWords([])
-        setWordsError(message)
-      } finally {
-        setIsLoadingWords(false)
       }
-    },
-    [resetScoreboard]
-  )
+      
+      setBaseWords(loaded)
+      setSessionWords(filteredWords)
+      const stat = getStat(dayId)
+      setCurrentStat(stat)
+      setProgressKey((value) => value + 1)
+      
+      // 복습 모드면 항상 0부터, 아니면 기존 로직
+      const startIndex = isReviewSession 
+        ? 0 
+        : (selectedMode === "sequence" 
+            ? Math.min(stat.lastIndex, Math.max(filteredWords.length - 1, 0)) 
+            : 0)
+      
+      setQueueIndex(startIndex)
+      setAutoStartPending(true)
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "단어를 불러오지 못했습니다."
+      setBaseWords([])
+      setSessionWords([])
+      setWordsError(message)
+    } finally {
+      setIsLoadingWords(false)
+    }
+  },
+  [resetScoreboard]
+)
 
   // 복습 로직 Hook
   const { beginReview, finalizeReview } = useReview(
@@ -457,91 +475,108 @@ const Game = () => {
     })
   }, [clearTimedMode, startTimedMode])
 
-  const handleSessionComplete = useCallback(() => {
-    clearElapsedTicker()
-    clearTimedMode()
-    clearAutoAdvance()
-    isRunningRef.current = false
-    setIsRunning(false)
-    if (!selectedDayId) return
-    
-    if (isReviewMode) {
-      setShowReviewChoiceModal(true)
-      setIsReviewMode(false)
-      refreshStat(selectedDayId)
-      return
-    }
-    
-    if (mode === "sequence") {
-      markDayCompleted(selectedDayId)
-      refreshStat(selectedDayId)
-      setShowCompletionModal(true)
-    }
-  }, [
-    clearAutoAdvance,
-    clearElapsedTicker,
-    clearTimedMode,
-    isReviewMode,
-    mode,
-    refreshStat,
-    selectedDayId,
-  ])
+const handleSessionComplete = useCallback(() => {
+  clearElapsedTicker()
+  clearTimedMode()
+  clearAutoAdvance()
+  isRunningRef.current = false
+  setIsRunning(false)
+  if (!selectedDayId) return
+  
+  // 복습 모드 완료 처리
+  if (isReviewMode) {
+    incrementReviewCount(selectedDayId)  // ⭐ 복습 횟수 증가
+    refreshStat(selectedDayId)
+    setShowCompletionModal(true)  // 완료 모달 표시
+    setIsReviewMode(false)
+    return
+  }
+  
+  // 일반 모드 완료 처리
+  if (mode === "sequence") {
+    markDayCompleted(selectedDayId)
+    refreshStat(selectedDayId)
+    setShowCompletionModal(true)
+  }
+}, [
+  clearAutoAdvance,
+  clearElapsedTicker,
+  clearTimedMode,
+  isReviewMode,
+  mode,
+  refreshStat,
+  selectedDayId,
+])
 
-  const handleNext = useCallback(() => {
-    if (sessionWords.length === 0) return
-    if (queueIndex + 1 >= sessionWords.length) {
+ const handleNext = useCallback(() => {
+  if (sessionWords.length === 0) return
+  
+  // 마지막 단어인 경우
+  if (queueIndex + 1 >= sessionWords.length) {
+    // 복습 모드가 아니고 sequence 모드면 완료 처리
+    if (!isReviewMode && mode === "sequence") {
       handleSessionComplete()
       return
     }
+    // 그 외의 경우는 첫 단어로 순환
     setTypedValue("")
     clearAutoAdvance()
-    setQueueIndex(queueIndex + 1)
-  }, [clearAutoAdvance, handleSessionComplete, queueIndex, sessionWords.length])
+    setQueueIndex(0)
+    return
+  }
+  
+  setTypedValue("")
+  clearAutoAdvance()
+  setQueueIndex(queueIndex + 1)
+}, [clearAutoAdvance, handleSessionComplete, isReviewMode, mode, queueIndex, sessionWords.length])
 
-  const handleCorrectWord = useCallback(() => {
-    const current = sessionWords[queueIndex]
-    if (!current || !selectedDayId) return
-    
-    clearAutoAdvance()
-    
-    if (isInteracted) {
-      pronounceWord(current.word).catch(() => {})
+const handleCorrectWord = useCallback(() => {
+  const current = sessionWords[queueIndex]
+  if (!current || !selectedDayId) return
+  
+  clearAutoAdvance()
+  
+  if (isInteracted) {
+    pronounceWord(current.word).catch(() => {})
+  }
+  
+  setScore((previous) => previous + 10 + streak * 2)
+  setStreak((previous) => {
+    const next = previous + 1
+    setMaxStreak((maxValue) => Math.max(maxValue, next))
+    return next
+  })
+  
+  const nextProgressIndex = !isReviewMode && mode === "sequence"
+    ? Math.min(current.orderIndex + 1, baseWords.length)
+    : currentStat.lastIndex
+  
+  markAnswer(selectedDayId, current.word, true, nextProgressIndex)
+  refreshStat(selectedDayId)
+  
+  // ⭐⭐⭐ 이 줄을 추가하세요 ⭐⭐⭐
+  setTypedValue("")
+  
+  autoAdvanceRef.current = window.setTimeout(() => {
+    if (isRunningRef.current) {
+      handleNext()
     }
-    
-    setScore((previous) => previous + 10 + streak * 2)
-    setStreak((previous) => {
-      const next = previous + 1
-      setMaxStreak((maxValue) => Math.max(maxValue, next))
-      return next
-    })
-    
-    const nextProgressIndex = !isReviewMode && mode === "sequence"
-      ? Math.min(current.orderIndex + 1, baseWords.length)
-      : currentStat.lastIndex
-    
-    markAnswer(selectedDayId, current.word, true, nextProgressIndex)
-    refreshStat(selectedDayId)
-    
-    autoAdvanceRef.current = window.setTimeout(() => {
-      if (isRunningRef.current) {
-        handleNext()
-      }
-    }, AUTO_ADVANCE_DELAY_MS)
-  }, [
-    baseWords.length,
-    clearAutoAdvance,
-    currentStat.lastIndex,
-    handleNext,
-    isInteracted,
-    isReviewMode,
-    mode,
-    pronounceWord,
-    queueIndex,
-    refreshStat,
-    selectedDayId,
-    sessionWords,
-    streak,
-  ])
+  }, AUTO_ADVANCE_DELAY_MS)
+}, [
+  baseWords.length,
+  clearAutoAdvance,
+  currentStat.lastIndex,
+  handleNext,
+  isInteracted,
+  isReviewMode,
+  mode,
+  pronounceWord,
+  queueIndex,
+  refreshStat,
+  selectedDayId,
+  sessionWords,
+  streak,
+])
 
   const handleIncorrectAttempt = useCallback(() => {
     const current = sessionWords[queueIndex]
@@ -583,12 +618,40 @@ const Game = () => {
     void initializeDay(selectedDayId, mode)
   }, [initializeDay, mode, selectedDayId])
 
-  const handleReset = useCallback(() => {
-    if (!selectedDayId) return
-    resetDay(selectedDayId)
-    refreshStat(selectedDayId)
-    void initializeDay(selectedDayId, mode)
-  }, [initializeDay, mode, refreshStat, selectedDayId])
+ const handleRetryFromCompletion = useCallback(() => {
+  if (!selectedDayId) return
+  setShowCompletionModal(false)
+  setTypedValue("")
+  setQueueIndex(0)
+  resetScoreboard()
+  setTimeout(() => {
+    handleStart()
+  }, 100)
+}, [selectedDayId, resetScoreboard, handleStart])
+
+
+const handleCloseCompletion = useCallback(() => {
+  setShowCompletionModal(false)
+  setView("wordbook")  // 단어집으로 돌아가기
+}, [])
+
+
+const handleReset = useCallback(() => {
+  if (!selectedDayId) return
+  
+  // 학습 진행 상황만 초기화 (편집 내용은 유지)
+  resetDay(selectedDayId)
+  refreshStat(selectedDayId)
+  
+  // 현재 세션만 초기화
+  setTypedValue("")
+  setQueueIndex(0)
+  resetScoreboard()
+  
+  // 단어 목록 다시 로드 (편집된 내용이 반영된 상태로)
+  void initializeDay(selectedDayId, mode, isReviewMode)
+}, [initializeDay, mode, refreshStat, selectedDayId, isReviewMode, resetScoreboard])
+
 
   const closeSummary = useCallback(() => {
     setSummary(null)
@@ -698,17 +761,18 @@ const Game = () => {
               />
             )}
 
-            <GameModals
-              summary={summary}
-              onCloseSummary={closeSummary}
-              onRestartFromSummary={restartFromSummary}
-              showCompletionModal={showCompletionModal}
-              currentStat={currentStat}
-              onCloseCompletion={() => setShowCompletionModal(false)}
-              onBeginReview={beginReview}
-              showReviewChoiceModal={showReviewChoiceModal}
-              onFinalizeReview={finalizeReview}
-            />
+           <GameModals
+  summary={summary}
+  onCloseSummary={closeSummary}
+  onRestartFromSummary={restartFromSummary}
+  showCompletionModal={showCompletionModal}
+  currentStat={currentStat}
+  onCloseCompletion={handleCloseCompletion}  // ← 수정
+  onBeginReview={beginReview}
+  onRetryFromCompletion={handleRetryFromCompletion}
+  showReviewChoiceModal={showReviewChoiceModal}
+  onFinalizeReview={finalizeReview}
+/>
           </div>
         </div>
       )}
