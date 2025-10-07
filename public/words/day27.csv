@@ -1,24 +1,45 @@
 word,meaning,pronunciation,syllables,partOfSpeech,example
-accommodate,"To render fit, suitable, or correspondent; to adapt.",/??k?m??det/,acc-omm-od-at-e,verb,to accommodate ourselves to circumstances
-participate,"To join in, to take part, to involve oneself (in something).",/p???tspet/,p-art-ic-ip-at-e,verb,
-require,To ask (someone) for something; to request.,/?kwa?/,r-eq-uir-e,verb,
-provide,To make a living; earn money for necessities.,/p??vad/,pr-ov-id-e,verb,It is difficult to provide for my family working on minimum wage.
-ensure,"To make a pledge to (someone); to promise, guarantee (someone of something); to assure.",/n????/,ens-ur-e,verb,I use an alarm clock to ensure that I get up on time.
-consider,To think about seriously.,/k?n?sd?/,c-ons-id-er,verb,Consider that we?셶e had three major events and the year has hardly begun.
-offer,A proposal that has been made.,/??f?/,off-er,noun,I decline your offer to contract.
-recommend,"To bestow commendation on; to represent favourably; to suggest, endorse or encourage as an appropriate choice.",/?k??m?nd/,r-ec-omm-end,verb,"The board recommends Philips, given his ample experience in similar positions."
-allow,"To grant, give, admit, accord, afford, or yield; to let one have.",/??la?/,all-ow,verb,to allow a servant his liberty;혻 to allow a free passage;혻 to allow one day for rest
-audit,A judicial examination.,/??.dt/,aud-it,noun,National Assembly audit
-client,"A customer, a buyer or receiver of goods or services.",/?kl??nt/,cl-ient,noun,
-achieve,"To succeed in something, now especially in academic performance.",/??t?i?v/,ach-iev-e,verb,Show all the spoils by valiant kings achieved.
-allocate,To set aside for a purpose.,/?챈l.?.ket/,all-oc-at-e,verb,The bulk of K??2 education funds are allocated to school districts that in turn pay for the cost of operating schools.
-assemble,To put together.,/??s?mbl揭/,ass-embl-e,verb,He assembled the model ship.
-candidate,A person who is running in an election.,/?k챈n.dd?t/,c-and-id-at-e,noun,
-comprehensive,A comprehensive school.,/?k?m.p?h?n.sv/,c-ompr-eh-ens-iv-e,noun,"When there are diametrically opposing views on a big issue that concerns millions of people, doing comprehensive research just makes sense."
-contribute,To give something that is or becomes part of a larger whole.,/k?n?t(?)b.ju?t/,c-ontr-ib-ut-e,verb,to contribute articles to a journal
-deficit,Deficiency in amount or quality; a falling short; lack.,/?d?fst/,d-ef-ic-it,noun,
-invoice,"A bill; a commercial document issued by a seller to a buyer indicating the products, quantities and agreed prices for products or services that the seller has already provided the buyer with. An invoice indicates that, unless paid in advance, payment is due by the buyer to the seller, according to the agreed terms.",/?n?v?s/,inv-oic-e,noun,The merchant receives a large invoice of goods.
-productive,"Capable of producing something, especially in abundance; fertile.",/p??d?ktv/,pr-od-uct-iv-e,adjective,a productive set
-revenue,The income returned by an investment.,/??v?nju?/,r-ev-en-ue,noun,
-substantial,Anything having substance; an essential part.,/s?b?st챈n??l/,s-ubst-ant-ial,noun,substantial life
+trademark,"A word, symbol, or phrase used to identify a particular company's product and differentiate it from other companies' products.",/ˈtɹeɪdmɑː(ɹ)k/,tr-ad-em-ark,noun,
+traditionally,In a traditional manner.,/tɹəˈdɪʃənli/,tr-ad-it-ion-all-y,adverb,
+trainee,Someone who is still in the process of being formally trained in a workplace.,/tɹeɪˈni/,tr-ain-ee,noun,
+trainer,A person who trains another; a coach.,/ˈtɹeɪnə/,tr-ain-er,noun,
+transaction,"The act of conducting or carrying out (business, negotiations, plans).",/tɹænˈzækʃən/,tr-ans-act-ion,noun,The transaction was made on Friday with the supplier.
+transit,"The act of passing over, across, or through something.",/ˈtɹæn.sɪt/,tr-ans-it,noun,the transit of goods through a country
+translation,"The act of translating, in its various senses:",/tɹæns-/,tr-ansl-at-ion,noun,
+translator,"A person who translates text, film or other material into a different natural language.",/ˈtɹanzleɪtə/,tr-ansl-at-or,noun,
+transmission,"The act of transmitting, e.g. data or electric power.",/tɹænsˈmɪʃən/,tr-ansm-iss-ion,noun,
+transmit,"To send or convey something from one person, place or thing to another.",/tɹænsˈmɪt/,tr-ansm-it,verb,
+trash,Useless things to be discarded; rubbish; refuse.,/tɹæʃ/,tr-ash,noun,I am Harry Potter trash.
+traveler,"A member of a particular nomadic ethnic minority in Ireland, the Pavee.",/ˈtɹæv.l̩.ɚ/,tr-av-el-er,noun,
+tray,"A small, typically rectangular or round, flat, and rigid object upon which things are carried.",/tɹeɪ/,tr-ay,noun,I carefully arranged the dishes on the tray and brought it upstairs.
+tremendous,Awe-inspiring; terrific.,/tɹəˈmɛndəs/,tr-em-end-ous,adjective,Van Beethoven's ninth symphony is a tremendous piece of music.
+tropical,A tropical plant.,,tr-op-ic-al,noun,tropical fruit
+tuition,"A sum of money paid for instruction (such as in a high school, boarding school, university, or college).",/ˈtjuːʃən/,t-uit-ion,noun,"These rosemaling workshops are no place for anyone who wants to pester me or the students with the ""white privilege"" card, inter alia. Therefore, I reserve the right to refund the tuition of such men and women, kick them out the door, and bar them from at least two of my future events."
+tuna,Any of several species of fish of the genus Thunnus in the family Scombridae.,/ˈtjuː.nə/,t-un-a,noun,
+tunnel,An underground or underwater passage.,/ˈtʌn(ə)l/,t-unn-el,noun,
+turnover,The amount of money taken as sales transacted in a given period.,,t-urn-ov-er,noun,"The company had an annual turnover of $500,000."
+umbrella,Cloth-covered frame used for protection against rain or sun.,/ʌmˈbɹɛlə/,umbr-ell-a,noun,"Quick, grab that umbrella before you get rained on!"
+unattended,Not attended; without persons present.,,un-att-end-ed,adjective,System administrators may schedule an unattended installation of the software.
+unauthorize,,,un-auth-or-iz-e,,
+unavailable,(history) A communist who operated underground and was therefore not available for a political leadership position.,,un-av-ail-abl-e,noun,"A cold, reserved man, he was seen as emotionally unavailable."
+uncomfortable,Not comfortable; causing discomfort.,/ʌnˈkʌm.fə.tə.bəl/,unc-omf-ort-abl-e,adjective,The class squirmed and fidgeted in the uncomfortable new chairs.
+underground,"An underground railway, especially for mass transit of people in urban areas.",/ˈʌndəɡɹaʊnd/,und-ergr-ound,noun,the French underground during World War II
+underline,A line placed underneath a piece of text in order to provide emphasis or to indicate that it should be viewed in italics or (in electronic documents) that it acts as a hyperlink.,/ˈʌndəˌlaɪn/,und-erl-in-e,noun,underline the important words in the text
+underway,"A road, track, path, or street for going under another way or obstacle.",,und-erw-ay,noun,
+unemployed,Unemployed people.,,un-empl-oyed,noun,The unemployed are a growing portion of the population.
+unexpected,"Not expected, anticipated or foreseen.",/ʌnɪkˈspɛktɪd/,un-exp-ect-ed,adjective,
+unfamiliar,An unfamiliar person; a stranger.,/ˌʌnfəˈmɪli.əɹ/,unf-am-il-iar,noun,
+unhappy,An individual who is not happy.,/ʌnˈhæpi/,unh-app-y,noun,An unhappy customer is unlikely to return to your shop.
+unlimited,Limitless or without bounds; unrestricted,/ʌnˈlɪmɪtɪd/,unl-im-it-ed,adjective,
+unload,"To remove the load or cargo from (a vehicle, etc.).",/ʌnˈləʊd/,unl-oad,verb,to unload a ship; to unload a camel
+unnecessary,Not needed or necessary.,/ʌnˈnɛ.sə.s(ə)ɹɪ /,unn-ec-ess-ar-y,adjective,The automatic child-frightener made clowns unnecessary.
+unpaid,Not paid for.,/ʌnˈpeɪd/,unp-aid,adjective,an unpaid bill
+unpleasant,Not pleasant.,/ʌnˈplezənt/,unpl-eas-ant,adjective,
+unplug,"To disconnect from a supply, especially an electrical socket.",/ʌnˈplʌɡ/,unpl-ug,verb,"To save electricity, I unplug my computer when I am not at home."
+unreal,Fake; not real,/ʌnˈɹi.əl/,unr-eal,adjective,I just had an unreal hamburger.
+unreliable,Not reliable.,,unr-el-iabl-e,adjective,
+unspecified,Not specified; not thoroughly explained or detailed; not adequately commented.,/ʌn.ˈspɛ.sɪ.faɪd/,unsp-ec-if-ied,adjective,
+unsure,Uncertain,,uns-ur-e,adjective,I'm still unsure whether to attend the wedding.
+unused,Not used.,/ʌnˈjuːst/,un-us-ed,adjective,I have two unused vouchers for a free meal.
+unusually,In an unusual manner.,/ʌnˈjuːʒuəli/,un-us-uall-y,adverb,
 

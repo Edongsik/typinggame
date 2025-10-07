@@ -1,24 +1,51 @@
 word,meaning,pronunciation,syllables,partOfSpeech,example
-accommodate,"To render fit, suitable, or correspondent; to adapt.",/??k?m??det/,acc-omm-od-at-e,verb,to accommodate ourselves to circumstances
-participate,"To join in, to take part, to involve oneself (in something).",/p???tspet/,p-art-ic-ip-at-e,verb,
-require,To ask (someone) for something; to request.,/?kwa?/,r-eq-uir-e,verb,
-provide,To make a living; earn money for necessities.,/p??vad/,pr-ov-id-e,verb,It is difficult to provide for my family working on minimum wage.
-ensure,"To make a pledge to (someone); to promise, guarantee (someone of something); to assure.",/n????/,ens-ur-e,verb,I use an alarm clock to ensure that I get up on time.
-consider,To think about seriously.,/k?n?sd?/,c-ons-id-er,verb,Consider that we?셶e had three major events and the year has hardly begun.
-offer,A proposal that has been made.,/??f?/,off-er,noun,I decline your offer to contract.
-recommend,"To bestow commendation on; to represent favourably; to suggest, endorse or encourage as an appropriate choice.",/?k??m?nd/,r-ec-omm-end,verb,"The board recommends Philips, given his ample experience in similar positions."
-allow,"To grant, give, admit, accord, afford, or yield; to let one have.",/??la?/,all-ow,verb,to allow a servant his liberty;혻 to allow a free passage;혻 to allow one day for rest
-audit,A judicial examination.,/??.dt/,aud-it,noun,National Assembly audit
-client,"A customer, a buyer or receiver of goods or services.",/?kl??nt/,cl-ient,noun,
-achieve,"To succeed in something, now especially in academic performance.",/??t?i?v/,ach-iev-e,verb,Show all the spoils by valiant kings achieved.
-allocate,To set aside for a purpose.,/?챈l.?.ket/,all-oc-at-e,verb,The bulk of K??2 education funds are allocated to school districts that in turn pay for the cost of operating schools.
-assemble,To put together.,/??s?mbl揭/,ass-embl-e,verb,He assembled the model ship.
-candidate,A person who is running in an election.,/?k챈n.dd?t/,c-and-id-at-e,noun,
-comprehensive,A comprehensive school.,/?k?m.p?h?n.sv/,c-ompr-eh-ens-iv-e,noun,"When there are diametrically opposing views on a big issue that concerns millions of people, doing comprehensive research just makes sense."
-contribute,To give something that is or becomes part of a larger whole.,/k?n?t(?)b.ju?t/,c-ontr-ib-ut-e,verb,to contribute articles to a journal
-deficit,Deficiency in amount or quality; a falling short; lack.,/?d?fst/,d-ef-ic-it,noun,
-invoice,"A bill; a commercial document issued by a seller to a buyer indicating the products, quantities and agreed prices for products or services that the seller has already provided the buyer with. An invoice indicates that, unless paid in advance, payment is due by the buyer to the seller, according to the agreed terms.",/?n?v?s/,inv-oic-e,noun,The merchant receives a large invoice of goods.
-productive,"Capable of producing something, especially in abundance; fertile.",/p??d?ktv/,pr-od-uct-iv-e,adjective,a productive set
-revenue,The income returned by an investment.,/??v?nju?/,r-ev-en-ue,noun,
-substantial,Anything having substance; an essential part.,/s?b?st챈n??l/,s-ubst-ant-ial,noun,substantial life
+cooler,Having a slightly low temperature; mildly or pleasantly cold.,/ˈkuːl.ə(ɹ)/,c-ool-er,adjective,Linen has made cool and breathable clothing for millennia.
+cooperate,"To work or act together, especially for a common purpose or benefit.",/koʊˈɒpəɹeɪt/,c-oop-er-at-e,verb,
+coordinate,"A number representing the position of a point along a line, arc, or similar one-dimensional figure.",,c-oord-in-at-e,noun,Give me your coordinates and we'll come and rescue you.
+coordinator,One who coordinates.,,c-oord-in-at-or,noun,
+copier,A machine that copies graphical material; a duplicator.,/ˈkɒpɪə/,c-op-ier,noun,a file copier; a disk copier
+copyright,"The right by law to be the entity which determines who may publish, copy and distribute a piece of writing, music, picture or other work of authorship.",/ˈkɒpiˌɹaɪt/,c-op-yr-ight,noun,Copyright is a separate legal area from trademarks.
+cord,A harmonic set of three or more notes that is heard as if sounding simultaneously.,/kɔːd/,c-ord,noun,He looped some cord around his fingers.
+cordless,Having no cord; especially using batteries instead of mains electricity,,c-ordl-ess,adjective,
+correction,The act of correcting.,/kəˈɹɛkʃən/,c-orr-ect-ion,noun,"I have four T-80 tanks at grid Three-niner-niner-four-eight-eight, Correction: Grid Three niner-niner-four-eight-five. How copy? Over."
+correctly,In a correct manner.,/kəˈɹɛktli/,c-orr-ectl-y,adverb,
+correspondence,Friendly discussion.,/ˌkɒɹɪˈspɒndəns/,c-orr-esp-ond-enc-e,noun,
+cosmetic,"Any substances applied to enhance the external color or texture of the skin, e.g. lipstick, eyeshadow, eyeliner; makeup.",/kɒzˈmɛtɪk/,c-osm-et-ic,noun,a cosmetic preparation
+costly,Of high cost; expensive.,/ˈkɒst.li/,c-ostl-y,adjective,a costly activity
+costume,"A style of dress, including garments, accessories and hairstyle, especially as characteristic of a particular country, period or people.",/ˈkɒs.tjuːm/,c-ost-um-e,noun,The dancer was wearing Highland costume.
+counselor,"A professional who counsels people, especially on personal problems.",/ˈkaʊnsələ(ɹ)/,c-ouns-el-or,noun,
+countryside,"A rural area, or the rural part of a larger area.",/ˈkʌn.tɹiˌsaɪd/,c-ountr-ys-id-e,noun,We live in the Swedish countryside.
+coupon,"A section of a ticket, showing the holder to be entitled to some specified accommodation or service, as to a passage over a designated line of travel, a particular seat in a theater, a discount, etc.",/ˈkuːˌpɒn/,c-oup-on,noun,Jenna coupons and she goes through three magazines a day to find the coupons.
+courier,A person who looks after and guides tourists,/ˈkʊɹ.ɪə/,c-our-ier,noun,We'll have the contract couriered to you.
+courtesy,Polite behavior.,/ˈkɜːtəsi/,c-ourt-es-y,noun,"He was always known for his grace, kindness, and courtesy to people of every rank."
+coworker,Somebody with whom one works.,,c-ow-ork-er,noun,He heard from a coworker that the company planned to merge those departments.
+crane,"Any bird of the family Gruidae, large birds with long legs and a long neck which is extended during flight.",/kɹeɪn/,cr-an-e,noun,
+creativity,The ability to use imagination to produce a novel idea or product that is useful to society.,/kɹieɪˈtɪvɪti/,cr-eat-iv-it-y,noun,His creativity is unsurpassed by his fellow students in the art class.
+criteria,A single criterion.,/kɹaɪˈtɪəɹ.i.ə/,cr-it-er-ia,noun,"Criterion of choice, of decision, of selection"
+cruise,"A sea or lake voyage, especially one taken for pleasure.",/kɹuːz/,cr-uis-e,noun,Germany cruised to a World Cup victory over the short-handed Australians.
+culinary,Relating to the practice of cookery or the activity of cooking.,/ˈkʌlɪn(ə)ɹi/,c-ul-in-ar-y,adjective,Her culinary skills were excellent.
+cumulative,Incorporating all current and previous data up to the present or at the time of measuring or collating,/ˈkjuːmjʊlətɪv/,c-um-ul-at-iv-e,adjective,
+cushion,"A soft mass of material stuffed into a cloth bag, used for comfort or support; for sitting on, kneeling on, resting one's head on etc.",/ˈkʊʃən/,c-ush-ion,noun,to cushion a sofa
+customize,To build or alter according to personal preferences or specifications.,/ˈkʌst.ə.maɪ̯z/,c-ust-om-iz-e,verb,
+daytime,The time of daylight; the time between sunrise and sunset.,/ˈdeɪtaɪm/,d-ayt-im-e,noun,daytime television
+deadline,A time limit in the form of a date on or before which something must be completed.,/ˈdɛdˌlaɪn/,d-eadl-in-e,noun,I must make this deadline or my boss will kill me!
+dealership,"A place that sells items, especially cars.",/ˈdiːləʃɪp/,d-eal-ersh-ip,noun,I visited the car dealership today.
+debit,"In bookkeeping, an entry in the left hand column of an account.",/ˈdɛb.ɪt/,d-eb-it,noun,A cash sale is recorded as debit on the cash account and as credit on the sales account.
+deck,Any raised flat surface that can be walked on: a balcony; a porch; a raised patio; a flat rooftop.,/dɛk/,d-eck,noun,to swab the deck
+decorate,To furnish with decorations.,/ˈdɛkəɹeɪt/,d-ec-or-at-e,verb,We decorated the Christmas tree with tinsel and baubles.
+decoration,"The act of adorning, embellishing, or honoring; ornamentation.",/ˌdɛkəˈɹeɪʃən/,d-ec-or-at-ion,noun,
+dedication,The act of dedicating or the state of being dedicated.,/ˌdɛdɪˈkeɪʃən/,d-ed-ic-at-ion,noun,
+deduct,To take one thing from another; remove from; make smaller by some amount.,/dɪˈdʊkt/,d-ed-uct,verb,I will deduct the cost of the can of peas from the money I owe you.
+deduction,That which is deducted; that which is subtracted or removed,/dɪˈdʊkʃən/,d-ed-uct-ion,noun,You might want to donate the old junk and just take the deduction.
+defect,A fault or malfunction.,,d-ef-ect,noun,a defect in the ear or eye; a defect in timber or iron; a defect of memory or judgment
+defective,A person or thing considered to be defective.,/dɪˈfɛktɪv/,d-ef-ect-iv-e,noun,
+definite,(grammar) A word or phrase that designates a specified or identified person or entity.,/ˈdɛfɪnɪt/,d-ef-in-it-e,noun,definite dimensions; a definite measure; a definite period or interval
+delegate,A person authorized to act as representative for another; a deputy,,d-el-eg-at-e,noun,
+delete,A key that may be pressed to delete something (such as text or files) from a computer.,/diˈliːt/,d-el-et-e,noun,I lost the file when I accidentally hit delete.
+delicate,"A delicate item of clothing, especially underwear or lingerie.",/ˈdɛlɪkət/,d-el-ic-at-e,noun,Don't put that in with your jeans: it's a delicate!
+delicious,Pleasing to taste; tasty.,/dɪˈlɪʃəs/,d-el-ic-ious,adjective,The irony is delicious!
+deluxe,Very fine in quality or luxurious.,/dəˈlʌks/,d-el-ux-e,adjective,
+demolish,To destroy.,/dəˈmɒl.ɪʃ/,d-em-ol-ish,verb,They demolished the old mill and put up four townhouses.
+dental,Cleaning and polishing of an animal's teeth.,/ˈdɛntl̩/,d-ent-al,noun,
+dentist,A medical doctor who specializes in dentistry.,/ˈdɛntɪst/,d-ent-ist,noun,
 
