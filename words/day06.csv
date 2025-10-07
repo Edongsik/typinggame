@@ -1,24 +1,47 @@
 word,meaning,pronunciation,syllables,partOfSpeech,example
-accommodate,"To render fit, suitable, or correspondent; to adapt.",/??k?m??det/,acc-omm-od-at-e,verb,to accommodate ourselves to circumstances
-participate,"To join in, to take part, to involve oneself (in something).",/p???tspet/,p-art-ic-ip-at-e,verb,
-require,To ask (someone) for something; to request.,/?kwa?/,r-eq-uir-e,verb,
-provide,To make a living; earn money for necessities.,/p??vad/,pr-ov-id-e,verb,It is difficult to provide for my family working on minimum wage.
-ensure,"To make a pledge to (someone); to promise, guarantee (someone of something); to assure.",/n????/,ens-ur-e,verb,I use an alarm clock to ensure that I get up on time.
-consider,To think about seriously.,/k?n?sd?/,c-ons-id-er,verb,Consider that we?셶e had three major events and the year has hardly begun.
-offer,A proposal that has been made.,/??f?/,off-er,noun,I decline your offer to contract.
-recommend,"To bestow commendation on; to represent favourably; to suggest, endorse or encourage as an appropriate choice.",/?k??m?nd/,r-ec-omm-end,verb,"The board recommends Philips, given his ample experience in similar positions."
-allow,"To grant, give, admit, accord, afford, or yield; to let one have.",/??la?/,all-ow,verb,to allow a servant his liberty;혻 to allow a free passage;혻 to allow one day for rest
-audit,A judicial examination.,/??.dt/,aud-it,noun,National Assembly audit
-client,"A customer, a buyer or receiver of goods or services.",/?kl??nt/,cl-ient,noun,
-achieve,"To succeed in something, now especially in academic performance.",/??t?i?v/,ach-iev-e,verb,Show all the spoils by valiant kings achieved.
-allocate,To set aside for a purpose.,/?챈l.?.ket/,all-oc-at-e,verb,The bulk of K??2 education funds are allocated to school districts that in turn pay for the cost of operating schools.
-assemble,To put together.,/??s?mbl揭/,ass-embl-e,verb,He assembled the model ship.
-candidate,A person who is running in an election.,/?k챈n.dd?t/,c-and-id-at-e,noun,
-comprehensive,A comprehensive school.,/?k?m.p?h?n.sv/,c-ompr-eh-ens-iv-e,noun,"When there are diametrically opposing views on a big issue that concerns millions of people, doing comprehensive research just makes sense."
-contribute,To give something that is or becomes part of a larger whole.,/k?n?t(?)b.ju?t/,c-ontr-ib-ut-e,verb,to contribute articles to a journal
-deficit,Deficiency in amount or quality; a falling short; lack.,/?d?fst/,d-ef-ic-it,noun,
-invoice,"A bill; a commercial document issued by a seller to a buyer indicating the products, quantities and agreed prices for products or services that the seller has already provided the buyer with. An invoice indicates that, unless paid in advance, payment is due by the buyer to the seller, according to the agreed terms.",/?n?v?s/,inv-oic-e,noun,The merchant receives a large invoice of goods.
-productive,"Capable of producing something, especially in abundance; fertile.",/p??d?ktv/,pr-od-uct-iv-e,adjective,a productive set
-revenue,The income returned by an investment.,/??v?nju?/,r-ev-en-ue,noun,
-substantial,Anything having substance; an essential part.,/s?b?st챈n??l/,s-ubst-ant-ial,noun,substantial life
+compact,An agreement or contract.,/kəmˈpækt/,c-omp-act,noun,
+compartment,"A room, or section, or chamber",/kəmˈpɑː(ɹ)tmənt/,c-omp-artm-ent,noun,Two men were seated in a well-lighted compartment of a third-class railway carriage.
+compatible,Something that is compatible with something else.,/kəmˈpætəbəl/,c-omp-at-ibl-e,noun,a computer company that sells IBM compatibles
+compensate,To do (something good) after (something bad) happens,/ˈkɒm.pən.seɪt/,c-omp-ens-at-e,verb,"It is hard work, but they will compensate you well for it."
+compile,An act of compiling code.,/kəmpʌɪl/,c-omp-il-e,noun,Samuel Johnson compiled one of the most influential dictionaries of the English language.
+completion,"The act or state of being or making something complete; conclusion, accomplishment.",/kəmˈpliːʃən/,c-ompl-et-ion,noun,
+compliance,An act of complying.,/kəmˈplaɪəns/,c-ompl-ianc-e,noun,
+complication,The act or process of complicating.,,c-ompl-ic-at-ion,noun,
+compliment,"An expression of praise, congratulation, or respect.",/ˈkɒmplɪmənt/,c-ompl-im-ent,noun,
+complimentary,In the nature of a compliment.,/ˌkɒmplɪ̈ˈmɛnt(ə)ɹi/,c-ompl-im-ent-ar-y,adjective,a complimentary remark
+comply,"To yield assent; to accord; to acquiesce, agree, consent; to adapt oneself, to conform.",/kəmˈplaɪ/,c-ompl-y,verb,
+comprehension,Thorough understanding,/kɒmpɹɪˈhɛnʃn̩/,c-ompr-eh-ens-ion,noun,
+concierge,One who attends to the wishes of hotel guests.,/ˌkɒn.siˈɛə̯ʒ/,c-onc-ierg-e,noun,
+conditioner,Anything that improves the condition of something,,c-ond-it-ion-er,noun,
+condominium,Joint sovereignty over a territory by two or more countries.,/kɒn.dəˈmɪn.ɪ.əm/,c-ond-om-in-ium,noun,
+conductor,One who conducts or leads; a guide; a director.,/kənˈdʌktɚ/,c-ond-uct-or,noun,train conductor; tram conductor
+conference,The act of consulting together formally; serious conversation or discussion; interchange of views.,/ˈkɒn.fə.ɹəns/,c-onf-er-enc-e,noun,
+confidential,"Kept, or meant to be kept, secret within a certain circle of persons; not intended to be known publicly",/ˌkɑːnfɪˈdɛnʃl/,c-onf-id-ent-ial,adjective,The newspaper claims a leaked confidential report by the government admits to problems with corrupt MPs.
+confirmation,An official indicator that things will happen as planned.,/ˌkɒn.fəˈmeɪ.ʃən/,c-onf-irm-at-ion,noun,We will send you a written confirmation of your hotel booking.
+conform,"(of persons, often followed by to) To act in accordance with expectations; to behave in the manner of others, especially as a result of social pressure.",/kənˈfɔːm/,c-onf-orm,verb,
+congestion,"The hindrance or blockage of the passage of something, for example a fluid, mixture, traffic, people, etc. (due to an excess of this or due to a partial or complete obstruction), resulting in overfilling or overcrowding.",/kʊnˈd͡ʒɛʃ.d͡ʒən/,c-ong-est-ion,noun,
+congratulate,To express one’s sympathetic pleasure or joy to the person(s) it is felt for.,/-t͡ʃə-/,c-ongr-at-ul-at-e,verb,Remind me to congratulate Dave and Lisa on their wedding.
+congratulation,The act of congratulating.,/kənˌɡɹætjʊˈleɪʃ(ə)n/,c-ongr-at-ul-at-ion,noun,
+consecutive,A sequence of notes or chords that results from repeated shifts in pitch of the same interval.,/kɒnsɛkjʊtɪv/,c-ons-ec-ut-iv-e,noun,
+consent,Voluntary agreement or permission.,/kənˈsɛnt/,c-ons-ent,noun,"After reflecting a little bit, I've consented."
+considerably,Significantly; to a degree worth considering.,/kənˈsɪdəɹəbli/,c-ons-id-er-abl-y,adverb,The situation has improved considerably.
+considerate,To think about seriously.,/kənˈsɪdəɹət/,c-ons-id-er-at-e,verb,Consider that we’ve had three major events and the year has hardly begun.
+consignment,"A collection of goods to be sent, in transit or having been sent",,c-ons-ignm-ent,noun,
+consistently,(manner) In a consistent manner.,,c-ons-ist-entl-y,adverb,
+consultation,The act of consulting.,/ˌkɒnsl̩ˈteɪʃən/,c-ons-ult-at-ion,noun,
+consumption,"The act of eating, drinking or using.",/kənˈsʌmp.ʃən/,c-ons-umpt-ion,noun,The consumption of snails as food is more common in France than in England.
+container,Someone who contains; something that contains.,/kənˈteɪnə/,c-ont-ain-er,noun,
+contestant,"A participant in a contest; specifically, a person who plays a game, as on a TV game show.",/kənˈtɛstənt/,c-ont-est-ant,noun,
+continental,Someone from the continent.,,c-ont-in-ent-al,noun,I don't care a continental!
+contraction,A reversible reduction in size.,/kɒnˈtɹæk.ʃən/,c-ontr-act-ion,noun,The country's economic contraction was caused by high oil prices.
+contractor,A person or company that builds or improves buildings.,/ˈkɒnˌtɹæk.tə(ɹ)/,c-ontr-act-or,noun,
+contradict,To deny the truth of (a statement or statements).,/kɒntɹəˈdɪkt/,c-ontr-ad-ict,verb,His testimony contradicts hers.
+contradiction,The act of contradicting.,/ˌkɒntɹəˈdɪkʃən/,c-ontr-ad-ict-ion,noun,His contradiction of the proposal was very interesting.
+contrary,The opposite.,/ˈkɒntɹəɹi/,c-ontr-ar-y,noun,contrary winds
+convenience,The quality of being convenient.,/kənˈviːnɪəns/,c-onv-en-ienc-e,noun,Fast food is popular because of its cost and convenience.
+convenient,"Serving to reduce a difficulty, or accessible with minimum difficulty; expedient.",/kənˈviːniənt/,c-onv-en-ient,adjective,"Fast food might be convenient, but it's also very unhealthy."
+conveniently,"In a convenient manner, form, or situation; without difficulty.",,c-onv-en-ientl-y,adverb,
+convey,To move (something) from one place to another.,/kənˈveɪ/,c-onv-ey,verb,Air conveys sound. Water is conveyed through the pipe.
+cookbook,A book or an encyclopedia of recipes and cookery tips.,/ˈkʊkˌbʊk/,c-ookb-ook,noun,The Anarchist's Cookbook
+cookie,"A small, flat, baked good which is either crisp or soft but firm.",/ˈkuːki/,c-ook-ie,noun,
 

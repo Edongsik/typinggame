@@ -1,24 +1,43 @@
 word,meaning,pronunciation,syllables,partOfSpeech,example
-accommodate,"To render fit, suitable, or correspondent; to adapt.",/??k?m??det/,acc-omm-od-at-e,verb,to accommodate ourselves to circumstances
-participate,"To join in, to take part, to involve oneself (in something).",/p???tspet/,p-art-ic-ip-at-e,verb,
-require,To ask (someone) for something; to request.,/?kwa?/,r-eq-uir-e,verb,
-provide,To make a living; earn money for necessities.,/p??vad/,pr-ov-id-e,verb,It is difficult to provide for my family working on minimum wage.
-ensure,"To make a pledge to (someone); to promise, guarantee (someone of something); to assure.",/n????/,ens-ur-e,verb,I use an alarm clock to ensure that I get up on time.
-consider,To think about seriously.,/k?n?sd?/,c-ons-id-er,verb,Consider that we?셶e had three major events and the year has hardly begun.
-offer,A proposal that has been made.,/??f?/,off-er,noun,I decline your offer to contract.
-recommend,"To bestow commendation on; to represent favourably; to suggest, endorse or encourage as an appropriate choice.",/?k??m?nd/,r-ec-omm-end,verb,"The board recommends Philips, given his ample experience in similar positions."
-allow,"To grant, give, admit, accord, afford, or yield; to let one have.",/??la?/,all-ow,verb,to allow a servant his liberty;혻 to allow a free passage;혻 to allow one day for rest
-audit,A judicial examination.,/??.dt/,aud-it,noun,National Assembly audit
-client,"A customer, a buyer or receiver of goods or services.",/?kl??nt/,cl-ient,noun,
-achieve,"To succeed in something, now especially in academic performance.",/??t?i?v/,ach-iev-e,verb,Show all the spoils by valiant kings achieved.
-allocate,To set aside for a purpose.,/?챈l.?.ket/,all-oc-at-e,verb,The bulk of K??2 education funds are allocated to school districts that in turn pay for the cost of operating schools.
-assemble,To put together.,/??s?mbl揭/,ass-embl-e,verb,He assembled the model ship.
-candidate,A person who is running in an election.,/?k챈n.dd?t/,c-and-id-at-e,noun,
-comprehensive,A comprehensive school.,/?k?m.p?h?n.sv/,c-ompr-eh-ens-iv-e,noun,"When there are diametrically opposing views on a big issue that concerns millions of people, doing comprehensive research just makes sense."
-contribute,To give something that is or becomes part of a larger whole.,/k?n?t(?)b.ju?t/,c-ontr-ib-ut-e,verb,to contribute articles to a journal
-deficit,Deficiency in amount or quality; a falling short; lack.,/?d?fst/,d-ef-ic-it,noun,
-invoice,"A bill; a commercial document issued by a seller to a buyer indicating the products, quantities and agreed prices for products or services that the seller has already provided the buyer with. An invoice indicates that, unless paid in advance, payment is due by the buyer to the seller, according to the agreed terms.",/?n?v?s/,inv-oic-e,noun,The merchant receives a large invoice of goods.
-productive,"Capable of producing something, especially in abundance; fertile.",/p??d?ktv/,pr-od-uct-iv-e,adjective,a productive set
-revenue,The income returned by an investment.,/??v?nju?/,r-ev-en-ue,noun,
-substantial,Anything having substance; an essential part.,/s?b?st챈n??l/,s-ubst-ant-ial,noun,substantial life
+infer,"To introduce (something) as a reasoned conclusion; to conclude by reasoning or deduction, as from premises or evidence.",/ɪnˈfɜː/,inf-er,verb,
+inference,The act or process of inferring by deduction or induction.,/ˈɪn.fə.ɹəns/,inf-er-enc-e,noun,
+inflate,To enlarge an object by pushing air (or a gas) into it; to raise or expand abnormally,/ɪnˈfleɪt/,infl-at-e,verb,You inflate a balloon by blowing air into it.
+influential,A person who has influence,/ɪnfluˈɛnʃəl/,infl-uent-ial,noun,Jane was very influential in getting the motion passed.
+informal,Not formal or ceremonious.,/ɪnˈfɔːm(ə)l/,inf-orm-al,adjective,an informal get-together
+informative,"Providing information; especially, providing useful or interesting information.",/ɪnˈfɔɹmətɪv/,inf-orm-at-iv-e,adjective,I read a very informative newspaper article on that subject last week.
+ingredient,"One of the substances present in a mixture, especially food.",/ɪnˈɡɹiːdi.ənt/,ingr-ed-ient,noun,
+ink,"A pigment (or dye)-based fluid used for writing, printing etc.",/ɪŋk/,ink,noun,The TSA has been getting a lot of ink lately.
+innovative,Characterized by the creation of new ideas or inventions.,/ɪnˈnɒ.və.tɪv/,inn-ov-at-iv-e,adjective,
+inquire,To ask (about something).,/ɪnˈkwaɪə/,inq-uir-e,verb,
+insert,An image inserted into text.,/ɪnˈsɜːt/,ins-ert,noun,This software can print compact disc inserts if you have the right size of paper.
+inspect,"To examine critically or carefully; especially, to search out problems or determine condition; to scrutinize.",/ɪnˈspɛkt/,insp-ect,verb,Inspect the system for leaks.
+inspection,"The act of examining something, often closely.",/ɪnˈspɛkʃən/,insp-ect-ion,noun,"Upon closer inspection, the animal turned out to be a dolphin, not a shark!"
+inspector,A person employed to inspect something.,/ɪnˈspɛktə/,insp-ect-or,noun,
+inspiration,"The drawing of air into the lungs, accomplished in mammals by elevation of the chest walls and flattening of the diaphragm, as part of the act of respiration.",/ɪnspɨˈɹeɪʃən/,insp-ir-at-ion,noun,She was waiting for inspiration to write a book.
+installation,An act of installing.,[ɪnstəˈleɪʃən],inst-all-at-ion,noun,
+institute,An organization founded to promote a cause,/ˈɪnstɪt(j)uːt/,inst-it-ut-e,noun,I work in a medical research institute.
+instruct,Instruction.,/ˌɪnˈstɹʌkt/,instr-uct,noun,Listen carefully when someone instructs you how to assemble the furniture.
+instructor,One who instructs; a teacher.,,instr-uct-or,noun,
+insufficient,Not sufficient.,/ɪnsəˈfɪʃənt/,ins-uff-ic-ient,adjective,Insufficient time is available to reflect on the problem
+integral,"A number, the limit of the sums computed in a process in which the domain of a function is divided into small subsets and a possibly nominal value of the function on each subset is multiplied by the measure of that subset, all these products then being summed.",/ˈɪntɪɡɹəl/,int-egr-al,noun,"The integral of x\mapsto x^2 on [0,1] is \frac{1}{3}."
+intently,In an intent or focused manner.,/ɪnˈtɛntli/,int-entl-y,adverb,
+interactive,A feature (as in a museum) that can be interacted with.,/ɪntɚˈæktɪv/,int-er-act-iv-e,noun,interactive teaching methods
+interfere,"To get involved or involve oneself, causing disturbance.",/ˌɪntəˈfɪə/,int-erf-er-e,verb,I always try not to interfere with other people’s personal affairs.
+intern,"A person who is interned, forcibly or voluntarily.",/ɪnˈtɜːn/,int-ern,noun,The US government interned thousands of Japanese-Americans during World War II.
+internationally,In an international manner.,,int-ern-at-ion-all-y,adverb,
+internet,Any set of computer networks that communicate using the Internet Protocol. (An intranet.),/ˈɪntəˌnɛt/,int-ern-et,noun,Do you have internet at your place?  My internet is down and I want to check my email.
+internship,A job taken by a student in order to learn a profession or trade.,/ˈɪntɝnʃɪp/,int-ernsh-ip,noun,
+interpreter,"One who conveys what a user of one language is saying or signing, in real time or shortly after that person has finished communicating, to a user of a different language. (Contrasted with a translator.)",/ɪnˈtɜːpɹɪtə/,int-erpr-et-er,noun,A Japanese man who is tried before a German court is assisted by an interpreter in making oral statements.
+interrupt,An event that causes a computer or other device to temporarily cease what it was doing and attend to a condition.,/ˌɪntəˈɹʌpt/,int-err-upt,noun,The interrupt caused the packet handler routine to run.
+intersection,"The junction of two (or more) paths, streets, highways, or other thoroughfares.",/ˈɪntəɹˌsɛkʃən/,int-ers-ect-ion,noun,
+intonation,The rise and fall of the voice in speaking.,/ɪntɵˈneɪʃən/,int-on-at-ion,noun,Her intonation was false.
+introductory,Introducing; giving a preview or idea of.,/ˌɪntrəˈdʌktəri/,intr-od-uct-or-y,adjective,He enrolled in an introductory wine-making course.
+invaluable,"Of great value; costly, precious, priceless.",,inv-al-uabl-e,adjective,
+invention,Something invented.,/ɪnˈvɛnʃən/,inv-ent-ion,noun,I'm afraid there was no burglar. It was all the housekeeper's invention.
+inventory,(operations) The stock of an item on hand at a particular location or business.,/ɪnˈvɛn.tə.ɹi/,inv-ent-or-y,noun,"Due to an undersized inventory at the Boston outlet, customers had to travel to Providence to find the item."
+invoice,"A bill; a commercial document issued by a seller to a buyer indicating the products, quantities and agreed prices for products or services that the seller has already provided the buyer with. An invoice indicates that, unless paid in advance, payment is due by the buyer to the seller, according to the agreed terms.",/ˈɪnˌvɔɪs/,inv-oic-e,noun,The merchant receives a large invoice of goods.
+irregular,"A soldier who is not a member of an official military force and, often, does not follow regular army tactics",/ɪˈɹɛɡjəlɚ/,irr-eg-ul-ar,noun,"""Calves"", ""cacti"", and ""children"" are irregular plurals."
+irrelevant,"Not related, not applicable, unimportant, not connected.",,irr-el-ev-ant,adjective,
+irritate,"To provoke impatience, anger, or displeasure in.",/ˈɪɹɪteɪt/,irr-it-at-e,verb,
+itinerary,A written schedule of activities for a vacation or road trip.,/aɪˈtɪnəɹi/,it-in-er-ar-y,noun,
 
