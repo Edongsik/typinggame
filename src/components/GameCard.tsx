@@ -8,11 +8,11 @@ type WordWithSentence = {
   syllables: string;
   partOfSpeech: string;
   example: string;
-  sentence?: string; // 빈칸 채우기용 문장
+  sentence?: string;
 };
 
 type GameCardProps = {
-  currentWord: any | null; // PracticeWord 대신 any 사용
+  currentWord: any | null;
   typedValue: string;
   isRunning: boolean;
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -62,7 +62,6 @@ const GameCard: FC<GameCardProps> = ({
     const sentence = currentWord.sentence || "";
     
     if (!sentence) {
-      // sentence가 없으면 example에서 자동으로 만들기
       if (!currentWord.example) {
         return { beforeBlank: "", afterBlank: "" };
       }
@@ -80,13 +79,11 @@ const GameCard: FC<GameCardProps> = ({
       return { beforeBlank: "", afterBlank: "" };
     }
     
-    // sentence에서 ____ 찾기
     const parts = sentence.split('____');
     if (parts.length === 2) {
       return { beforeBlank: parts[0], afterBlank: parts[1] };
     }
     
-    // ____ 대신 ___ 또는 다른 형식일 수도 있으니 확인
     const blankPattern = /__+/;
     const match = sentence.match(blankPattern);
     
@@ -125,12 +122,10 @@ const GameCard: FC<GameCardProps> = ({
         <div className="game-card__pos-badge">{currentWord.partOfSpeech}</div>
       )}
 
-      {/* 기존 예문 표시 */}
       <div className="game-card__example">
         {currentWord.example.replace(/\\r\\n/g, '\n')}
       </div>
 
-      {/* 빈칸 형식의 입력창 - 어두운 배경 */}
       <div style={{
         background: '#2c3e50',
         color: '#ecf0f1',

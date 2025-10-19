@@ -8,7 +8,8 @@
 import GameModals from "./GameModals"
 import GameView from "./GameView"
 import Wordbook from "./Wordbook"
-import AddWord, { type Word } from "./AddWord"
+import AddWord from "./AddWord"
+import type { Word as AddWordType } from "../types"
 import WordListPage from "./WordListPage"
 import Statistics from "./Statistics"
 import { loadDays, loadManifest, type PracticeWord } from "../lib/csv"
@@ -93,6 +94,9 @@ const Game = () => {
   const [view, setView] = useState<"wordbook" | "game" | "addword" | "wordlist" | "stats">("wordbook")
   const [addWordDayId, setAddWordDayId] = useState<string | null>(null)
   const [wordCounts, setWordCounts] = useState<Record<string, number>>({})
+  
+  // ✅ 자동 사운드 재생 상태 추가
+  const [autoSoundEnabled, setAutoSoundEnabled] = useState(true)
 
   // 단어 개수 로드
   useEffect(() => {
@@ -148,7 +152,7 @@ const Game = () => {
     setAddWordDayId(null)
   }
 
-  const handleWordAdded = (word: Word) => {
+  const handleWordAdded = (word: AddWordType) => {
     console.log("단어 추가됨:", word)
     alert(`"${word.word}" 단어가 추가되었습니다!`)
   }
@@ -333,17 +337,31 @@ const Game = () => {
     
     window.setTimeout(() => {
       inputRef.current?.focus()
-    }, 0)
+      
+      // ✅ 게임 시작 시 첫 단어 사운드 재생
+      if (autoSoundEnabled) {
+        const firstWord = sessionWords[queueIndex]
+        if (firstWord && 'speechSynthesis' in window) {
+          window.speechSynthesis.cancel()
+          const utterance = new SpeechSynthesisUtterance(firstWord.word)
+          utterance.lang = 'en-US'
+          utterance.rate = 0.95
+          window.speechSynthesis.speak(utterance)
+        }
+      }
+    }, 500)
   }, [
     clearAutoAdvance,
     clearElapsedTicker,
     clearTimedMode,
     isLoadingWords,
-    sessionWords.length,
+    sessionWords,
+    queueIndex,
     startElapsedTicker,
     startTimedMode,
     timerEnabled,
     wordsError,
+    autoSoundEnabled,
   ])
 
   const initializeDay = useCallback(
@@ -477,6 +495,26 @@ const Game = () => {
     wordsError,
   ])
 
+  // ✅ 단어가 변경될 때마다 자동으로 사운드 재생
+  useEffect(() => {
+    if (isRunning && sessionWords.length > 0 && autoSoundEnabled) {
+      const current = sessionWords[queueIndex]
+      if (!current) return
+      
+      const soundTimer = setTimeout(() => {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel()
+          const utterance = new SpeechSynthesisUtterance(current.word)
+          utterance.lang = 'en-US'
+          utterance.rate = 0.95
+          window.speechSynthesis.speak(utterance)
+        }
+      }, 300)
+
+      return () => clearTimeout(soundTimer)
+    }
+  }, [queueIndex, isRunning, sessionWords, autoSoundEnabled])
+
   const currentWord = sessionWords[queueIndex] ?? null
 
   const handleModeChange = useCallback((next: PracticeMode) => {
@@ -489,8 +527,16 @@ const Game = () => {
     }
     const current = sessionWords[queueIndex]
     if (!current) return
-    pronounceWord(current.word).catch(() => {})
-  }, [isInteracted, pronounceWord, queueIndex, sessionWords])
+    
+    // ✅ Web Speech API 직접 사용 (더 안정적)
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel()
+      const utterance = new SpeechSynthesisUtterance(current.word)
+      utterance.lang = 'en-US'
+      utterance.rate = 0.95
+      window.speechSynthesis.speak(utterance)
+    }
+  }, [isInteracted, queueIndex, sessionWords])
 
   const handleToggleTimer = useCallback(() => {
     setTimerEnabled((previous) => {
@@ -504,6 +550,11 @@ const Game = () => {
       return next
     })
   }, [clearTimedMode, startTimedMode])
+
+  // ✅ 자동 사운드 토글 핸들러
+  const handleToggleAutoSound = useCallback(() => {
+    setAutoSoundEnabled(prev => !prev)
+  }, [])
 
   const handleSessionComplete = useCallback(() => {
     clearElapsedTicker()
@@ -555,52 +606,48 @@ const Game = () => {
     setQueueIndex(queueIndex + 1)
   }, [clearAutoAdvance, handleSessionComplete, isReviewMode, mode, queueIndex, sessionWords.length])
 
-// Game.tsx의 handleCorrectWord 부분만 수정
+  const handleCorrectWord = useCallback(() => {
+    const current = sessionWords[queueIndex]
+    if (!current || !selectedDayId) return
 
-const handleCorrectWord = useCallback(() => {
-  const current = sessionWords[queueIndex]
-  if (!current || !selectedDayId) return
+    clearAutoAdvance()
 
-  clearAutoAdvance()
+    // 통계 업데이트
+    setScore((previous) => previous + 10 + streak * 2)
+    setStreak((previous) => {
+      const next = previous + 1
+      setMaxStreak((maxValue) => Math.max(maxValue, next))
+      return next
+    })
+    
+    const nextProgressIndex = !isReviewMode && mode === "sequence"
+      ? Math.min(current.orderIndex + 1, baseWords.length)
+      : currentStat.lastIndex
+    
+    markAnswer(selectedDayId, current.word, true, nextProgressIndex)
+    refreshStat(selectedDayId)
 
-  // 통계 업데이트
-  setScore((previous) => previous + 10 + streak * 2)
-  setStreak((previous) => {
-    const next = previous + 1
-    setMaxStreak((maxValue) => Math.max(maxValue, next))
-    return next
-  })
-  
-  const nextProgressIndex = !isReviewMode && mode === "sequence"
-    ? Math.min(current.orderIndex + 1, baseWords.length)
-    : currentStat.lastIndex
-  
-  markAnswer(selectedDayId, current.word, true, nextProgressIndex)
-  refreshStat(selectedDayId)
-
-  // ✅ 사운드는 useWordInput에서 이미 재생했으므로 제거
-  
-  // ✅ 다음 단어로 자동 이동 (1.2초 후)
-  autoAdvanceRef.current = setTimeout(() => {
-    if (isRunningRef.current) {
-      handleNext()
-    }
-  }, 1200)
-}, [
-  sessionWords,
-  queueIndex,
-  selectedDayId,
-  clearAutoAdvance,
-  streak,
-  isReviewMode,
-  mode,
-  baseWords.length,
-  currentStat.lastIndex,
-  refreshStat,
-  handleNext,
-  autoAdvanceRef,
-  isRunningRef
-])
+    // ✅ 사운드는 useWordInput에서 이미 재생했으므로 제거
+    
+    // ✅ 다음 단어로 자동 이동 (1.2초 후)
+    autoAdvanceRef.current = setTimeout(() => {
+      if (isRunningRef.current) {
+        handleNext()
+      }
+    }, 1200)
+  }, [
+    sessionWords,
+    queueIndex,
+    selectedDayId,
+    clearAutoAdvance,
+    streak,
+    isReviewMode,
+    mode,
+    baseWords.length,
+    currentStat.lastIndex,
+    refreshStat,
+    handleNext,
+  ])
 
   const handleIncorrectAttempt = useCallback(() => {
     const current = sessionWords[queueIndex]
@@ -841,6 +888,8 @@ const handleCorrectWord = useCallback(() => {
                 onPrevious={handlePrevious}
                 isPreviousDisabled={queueIndex === 0}
                 onStatsClick={handleShowStats}
+                autoSoundEnabled={autoSoundEnabled}
+                onToggleAutoSound={handleToggleAutoSound}
               />
             )}
 

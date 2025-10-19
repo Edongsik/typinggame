@@ -23,11 +23,6 @@ type GameViewProps = {
   inputRef: RefObject<HTMLInputElement>;
   wordContainerRef: RefObject<HTMLHeadingElement>;
   
-  // 🆕 시도 횟수 관련 props 추가
-  currentAttempts: number;
-  currentScore: number | null;
-  showScoreFeedback: boolean;
-  
   // Controls
   onBackToList: () => void;
   onPrevious: () => void;
@@ -43,6 +38,8 @@ type GameViewProps = {
   dayMeta: DayMeta | null;
   onStatsClick: () => void;
   isReviewMode?: boolean;
+  autoSoundEnabled?: boolean;
+  onToggleAutoSound?: () => void;
 };
 
 const GameView: FC<GameViewProps> = (props) => {
@@ -68,6 +65,8 @@ const GameView: FC<GameViewProps> = (props) => {
         currentIndex={props.currentIndex}
         totalWords={props.totalWords}
         progress={props.progress}
+        autoSoundEnabled={props.autoSoundEnabled}
+        onToggleAutoSound={props.onToggleAutoSound}
       />
 
       {/* 2. 타이머 */}
@@ -96,9 +95,6 @@ const GameView: FC<GameViewProps> = (props) => {
         onPlayAudio={props.onPlayAudio}
         inputRef={props.inputRef}
         wordContainerRef={props.wordContainerRef}
-        currentAttempts={props.currentAttempts}
-        currentScore={props.currentScore}
-        showScoreFeedback={props.showScoreFeedback}
       />
     </>
   );
