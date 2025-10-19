@@ -1,42 +1,34 @@
-word,meaning,pronunciation,syllables,partOfSpeech,example
-generalization,"일반화",,g-en-er-al-iz-at-ion,noun,"'generalization'은 개별적인 사례들에서 공통점을 찾아내어 보편적인 결론을 이끌어내는 '일반화'를 의미합니다."
-generator,"발전기",,g-en-er-at-or,noun,"'generator'는 기계적 에너지를 전기 에너지로 변환하는 장치, 즉 '발전기'를 의미합니다."
-generic,"일반적인, 포괄적인",/dʒɪˈnɛɹɪk/,g-en-er-ic,adjective,"'generic'은 특정 상표가 없는 '일반적인' 상품을 나타내거나, 특정 그룹 전체에 적용되는 '포괄적인'이라는 의미의 형용사입니다."
-generous,"관대한, 후한",/ˈdʒɛn(ə)ɹəs/,g-en-er-ous,adjective,"'generous'는 돈이나 시간을 아낌없이 주는 '후한' 성품이나, 다른 사람의 단점을 너그럽게 용서하는 '관대한' 태도를 묘사합니다."
-genre,"장르, 유형",/(d)ʒɒn.ɹə/,g-enr-e,noun,"'genre'는 문학, 영화, 음악 등 예술 작품을 내용이나 형식에 따라 나눈 갈래, 즉 '장르'나 '유형'을 의미합니다."
-getaway,"휴가; 도주",,g-et-aw-ay,noun,"'getaway'는 일상에서 벗어나 잠시 떠나는 짧은 '휴가'를 의미하는 비격식적인 단어이며, 범죄자가 현장에서 '도망치는 것', '도주'를 뜻하기도 합니다."
-glove,"장갑",/ɡlʌv/,gl-ov-e,noun,"'glove'는 손을 보호하거나 따뜻하게 하기 위해 끼는 '장갑'을 의미합니다."
-goods,"상품, 물품",/ɡʊdz/,g-oods,noun,"'goods'는 판매를 목적으로 생산된 '상품'이나 '제품'을 의미하며, 항상 복수형으로 씁니다."
-gossip,"험담, 소문",/ˈɡɒs.ɪp/,g-oss-ip,noun,"'gossip'은 다른 사람의 사생활에 대해 사실이 아닐 수도 있는 이야기를 하는 '험담'이나 '뜬소문'을 의미하는 셀 수 없는 명사입니다."
-graduation,"졸업",/ˌɡɹædʒuˈeɪʃən/,gr-ad-uat-ion,noun,"'graduation'은 학교의 모든 과정을 마치고 학위를 받는 것, 즉 '졸업' 또는 '졸업식'을 의미합니다."
-gram,"그램",/ɡɹæm/,gr-am,noun,"'gram'은 질량을 재는 단위로, 1킬로그램의 1000분의 1에 해당하는 '그램(g)'을 의미합니다."
-graph,"그래프, 도표",/ɡɹæf/,gr-aph,noun,"'graph'는 수치 데이터를 선이나 막대 등을 이용해 시각적으로 표현한 '그래프'나 '도표'를 의미합니다."
-graphic,"그림, 그래픽; 생생한",/ˈɡɹæfɪk/,gr-aph-ic,adjective,"'graphic'은 컴퓨터로 만든 '그림'이나 '이미지'를 의미하며, 묘사 등이 매우 '생생하고 상세한'이라는 의미의 형용사로도 쓰입니다."
-graphics,"그래픽스",/ˈɡɹæfɪks/,gr-aph-ics,noun,"'graphics'는 컴퓨터를 이용해 이미지나 영상을 만들고 처리하는 기술 또는 그 결과물을 의미하며, 주로 게임이나 영화의 시각 효과를 지칭할 때 복수형으로 사용됩니다."
-grill,"그릴, 석쇠; 굽다",/ɡɹɪl/,gr-ill,verb,"'grill'은 고기나 채소를 굽는 데 사용하는 '석쇠'를 의미하는 명사와, 석쇠에 음식을 '굽다'라는 의미의 동사로 쓰입니다."
-grocery,"식료품",/ˈɡɹəʊs(ə)ɹi/,gr-oc-er-y,noun,"'grocery'는 가정에서 일상적으로 소비하는 음식 재료나 생활용품, 즉 '식료품'을 의미하며, 보통 복수형 'groceries'로 사용됩니다. 'grocery store'는 '식료품점'입니다."
-guidance,"안내, 지도",/ˈɡaɪdəns/,g-uid-anc-e,noun,"'guidance'는 어떤 일을 어떻게 해야 할지 보여주거나 조언해주는 '안내'나 '지도'를 의미하는 셀 수 없는 명사입니다."
-gum,"잇몸; 껌",/ɡʌm/,g-um,noun,"'gum'은 치아를 둘러싸고 있는 분홍색 살 부분인 '잇몸'을 의미하며, 씹는 과자인 '껌'(chewing gum)을 뜻하기도 합니다."
-gym,"체육관, 헬스장",/dʒɪm/,g-ym,noun,"'gym'은 'gymnasium'의 줄임말로, 실내 운동을 할 수 있는 '체육관'이나 근력 운동 기구가 있는 '헬스장'을 의미합니다."
-gymnasium,"체육관",/dʒɪmˈneɪ.zi.əm/,g-ymn-as-ium,noun,"'gymnasium'은 학교 등에 있는 실내 스포츠 시설, 즉 '체육관'을 의미하는 공식적인 단어입니다."
-habitual,"습관적인, 상습적인",/-tjʊ-/,h-ab-it-ual,adjective,"'habitual'은 특별한 생각 없이 늘 반복적으로 하는 행동, 즉 '습관적인' 또는 '상습적인' 상태를 묘사하는 형용사입니다."
-hacker,"해커",/hækə(ɹ)/,h-ack-er,noun,"'hacker'는 컴퓨터 시스템에 불법적으로 침입하여 정보를 빼내거나 시스템을 마비시키는 사람, 즉 '해커'를 의미합니다. 원래는 '컴퓨터 프로그래밍에 매우 뛰어난 사람'을 뜻하는 긍정적인 의미였으나, 지금은 주로 부정적인 의미로 쓰입니다."
-hallway,"복도",,h-allw-ay,noun,"'hallway'는 건물 안에서 방과 방을 연결하는 긴 통로, 즉 '복도'를 의미합니다. 'corridor'와 같은 뜻입니다."
-hamburger,"햄버거",/ˈhæm.bə.ɡə/,h-amb-urg-er,noun,"'hamburger'는 다진 고기를 구워 둥근 빵 사이에 끼워 먹는 음식, 즉 '햄버거'를 의미합니다."
-handbook,"안내서, 편람",,h-andb-ook,noun,"'handbook'은 특정 주제나 장비 사용법에 대한 기본적이고 중요한 정보를 담고 있는 작은 책, 즉 '안내서'나 '편람'을 의미합니다."
-handy,"편리한, 유용한",/ˈhæn.di/,h-and-y,adjective,"'handy'는 사용하기 쉽거나 가까이 있어 필요할 때 바로 쓸 수 있어 '편리한' 또는 '유용한' 상태를 묘사하는 형용사입니다."
-hardware,"하드웨어, 철물",/ˈhɑːdˌwɛə/,h-ardw-ar-e,noun,"'hardware'는 컴퓨터의 물리적인 부품(모니터, 키보드 등)을 총칭하는 '하드웨어'라는 의미와, 문손잡이, 못, 연장 등 집수리에 필요한 '철물'이라는 두 가지 주요 의미를 가집니다."
-hardworking,"열심히 일하는, 성실한",,h-ardw-ork-ing,adjective,"'hardworking'은 자신의 일에 많은 노력과 시간을 들이는, 즉 '열심히 일하는' 또는 '성실한' 사람의 성품을 묘사하는 형용사입니다."
-harmful,"해로운, 유해한",/ˈhɑːmfl̩/,h-armf-ul,adjective,"'harmful'은 건강이나 환경 등에 나쁜 영향을 미치는, 즉 '해로운' 또는 '유해한' 성질을 나타내는 형용사입니다."
-hazard,"위험 (요소)",/ˈhazəd/,h-az-ard,noun,"'hazard'는 사고나 손상을 일으킬 수 있는 잠재적인 '위험' 또는 '위험 요소'를 의미하는 명사입니다."
-hazardous,"위험한",/ˈhæzəɹdəs/,h-az-ard-ous,adjective,"'hazardous'는 사람의 건강이나 안전에 '위험한' 물질이나 상황을 묘사하는 형용사입니다. 'dangerous'보다 더 공식적이고 전문적인 느낌을 줍니다."
-headache,"두통",/ˈhɛdeɪk/,h-ead-ach-e,noun,"'headache'는 머리가 아픈 증상, 즉 '두통'을 의미하며, 비유적으로 매우 '골치 아픈 문제'를 뜻하기도 합니다."
-headphone,"헤드폰",/ˈhedfəʊn/,h-eadph-on-e,noun,"'headphone'은 양쪽 귀에 걸거나 머리에 쓰고 음악 등을 듣는 장치, 즉 '헤드폰'을 의미하며, 보통 복수형 'headphones'로 사용됩니다."
-headquarter,"본사를 두다",,h-eadq-uart-er,verb,"'headquarter'는 회사의 중심이 되는 사무소, 즉 본사를 특정 장소에 '두다'라는 의미의 동사입니다. 주로 수동태 'be headquartered in ~' 형태로 '~에 본사가 있다'라고 쓰입니다."
-healthcare,"의료 서비스, 건강 관리",,h-ealthc-ar-e,noun,"'healthcare'는 질병의 예방, 치료, 관리를 포함하는 전반적인 '의료 서비스' 또는 '건강 관리'를 의미하는 셀 수 없는 명사입니다."
-healthful,"건강에 좋은",,h-ealthf-ul,adjective,"'healthful'은 음식이나 활동이 신체 '건강에 좋은' 영향을 미치는 것을 묘사하는 형용사입니다."
-heater,"난방기, 히터",/ˈhiːtə/,h-eat-er,noun,"'heater'는 방이나 건물의 온도를 높이기 위해 사용하는 기구, 즉 '난방기'나 '히터'를 의미합니다."
-helmet,"헬멧, 안전모",/ˈhɛlmət/,h-elm-et,noun,"'helmet'은 오토바이를 타거나 운동, 공사 등을 할 때 머리를 보호하기 위해 쓰는 '헬멧'이나 '안전모'를 의미합니다."
-hereby,"이로써, 이에 의하여",/hɪəˈbʌɪ/,h-er-eb-y,adverb,"'hereby'는 공식적인 선언이나 문서에서 '이 글(말)에 의해' 또는 '이로써'라는 의미를 나타내는 격식 있는 부사입니다."
-hesitant,"주저하는, 망설이는",/ˈhɛzɪtənt/,h-es-it-ant,adjective,"'hesitant'는 확신이 없거나 걱정이 되어 어떻게 행동할지 바로 결정하지 못하고 '주저하는' 또는 '망설이는' 태도를 묘사하는 형용사입니다."
-hesitation,"주저, 망설임",/hɛzɪˈteɪʃən/,h-es-it-at-ion,noun,"'hesitation'은 행동이나 결정을 내리기 전에 잠시 멈추거나 망설이는 것, 즉 '주저'를 의미하는 명사입니다."
+﻿word,meaning,pronunciation,syllables,partOfSpeech,example,sentence
+predict,Experts predicted that sales would rise.,pri-ˈdikt,pre-dict,타동사. 수동형 가능.,"predict'는 (관찰,' '경험,' '과학적' '이유' '등'에 '근거'하여) (미래'의 '일'을) '미리' '선언'하거나 '예측한다'는 '의미'의 '동사'입니다.\r\n Analysts predict that the market will continue to grow.",Experts ____ that prices will rise next year.
+prefer,I prefer tea to coffee.,pri-ˈfər,pre-fer,to + 비교대상.,prefer'는 (다른' '것'보다) (어떤' '것'을) '더' '좋아하거나' '선호한다'는 '의미'의 '동사'입니다.\r\n Many customers prefer online shopping for its convenience.,I ____ working in a quiet place.
+present,They presented him with an award.,ˈpre-zᵊnt,pres-ent,사람+with 구조 빈출.,"present'는 (형용사) (특정' '장소'에) '존재'하거나 '참석'한 '상태'를 '의미'합니다. (명사로 '선물', '현재'라는 '뜻'도 '있'습니다.)\r\n All managers must be present at the mandatory meeting.",She will ____ her findings at the conference.
+process,The system processes payments automatically.,ˈprä-ˌses,pro-cess,타동사. 수동형 가능.,"process'는 (명사) (어떤' '결과'에 '이르기'까지의) '연속적'인 '행동' '단계', '즉' '과정'이나 '절차'를 '의미'합니다. (동사로 '처리하다'는 '뜻'도 '있'습니다.)\r\n The hiring process can take up to four weeks.",We need to ____ all orders within two days.
+prohibit,The policy prohibits students from smoking.,prō-ˈhi-bət,pro-hib-it,from + 동명사 구조.,prohibit'는 (권위'를 '가지고) (어떤' '행동'이나 '물건'을) '법률'이나 '규칙'으로 '엄격'하게 '금지한다'는 '의미'의 '동사'입니다.\r\n Smoking is strictly prohibited inside the building.,The rule will ____ employees from using phones here.
+prolong,Stress can prolong recovery.,prə-ˈlȯŋ,pro-long,타동사. 수동형 가능.,prolong'은 (시간'이나 '기간'을) '더' '길게' '늘이거나' '연장시킨다'는 '의미'의 '동사'입니다.\r\n Any further delays will only prolong the project timeline.,Lack of sleep can ____ your recovery time.
+promote,She was promoted to manager.,prə-ˈmōt,pro-mote,수동형 자주. to + 직위.,"promote'는 (누군가를) '더' '높은' '직급'으로 '올리다(승진시키다)', '혹은' (제품'이나 '서비스'를) '널리' '알리다(홍보하다)'라는 '의미'의 '동사'입니다.\r\n Ms. Evans was promoted to Senior Manager last week.",The company will ____ its new product next month.
+prove,The plan proved successful.,ˈprüv,prove,타/자동 모두 가능. C보어 자주.,prove'는 (증거'나 '논리'를 '통해) (어떤' '것'이) '사실'이거나 '유효'함'을 '확립'한다는 '의미'의 '동사'입니다.\r\n This new strategy has proven to be very effective.,His results ____ the theory was correct.
+provide,The hotel provides guests with breakfast.,prə-ˈvīd,pro-vide,사람+with 구조.,provide'는 (필요'하거나 '원하는' '것'을) '쓸' '수' '있도록' '공급'하거나 '이용' '가능'하게 '만든다'는 '의미'의 '동사'입니다.\r\n The hotel provides free Wi-Fi for all guests.,We aim to ____ better service to customers.
+publicize,The company publicized its new campaign.,ˈpə-blə-ˌsīz,pub-li-cize,타동사. announce와 유사.,publicize'는 (대중'의 '관심'을 '끌기' '위해) (어떤' '것'을) '널리' '알리'거나 '광고'한다는 '의미'의 '동사'입니다.\r\n We need to publicize the upcoming charity event more effectively.,The company will ____ the new campaign online.
+publish,The author published a novel.,ˈpə-blish,pub-lish,타동사. 수동형 가능.,"publish'는 (책'이나 '잡지'를) '출판하다'는 '뜻' '외'에, (보고서' '등'의 '정보'를) '공식적'으로 '일반'에 '알린다'는 '의미'로도 '쓰'입니다.\r\n The company will publish its annual report next week.",The author plans to ____ a new book soon.
+purchase,We purchased new equipment.,ˈpər-chəs,pur-chase,타동사. buy의 격식형.,purchase'는 (돈'이나 '그에' '상응'하는 '것'을 '지불'하고) '물건'을 '얻는다(구매하다)'는 '의미'의 '동사' '및' '명사'입니다. (buy보다' '격식' '있음)\r\n All purchases over $50 are eligible for free shipping.,You can ____ items online with a credit card.
+put off,Don’t put off doing your homework.,ˈpu̇t-ˈȯf,put off,타동사. postpone과 유사.,put off'는 (어떤' '일'이나 '약속'을) '나중'으로 '미룬다(postpone)'는 '의미'의 '구동사'입니다.\r\n We had to put off the meeting due to the client's schedule.,Let’s ____ the trip until next weekend.
+quote,She quoted a line from Shakespeare.,ˈkwōt,quote,타동사. from + 출처.,"quote'는 (동사) '인용하다'는 '뜻' '외'에, (명사) (서비스나' '작업'에 '대한) '예상' '비용', '즉' '견적'을 '의미'하는 '단어'로 '매우' '자주' '쓰'입니다.\r\n The contractor gave us a quote for the renovation work.",Can you ____ the total cost in your email?
+raise,They raised prices last month.,ˈrāz,raise,타동사. rise와 혼동 주의.,"raise'는 (물건'이나 '손'을) '위로' '올리다'는 '뜻' '외'에, (가격,' '임금,' '수준' '등'을) '높이다' '혹은' (자금'을) '모으다'는 '의미'로 '쓰'입니다.\r\n The company decided to raise the prices of its main products.",They plan to ____ salaries next year.
+rank,The city ranks among the safest in the world.,ˈraŋk,rank,자동/타동 모두 가능. among 구조 중요.,"rank'는 (명사) '상대적'인 '지위'나 '순위', (동사) (어떤' '것'의) '순위'나 '등급'을 '매긴다'는 '의미'입니다.\r\n Our new product was ranked as the best in its category.",Our school will ____ first in national exams.
+retire,She retired from the company last year.,ri-ˈtī(-ə)r,re-tire,자동사 + from. 수동 불가.,retire'는 (주로' '나이'가 '들어) '직장' '생활'을 '그만두고' '물러난다'는 '의미'의 '동사'입니다.\r\n Mr. Kim will retire next month after 30 years with the company.,He plans to ____ after 30 years of service.
+reach,We finally reached an agreement.,ˈrēch,reach,타동사. to 불필요. (X reach to),"reach'는 (손'을 '뻗다)라는 '뜻' '외'에, (어떤' '장소'에) '도착하다' '혹은' (전화나' '이메일' '등'으로) '연락'이 '닿다'는 '의미'로 '자주' '쓰'입니다.\r\n You can reach our customer service team by phone or email.",We must ____ our goals by the end of the year.
+recall,I can’t recall his name.,ri-ˈkȯl,re-call,타동사. 제품 회수에도 쓰임.,recall'은 (결함' '등'으로 '인해) (시중'의 '제품'을) '회수'하는 '것(리콜)'을 '의미'하는 '동사'입니다. ('기억해내다'는 '뜻'도 '있'습니다.)`\r\n The company had to recall the product due to a safety defect.,I can’t ____ his name at the moment.
+receive,She received a scholarship.,ri-ˈsēv,re-ceive,타동사. 수동형 자주.,receive'는 (어떤' '것'을) '주'는 '것'을 '받거나' '소유'하게 '된다'는 '의미'의 '동사'입니다.\r\n You will receive an email confirmation shortly after ordering.,Did you ____ the package from the office?
+recognize,He was recognized as a leader.,ˈre-kig-ˌnīz,rec-og-nize,as보어 구조 가능.,"recognize'는 (누군가'나 '무엇'을) '알아보다'는 '뜻' '외'에, (누군가'의 '노력'이나 '공로'를) '공식적'으로 '인정'하고 '포상'한다는 '의미'로 '자주' '쓰'입니다.\r\n The company recognized her hard work with a bonus.",We must ____ his great contribution.
+recruit,The firm recruited new employees.,ri-ˈkrüt,re-cruit,타동사. 수동형 가능.,recruit'는 (회사나' '조직'에 '필요'한) '새' '구성원'을 '찾아' '뽑는다(모집하다)'는 '의미'의 '동사'입니다.\r\n We are currently recruiting experienced software developers.,The company will ____ new engineers this month.
+refrain,Please refrain from smoking.,ri-ˈfrān,re-frain,자동사 + from + 동명사.,refrain'은 (주로' 'refrain' 'from' '형태'로) (어떤' '행동'을) '하고' '싶'은 '것'을 '억누르고' '하지' '않는다(삼가다)'는 '의미'의 '동사'입니다.\r\n Please refrain from using mobile phones during the presentation.,Please ____ from using your phone during class.
+refund,The store refunded the money to him.,ri-ˈfənd,re-fund,4형식 가능. 수동형 빈출.,refund'는 (동사) (지불'한 '돈'을) '다시' '돌려준다'는 '의미' '혹은' (명사) '그렇게' '돌려받는' '돈(환불금)'을 '의미'합니다.\r\n If you are not satisfied you can return the item for a full refund.,You may get a full ____ if you cancel today.
+regard,She is regarded as a pioneer.,ri-ˈgärd,re-gard,5형식(as 보어형). 수동형 자주.,"regard'는 (명사) '관심'이라는 '뜻'도 '있'지만, (동사, 'regard' 'A' 'as' 'B' '형태'로) (A'를 'B'로) '생각'하거나 '간주한다'는 '의미'로 '자주' '쓰'입니다.\r\n We regard customer safety as our top priority.",Many people still ____ him as a great leader.
+regret,I regret saying that. / We regret to inform you.,ri-ˈgret,re-gret,-ing(과거) / to부정사(미래) 구분 중요.,"regret'은 (과거'의 '일'을) '후회하다'는 '뜻' '외'에, (나쁜' '소식'을 '전하게' '되어) '유감'스럽게 '생각한다'는 '의미'로 '자주' '쓰'입니다.\r\n We regret to inform you that the position has been filled.",We deeply ____ the delay in delivery.
+regulate,The law regulates trade.,ˈre-gyə-ˌlāt,reg-u-late,타동사. 수동 가능.,regulate'는 (규칙'이나 '법률'에 '따라) (어떤' '산업'이나 '활동'을) '관리'하고 '통제한다(규제하다)'는 '의미'의 '동사'입니다.\r\n The government closely regulates the pharmaceutical industry.,The government will ____ food safety standards.
+reimburse,The company reimbursed him for expenses.,ˌrē-əm-ˈbərs,re-im-burse,for + 비용 구조. 수동형 자주.,reimburse'는 (주로' '업무' '상' '지출'한 '비용'을) (나중'에 '회사' '등'이) '다시' '갚아준다(변제하다)'는 '의미'의 '동사'입니다.\r\n The company will reimburse you for all travel-related expenses.,The company will ____ travel expenses next week.
+reject,They rejected the proposal.,ri-ˈjekt,re-ject,타동사. 수동형 빈출.,"reject'는 (제안,' '지원,' '의견' '등'을) '받아들이'는 '것'을 '거부'하거나 '거절한다'는 '의미'의 '동사'입니다.\r\n The proposal was rejected because the costs were too high.",They decided to ____ the offer.
+relate,The story relates to our topic.,ri-ˈlāt,re-late,자동/타동 모두. to + 대상.,"relate'는 (이야기'를 '들려주다)라는 '뜻'도 '있'지만, (주로' 'be' 'related' 'to' '형태'로) (두' '가지' '이상'의 '것'이) '서로' '연관'이 '있음'을 '나타내는' '동사'입니다.\r\n This issue is directly related to our new shipping policy.",This article will ____ to your research topic.
+relocate,The company relocated to Busan. / They relocated the office.,(ˌ)rē-ˈlō-ˌkāt,re-lo-cate,자동/타동 모두 가능.,"relocate'는 (회사,' '사무실,' '공장' '등'이) '새로운' '장소'로 '옮기'거나 '이전한다'는 '의미'의 '동사'입니다.\r\n Our company headquarters will relocate to Singapore next year.",The firm plans to ____ its headquarters to Seoul.
+remove,Please remove the sticker from the package.,ri-ˈmüv,re-move,타동사. from + 위치.,remove'는 (어떤' '것'을) '원래' '있던' '장소'에서 '다른' '곳'으로 '옮기'거나 '없앤다(제거하다)'는 '의미'의 '동사'입니다.\r\n Please remove all personal items from the lockers by Friday.,Please ____ this file from the list.
+renew,You need to renew your license.,ri-ˈnü,re-new,타동사. 수동 가능.,"renew'는 (계약,' '구독,' '면허' '등'의) '유효' '기간'을 '연장'하여 '새롭게' '한다(갱신하다)'는 '의미'의 '동사'입니다.\r\n You must renew your subscription if you wish to continue the service.",You should ____ your passport before it expires

@@ -8,8 +8,8 @@ type ControlsProps = {
   onNext: () => void;
   isPreviousDisabled: boolean;
   isNextDisabled: boolean;
-  onReset: () => void; // ⭐ 추가
-  isResetDisabled: boolean; // ⭐ 추가
+  onReset: () => void;
+  isResetDisabled: boolean;
   mode: PracticeMode;
   onModeChange: (mode: PracticeMode) => void;
   dayMeta: DayMeta | null;
@@ -70,7 +70,6 @@ const Controls: FC<ControlsProps> = (props) => {
             ⏱️
           </button>
 
-          {/* ▼▼▼ '초기화' 버튼을 여기에 추가합니다 ▼▼▼ */}
           <button 
             className="btn btn--reset"
             onClick={props.onReset}

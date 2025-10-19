@@ -555,46 +555,62 @@ const Game = () => {
     setQueueIndex(queueIndex + 1)
   }, [clearAutoAdvance, handleSessionComplete, isReviewMode, mode, queueIndex, sessionWords.length])
 
-  const handlePrevious = useCallback(() => {
-    if (sessionWords.length === 0 || queueIndex === 0) return;
+  const handleCorrectWord = useCallback(async () => {
+    const current = sessionWords[queueIndex]
+    if (!current || !selectedDayId) return
+
+    clearAutoAdvance()
+
+    // 통계 업데이트 먼저 실행
+    setScore((previous) => previous + 10 + streak * 2)
+    setStreak((previous) => {
+      const next = previous + 1
+      setMaxStreak((maxValue) => Math.max(maxValue, next))
+      return next
+    })
     
-    setTypedValue("");
-    clearAutoAdvance();
-    setQueueIndex(queueIndex - 1);
-  }, [clearAutoAdvance, queueIndex, sessionWords.length]);
+    const nextProgressIndex = !isReviewMode && mode === "sequence"
+      ? Math.min(current.orderIndex + 1, baseWords.length)
+      : currentStat.lastIndex
+    
+    markAnswer(selectedDayId, current.word, true, nextProgressIndex)
+    refreshStat(selectedDayId)
 
- const handleCorrectWord = useCallback(async () => { // 1. async 추가
-    const current = sessionWords[queueIndex];
-    if (!current || !selectedDayId) return;
-
-    // 기존 타이머 로직을 모두 제거합니다.
-    clearAutoAdvance();
-
-    // 2. 사운드 재생이 끝날 때까지 기다립니다.
+    // 사운드 재생
     if (isInteracted) {
       try {
-        await pronounceWord(current.word);
+        await pronounceWord(current.word)
       } catch (e) {
-        console.error("사운드 재생 실패:", e);
+        console.error("사운드 재생 실패:", e)
       }
     }
 
-    // 3. 마지막 글자가 초록색으로 보이는 것을 인지할 수 있도록 짧은 지연시간을 줍니다.
-    await new Promise(resolve => setTimeout(resolve, 300)); // 0.3초 대기
+    // 짧은 지연 후 다음 단어로 이동
+    await new Promise(resolve => setTimeout(resolve, 300))
 
-    // 4. 모든 작업이 끝난 후, 다음 단어로 넘어갑니다.
+    // 다음 단어로 이동
     if (isRunningRef.current) {
-      handleNext();
+      handleNext()
     }
   }, [
-    clearAutoAdvance,
-    handleNext,
-    isInteracted,
-    pronounceWord,
+    sessionWords,
     queueIndex,
     selectedDayId,
-    sessionWords,
-  ]);
+    clearAutoAdvance,
+    streak,
+    setScore,
+    setStreak,
+    setMaxStreak,
+    isReviewMode,
+    mode,
+    baseWords.length,
+    currentStat.lastIndex,
+    markAnswer,
+    refreshStat,
+    isInteracted,
+    pronounceWord,
+    handleNext,
+  ])
 
   const handleIncorrectAttempt = useCallback(() => {
     const current = sessionWords[queueIndex]
@@ -620,7 +636,12 @@ const Game = () => {
     sessionWords,
   ])
 
-  const { typedValue, setTypedValue, handleInputChange, handleKeyDown } = useWordInput(
+  const { 
+    typedValue, 
+    setTypedValue, 
+    handleInputChange, 
+    handleKeyDown 
+  } = useWordInput(
     sessionWords,
     queueIndex,
     selectedDayId,
@@ -629,6 +650,14 @@ const Game = () => {
     handleCorrectWord,
     handleIncorrectAttempt
   )
+
+  const handlePrevious = useCallback(() => {
+    if (sessionWords.length === 0 || queueIndex === 0) return
+    
+    setTypedValue("")
+    clearAutoAdvance()
+    setQueueIndex(queueIndex - 1)
+  }, [clearAutoAdvance, queueIndex, sessionWords.length, setTypedValue])
 
   const handleRetry = useCallback(() => {
     if (!selectedDayId) return
@@ -644,7 +673,7 @@ const Game = () => {
     setTimeout(() => {
       handleStart()
     }, 100)
-  }, [selectedDayId, resetScoreboard, handleStart])
+  }, [selectedDayId, resetScoreboard, handleStart, setTypedValue])
 
   const handleCloseCompletion = useCallback(() => {
     setShowCompletionModal(false)
@@ -662,7 +691,7 @@ const Game = () => {
     resetScoreboard()
     
     void initializeDay(selectedDayId, mode, isReviewMode)
-  }, [initializeDay, mode, refreshStat, selectedDayId, isReviewMode, resetScoreboard])
+  }, [initializeDay, mode, refreshStat, selectedDayId, isReviewMode, resetScoreboard, setTypedValue])
 
   const closeSummary = useCallback(() => {
     setSummary(null)
@@ -697,8 +726,8 @@ const Game = () => {
     <div className="app-layout">
       {view === "wordbook" ? (
         <>
-        <h1 className="app-title">토익 단어 타자 게임</h1>
-        
+          <h1 className="app-title">토익 단어 타자 게임</h1>
+          
           <div style={{
             display: 'flex',
             justifyContent: 'center',
@@ -818,13 +847,10 @@ const Game = () => {
                 onModeChange={handleModeChange}
                 dayMeta={dayMeta}
                 isReviewMode={isReviewMode}
-
-                  onBackToList={handleBackToWordbook} // 기존 onBack을 onBackToList로 이름 변경
-                onPrevious={handlePrevious}          // 새로 만든 '이전' 함수 전달
-                 isPreviousDisabled={queueIndex === 0}  // '이전' 버튼 비활성화 조건
-                  onStatsClick={handleShowStats}       // '통계' 버튼 클릭 함수 전달
-
-
+                onBackToList={handleBackToWordbook}
+                onPrevious={handlePrevious}
+                isPreviousDisabled={queueIndex === 0}
+                onStatsClick={handleShowStats}
               />
             )}
 

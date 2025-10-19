@@ -500,3 +500,43 @@ button {
     font-size: clamp(2.5rem, 10vw, 3.5rem);
   }
 }
+
+.controls-panel__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.controls-panel .progress-bar {
+  flex-grow: 1;
+  height: 8px;
+  background-color: var(--color-bg-muted);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.controls-panel .progress-bar__fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.game-card__example,
+.game-card__example-sentence {
+  white-space: pre-line; /* \n 문자를 실제 줄바꿈으로 표시해 줌 */
+}
+
+/* 입력창 배경 완전 제거 */
+input[type="text"] {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.game-card input[type="text"] {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}

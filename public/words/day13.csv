@@ -1,42 +1,33 @@
-word,meaning,pronunciation,syllables,partOfSpeech,example
-highway,"고속도로",/ˈhaɪweɪ/,h-ighw-ay,noun,"'highway'는 도시와 도시 또는 주요 지역을 연결하는 넓고 포장된 주요 도로, 특히 '고속도로'를 의미합니다."
-hike,"하이킹; (가격 등의) 급등",/haɪk/,h-ik-e,noun,"'hike'는 자연 속에서 장거리를 걷는 '하이킹'이나 '도보 여행'을 의미하며, 비유적으로 가격이나 비용의 '급격한 인상'을 뜻하는 비격식적인 단어로도 쓰입니다."
-hiker,"하이커, 도보 여행자",/ˈhaɪkɚ/,h-ik-er,noun,"'hiker'는 취미나 운동으로 하이킹을 하는 사람, 즉 '도보 여행자'를 의미합니다."
-hobby,"취미",/ˈhɒ.bi/,h-obb-y,noun,"'hobby'는 여가 시간에 즐거움을 위해 하는 활동, 즉 '취미'를 의미합니다."
-homeless,"집이 없는",/ˈhoʊmləs/,h-om-el-ess,adjective,"'homeless'는 거주할 집이 없는 상태를 나타내는 형용사입니다. 'the homeless'는 '노숙자들'을 의미하는 명사로 쓰입니다."
-homemade,"집에서 만든",,h-om-em-ad-e,adjective,"'homemade'는 가게에서 산 것이 아니라 집에서 직접 만든 음식이나 물건을 묘사하는 형용사입니다."
-homeowner,"주택 소유자",,h-om-eown-er,noun,"'homeowner'는 자신이 사는 집을 소유하고 있는 사람, 즉 '주택 소유자'를 의미합니다."
-homework,"숙제",/ˈhəʊmˌwɜːk/,h-om-ew-ork,noun,"'homework'는 학생이 학교 수업 후에 집에서 하도록 부여받은 과제, 즉 '숙제'를 의미하는 셀 수 없는 명사입니다."
-honestly,"솔직히",/ˈɒnɪstli/,h-on-estl-y,adverb,"'honestly'는 '정직하게'라는 기본적인 의미와 함께, 자신의 생각이나 감정을 강조하며 '솔직히 말해서'라고 말할 때 문장 앞에서 자주 사용됩니다."
-hospitality,"환대, 후대",/hɒs.pɪˈtæl.ɪ.ti/,h-osp-it-al-it-y,noun,"'hospitality'는 손님을 따뜻하고 친절하게 맞이하여 대접하는 것, 즉 '환대'를 의미합니다."
-hotline,"핫라인, 긴급 직통 전화",,h-otl-in-e,noun,"'hotline'은 특정 문제에 대한 정보나 도움을 제공하기 위해 운영되는 직통 전화, 즉 '상담 전화'나 '긴급 전화'를 의미합니다."
-hourly,"시간마다의; 시급으로",/ˈaʊ̯əli/,h-ourl-y,adverb,"'hourly'는 '매시간의'라는 의미의 형용사와, '한 시간마다'라는 의미의 부사로 쓰입니다. 'hourly wage'는 '시급'입니다."
-housekeep,"살림하다",,h-ous-ek-eep,verb,"'housekeep'은 집안을 관리하고 돌보는 것, 즉 '살림하다'라는 의미의 동사입니다. 명사 'housekeeping'(살림)이 더 흔하게 쓰입니다."
-housekeeper,"가정부, 가사도우미",/ˈhaʊskiːpə/,h-ous-ek-eep-er,noun,"'housekeeper'는 다른 사람의 집을 청소하고 관리하는 일을 하는 사람, 즉 '가정부'나 '가사도우미'를 의미합니다."
-humidity,"습도",/hjuːˈmɪdɪti/,h-um-id-it-y,noun,"'humidity'는 공기 중에 포함된 수증기의 양, 즉 '습도'를 의미합니다."
-hungry,"배고픈",/ˈhʌŋ.ɡɹi/,h-ungr-y,adjective,"'hungry'는 음식을 먹고 싶어 하는 상태, 즉 '배고픈'을 의미하는 가장 일반적인 형용사입니다."
-hurricane,"허리케인",/ˈhʌɹɪkən/,h-urr-ic-an-e,noun,"'hurricane'은 대서양에서 발생하는 강력한 열대성 저기압, 즉 '허리케인'을 의미합니다. 태평양에서 발생하면 'typhoon'(태풍)이라고 부릅니다."
-hygiene,"위생",/ˈhaɪˌdʒiːn/,h-yg-ien-e,noun,"'hygiene'은 건강을 유지하기 위해 청결을 지키는 실천, 즉 '위생'을 의미합니다. 'personal hygiene'은 '개인위생'입니다."
-ice cream,"아이스크림",/ˌaɪsˈkɹiːm/,ic-e c-ream,noun,"'ice cream'은 우유나 크림을 얼려 만든 차가운 디저트, 즉 '아이스크림'을 의미합니다."
-icy,"얼음 같은, 몹시 차가운",/ˈaɪsi/,ic-y,adjective,"'icy'는 길이나 표면이 '얼음으로 덮인' 상태나, 날씨나 사람이 '매우 차가운' 상태를 묘사하는 형용사입니다."
-ideally,"이상적으로",/ʌɪˈdɪəli/,id-eall-y,adverb,"'ideally'는 가장 완벽하고 바람직한 상황을 가정하여 말할 때, 즉 '이상적으로는'이라는 의미로 사용되는 부사입니다."
-identification,"신분증; 확인",/aɪˌdɛntɪfɪˈkeɪʃən/,id-ent-if-ic-at-ion,noun,"'identification'은 그 사람이 누구인지를 증명하는 공식적인 문서, 즉 '신분증'(줄여서 ID)을 의미하며, 무언가를 인식하고 '확인'하는 행위를 뜻하기도 합니다."
-illogical,"비논리적인",,ill-og-ic-al,adjective,"'illogical'은 이치에 맞지 않고 상식적으로 이해하기 힘든, 즉 '비논리적인' 생각이나 주장을 묘사하는 형용사입니다."
-immigration,"이민",/ɪmɪˈɡɹeɪʃn/,imm-igr-at-ion,noun,"'immigration'은 다른 나라로 영구적으로 거주하기 위해 들어오는 것, 즉 '(타국으로부터의) 이민'을 의미합니다. 반대말은 '(타국으로의) 이주'를 뜻하는 'emigration'입니다."
-impact,"영향, 충격",,imp-act,noun,"'impact'는 어떤 것이 다른 것에 미치는 강한 '영향'이나 '효과'를 의미하며, 두 물체가 부딪히는 물리적인 '충돌'이나 '충격'을 뜻하기도 합니다."
-impatient,"참을성 없는",/ɪmˈpeɪʃənt/,imp-at-ient,adjective,"'impatient'은 기다리거나 지체되는 것을 힘들어하고 쉽게 짜증을 내는, 즉 '참을성 없는' 성격을 묘사하는 형용사입니다."
-imperative,"반드시 해야 하는, 긴요한",/ɪmˈpɛɹ.ə.tɪv/,imp-er-at-iv-e,adjective,"'imperative'는 어떤 일이 매우 중요하여 '반드시 해야 하는' 또는 '필수적인'이라는 의미를 가진 격식 있는 형용사입니다."
-inappropriate,"부적절한",/ˌɪnəˈpɹəʊpɹi.ət/,in-appr-opr-iat-e,adjective,"'inappropriate'는 특정 상황이나 장소에 어울리지 않고 예의에 어긋나는, 즉 '부적절한' 말이나 행동을 묘사하는 형용사입니다."
-inclusive,"포괄적인, 포함된",/ɪnˈkluːsɪv/,incl-us-iv-e,adjective,"'inclusive'는 특정 항목이 전체 가격이나 범위에 '포함된'이라는 의미와, 다양한 사람들을 차별 없이 '포용하는'이라는 의미로 사용됩니다."
-incoming,"들어오는, 새로 온",,inc-om-ing,adjective,"'incoming'은 '들어오는'(예: incoming call - 수신 전화) 또는 조직에 '새로 부임한'이라는 의미를 가진 형용사입니다."
-incomplete,"불완전한",/ɪn.kəm.ˈpliːt/,inc-ompl-et-e,adjective,"'incomplete'은 모든 부분이 갖추어지지 않아 '불완전한' 또는 '미완성의' 상태를 나타내는 형용사입니다."
-inconvenience,"불편",/ɪnkənˈviːnɪəns/,inc-onv-en-ienc-e,noun,"'inconvenience'는 사소한 문제나 곤란함으로 인해 겪게 되는 '불편'을 의미하는 명사입니다."
-incur,"(손실·비용 등을) 발생시키다, 초래하다",/ɪnˈkəː/,inc-ur,verb,"'incur'는 주로 좋지 않은 결과(비용, 손실, 비난 등)를 스스로에게 '가져오다' 또는 '초래하다'라는 의미의 격식 있는 동사입니다."
-indicator,"지표",/ˈɪn.dɪ.ˌkeɪ.tə(ɹ)/,ind-ic-at-or,noun,"'indicator'는 특정 상황의 변화나 상태를 보여주는 '지표'나 '척도'를 의미합니다."
-indirect,"간접적인",/ˌɪndaɪˈɹɛkt/,ind-ir-ect,adjective,"'indirect'는 직접적으로 관련되거나 표현되지 않고, 다른 것을 통해 연결되는 '간접적인' 관계나 방식을 나타내는 형용사입니다."
-individually,"개별적으로, 각자",,ind-iv-id-uall-y,adverb,"'individually'는 그룹 전체가 아닌, 구성원 한 명 한 명에게 '개별적으로' 또는 '각자'라는 의미를 나타내는 부사입니다."
-indoor,"실내의",/ˈɪndɔː/,ind-oor,adjective,"'indoor'는 건물 '안의' 또는 '실내에서 하는' 활동을 묘사하는 형용사입니다. 부사 'indoors'(실내에서)와 구분하여 사용해야 합니다."
-induction,"유도; 취임",/ɪnˈdʌkʃən/,ind-uct-ion,noun,"'induction'은 특정 사례들로부터 일반적인 원리를 이끌어내는 '귀납법'이라는 의미와, 새로운 직책이나 조직에 사람을 정식으로 맞이하는 '취임(식)'이라는 의미로 사용됩니다."
-inefficient,"비효율적인",/ɪnɪˈfɪʃənt/,in-eff-ic-ient,adjective,"'inefficient'은 시간, 노력, 비용 등을 낭비하며 원하는 결과를 잘 얻지 못하는, 즉 '비효율적인' 방식이나 사람을 묘사하는 형용사입니다."
-inexpensive,"저렴한, 비싸지 않은",,in-exp-ens-iv-e,adjective,"'inexpensive'는 가격이 높지 않은, 즉 '저렴한' 또는 '비싸지 않은' 물건을 묘사하는 형용사입니다. 'cheap'보다 긍정적인 느낌을 줍니다."
-inexperience,"경험 부족, 미숙함",,in-exp-er-ienc-e,noun,"'inexperience'는 특정 일에 대한 지식이나 기술이 부족한 상태, 즉 '경험 부족' 또는 '미숙함'을 의미하는 명사입니다."
+﻿word,meaning,pronunciation,syllables,partOfSpeech,example,sentence
+replace,They replaced the old printer with a new one.,ri-ˈplās,re-place,with 구조 중요.,"replace'는 (낡'거나 '고장' '난' '것,' '혹은' '사람'을) '새로운' '것'으로 '바꾸거나' '대신'한다는 '의미'의 '동사'입니다.\r\n We need to replace the old printer with a new model.",We will ____ the broken parts with new ones.
+report,The team reported the results. / He reported on the issue.,ri-ˈpȯrt,re-port,"자동사(on), 타동사 모두 가능.","report'는 (명사) (업무,' '연구,' '사건' '등'에 '대한) '공식적'인 '글'이나 '문서', '즉' '보고서'를 '의미'합니다.\r\n The sales report must be submitted by the end of the day.",Please ____ any system errors immediately.
+represent,The lawyer represented the client.,ˌre-pri-ˈzent,rep-re-sent,타동사. 수동 가능.,represent'는 (어떤' '그룹'이나 '회사'를) '대신'하여 '공식적'으로 '행동'하거나 '말한다(대표하다)'는 '의미'의 '동사'입니다.\r\n Mr. Lee will represent our company at the conference.,This logo will ____ the company’s new image.
+request,We requested more information.,ri-ˈkwest,re-quest,타동사. for 사용 X.,"request'는 (명사) (어떤' '것'을 '해달'라고) '공식적'이고 '정중'하게 '부탁'하는 '행위', '즉' '요청'을 '의미'합니다.\r\n All requests for vacation must be approved by a manager.",I’d like to ____ a refund for my order.
+require,The job requires experience. / The task requires you to work late.,ri-ˈkwī(-ə)r,re-quire,5형식(to부정사 보어형) 가능.,require'는 (규칙'이나 '필요'에 '의해) (어떤' '것'이) '반드시' '있어야' '하거나' '행해져야' '함'을 '의미'하는 '동사'입니다.\r\n This position requires at least five years of experience.,The job will ____ a high level of skill.
+reserve,Please reserve a seat for me.,ri-ˈzərv,re-serve,타동사. 수동형 자주.,"reserve'는 (좌석,' '방,' '테이블' '등'을) '미리' '확보'하여 '사용'할 '수' '있도록 '예약한다'는 '의미'의 '동사'입니다.\r\n I would like to reserve a meeting room for this afternoon.",You should ____ a table before the weekend.
+resign,She resigned from her position.,ri-ˈzīn,re-sign,자동사 + from. 수동 불가.,resign'은 (직위'나 '일자리'에서) '공식적'으로 '물러난다(사임하다)'는 '의미'의 '동사'입니다.\r\n The CEO announced that he will resign at the end of the year.,He decided to ____ from his position.
+resolve,They resolved the issue. / He resolved to try again.,ri-ˈzälv,re-solve,타/자동 둘 다 가능.,"resolve'는 (문제,' '불만,' '갈등' '등'을) '성공적'으로 '다루어' '분명'하게 '끝낸다(해결하다)'는 '의미'의 '동사'입니다.\r\n Our technical support team will help you resolve the issue quickly.",We must ____ this issue as soon as possible.
+restore,The project restored the building to its original state.,ri-ˈstȯr,re-store,to + 상태 구조.,restore'는 (이전'의 '좋은' '상태'나 '기능' '등'을) '다시' '되찾'거나 '회복시킨다(복구하다)'는 '의미'의 '동사'입니다.\r\n Service has been restored after the temporary network outage.,The team will ____ the data after the crash.
+restrict,Access is restricted to members only.,ri-ˈstrikt,re-strict,수동형 + to 구조 자주.,"restrict'는 (어떤' '것'의 '범위,' '양,' '자유' '등'을) '일정' '한도' '내'로 '막거나' '제한한다'는 '의미'의 '동사'입니다.\r\n Access to this area is restricted to authorized personnel only.",The new rule will ____ access to the lab.
+result,The error resulted in delay.,ri-ˈzəlt,re-sult,자동사. 수동 불가.,"result'는 (동사, 'result' 'from'/'in' '형태'로) (어떤' '것'이) '결과'로서 '생겨나거나' (어떤' '결과'를 '초래'한다)는 '의미'입니다.\r\n The errors resulted from a flaw in the software.",His hard work will ____ in great success.
+resume,She resumed work after the break.,ri-ˈzüm,re-sume,타동사. 수동형 자주.,resume'는 (잠시' '중단'되었던) '활동'이나 '상태'를 '다시' '시작한다(재개하다)'는 '의미'의 '동사'입니다. (참고: 명사 이력서는 [ˈre-zə-ˌmā]로 발음이 다름)\r\n We will resume the meeting after a 15-minute break.,Let’s ____ work after a short break.
+retain,The company retained its employees.,ri-ˈtān,re-tain,타동사. continue와 유사.,retain'은 (어떤' '것'을) '잃지' '않고' '계속' '가지고' '있거나' '보유한다'는 '의미'의 '동사'입니다.\r\n The company must work hard to retain its best employees.,We must ____ key staff during restructuring.
+return,She returned home. / Please return the form to us.,ri-ˈtərn,re-turn,자동/타동 모두.,"return'은 (원래' '있던' '곳'으로) '돌아가다'는 '뜻' '외'에, (물건'을) '원래' '주인'이나 '장소'로 '돌려준다(반품/반납하다)'는 '의미'로 '자주' '쓰'입니다.\r\n You must return the defective product within 14 days.",Please ____ the items to the warehouse.
+reveal,The study revealed that stress affects sleep.,ri-ˈvēl,re-veal,타동사. 수동형 가능.,reveal'은 (이전'에 '숨겨져' '있거나 '알려지지' '않았던) '사실'이나 '정보'를 '알려주거나' '드러낸다'는 '의미'의 '동사'입니다.\r\n The investigation revealed several errors in the report.,The test results may ____ the cause of the problem.
+revise,Please revise the draft.,ri-ˈvīz,re-vise,타동사. 수동 가능.,"revise'는 (문서,' '계획,' '의견' '등'의 '잘못'된 '부분'이나 '부족'한 '점'을) '검토'하여 '바꾼다(수정/개정하다)'는 '의미'의 '동사'입니다.\r\n The manager asked me to revise the budget proposal.",We need to ____ the contract before signing.
+run,She runs every morning. / He runs a small business.,ˈrən,run,자동/타동 모두 가능.,"run'은 (달리다)라는 뜻 외에, (사업체, 프로그램 등을) '관리'하고 '운영한다'는 의미로 자주 쓰이는 동사입니다.\r\n They run a successful online retail business.",She will ____ her own business next year.
+rush,Don’t rush your work. / She rushed to the station.,ˈrəsh,rush,자동/타동 모두 가능.,"rush'는 (명사) '골풀'이라는 뜻도 있으나, (동사) (어떤 일을) '매우 급하게' '처리'하거나 '서두른다'는 의미로 훨씬 자주 쓰입니다.\r\n We had to rush the shipment to meet the customer's deadline.",Don’t ____ your work; take your time.
+satisfy,The results satisfied our expectations.,ˈsa-təs-ˌfī,sat-is-fy,타동사. 수동 가능.,"satisfy'는 (계약 조건, 요구 사항, 기준 등을) '수행'하거나 '완전히' '채운다(충족시키다)'는 의미의 동사입니다.\r\n The new product must satisfy all safety requirements.",We hope to ____ all customers with our service.
+save,This system saves time. / It saves us from errors.,ˈsāv,save,from 구조 자주.,"save'는 (죄에서 구하다)라는 뜻도 있으나, (돈, 시간, 노력 등을) '아끼다(절약하다)' 혹은 (컴퓨터 파일을) '저장하다'는 의미로 자주 쓰입니다.\r\n You can save time by using our online check-in service.",Please ____ time by working efficiently.
+schedule,The meeting is scheduled for Monday.,ˈske-(ˌ)jül,sched-ule,타동사. 수동형 빈출.,schedule'은 (어떤 일이) '언제' '어떤' '순서'로 '진행'될지를 '보여주는' '절차'상의 '계획'이나 '일정표'를 '의미'하는 '명사'입니다.\r\n The construction project is currently ahead of schedule.,Let’s ____ a meeting for next Monday.
+seal,Please seal the envelope with tape.,ˈsēl,seal,타동사. 수동 가능.,"seal'은 (명사) '물개'라는 뜻도 있지만, (동사) (봉투나 용기 등을) '틈이' '없도록' '단단히' '막거나' '봉한다'는 '의미'로 '자주' '쓰'입니다.\r\n Please make sure to seal the envelope before mailing the contract.",Please ____ the envelope before sending it.
+seat,The restaurant seats 100 guests.,ˈsēt,seat,타동사. 수동형 가능.,"seat'은 (높은 지위의 의자)라는 뜻도 있으나, (일반적으로) '앉을' '수' '있는' '장소'나 '자리'를 '의미'하는 '명사'입니다.\r\n There is a reserved seat for you in the front row.",I will ____ you near the front row.
+secure,They secured a loan from the bank.,si-ˈkyu̇r,se-cure,타동사. from + 출처 가능.,"secure'는 (위험이나) '공격', '무단' '접근'으로부터 '안전'하거나 '보호'되는 '상태'를 '의미'하는 '형용사'입니다. (동사로 '확보하다'는 뜻도 있음)\r\n All personal data must be kept in a secure database.",We must ____ the area before construction.
+seek,We seek to improve quality.,ˈsēk,seek,타동사. 수동 가능.,seek'는 (필요한 것이나 사람을) '얻기' '위해' '적극적'으로 '노력'하며 '찾는다(구하다)'는 '의미'의 '동사'입니다.\r\n We are seeking innovative solutions to improve efficiency.,We plan to ____ advice from an expert.
+select,Please select your preferred option.,sə-ˈlekt,se-lect,타동사. choose와 유사.,select'는 (적합성이나) '우수성'에 '따라) '(특별히) '선택'되거나 '엄선'되었다는 '의미'의 '형용사'입니다.\r\n Only a select number of applicants will be invited for an interview.,You may ____ your preferred training session.
+serve,He served as a manager for 10 years.,ˈsərv,serve,자동/타동 모두. as/for 구조 자주.,"serve'는 (하인으로) '일하다'는 뜻 외에, (고객에게) '(음식'이나 '서비스' '등을) '제공한다'는 '의미'로 '자주' '쓰'입니다.\r\n This restaurant is known for serving authentic Italian cuisine.",This café will ____ free coffee at the event.
+set up,They set up a new branch in Seoul.,ˈset-ˌəp,set-up,타동사. 수동 가능.,"set up'은 (육체적 자세)라는 뜻도 있으나, (회사' '등을) '설립'하거나 (회의' '등을) '마련'하고 (장비' '등을) '설치'한다는 '의미'의 '구동사'로 '훨씬' '자주' '쓰'입니다.\r\n The company plans to set up a new branch office in Asia.",Let’s ____ up the booth before the show.
+soak,Soak the beans overnight. / The ground soaked quickly.,ˈsōk,soak,타/자동 모두.,soak'는 (액체' '속'에) '담가' '두거나' (액체'에) '흠뻑' '젖게' '된다'는 '의미'의 '동사'입니다. (토익 빈출 단어는 아님)\r\n (The box was left in the rain and the labels soaked off.),Towels can ____ water quickly.
+solicit,The group solicited donations.,sə-ˈli-sət,so-lic-it,타동사. 수동형 가능.,"solicit'는 (누군가에게) (정보,' '의견,' '기부,' '투자' '등'을) '공식적'이고 '적극적'으로 '요청'하거나 '구한다'는 '의미'의 '동사'입니다.\r\n The charity is soliciting donations for the new community center.",The charity will ____ donations for the program.
+specialize,The company specializes in robotics.,ˈspe-shə-ˌlīz,spe-cial-ize,자동사 + in. 수동 불가.,specialize'는 (자신'의 '노력'을) '특별'한 '활동'이나 '분야' '또는' '업무'에 '집중'한다는 '의미'의 '동사'입니다. (주로 'specialize in' 형태로 쓰임)\r\n Our firm specializes in corporate law and intellectual property.,They ____ in online education solutions.
+specify,Please specify your requirements.,ˈspe-sə-ˌfī,spec-i-fy,타동사. 수동 가능.,specify'는 (어떤' '것'을) '명확'하고 '구체적'으로 '말'하거나 '기록'한다는 '의미'의 '동사'입니다.\r\n The purchase order must specify the quantity and description of each item.,Please ____ your arrival time in the form.

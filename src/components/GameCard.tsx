@@ -1,8 +1,18 @@
 import { FC, RefObject } from "react";
-import type { PracticeWord } from "../lib/csv";
+
+// Word 타입 확장 (sentence 필드 추가)
+type WordWithSentence = {
+  word: string;
+  meaning: string;
+  pronunciation: string;
+  syllables: string;
+  partOfSpeech: string;
+  example: string;
+  sentence?: string; // 빈칸 채우기용 문장
+};
 
 type GameCardProps = {
-  currentWord: PracticeWord | null;
+  currentWord: any | null; // PracticeWord 대신 any 사용
   typedValue: string;
   isRunning: boolean;
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -26,9 +36,7 @@ const GameCard: FC<GameCardProps> = ({
   const renderWord = () => {
     if (!currentWord) return null;
 
-   // console.log("현재 단어 데이터:", currentWord);
-
-    return currentWord.word.split("").map((char, index) => {
+    return currentWord.word.split("").map((char: string, index: number) => {
       let className = "char-neutral";
       if (index < typedValue.length) {
         className = typedValue[index] === char ? "char-correct" : "char-incorrect";
@@ -49,9 +57,54 @@ const GameCard: FC<GameCardProps> = ({
     );
   }
 
+  // sentence 필드에서 빈칸 위치 찾기
+  const createSentenceWithBlank = () => {
+    const sentence = currentWord.sentence || "";
+    
+    if (!sentence) {
+      // sentence가 없으면 example에서 자동으로 만들기
+      if (!currentWord.example) {
+        return { beforeBlank: "", afterBlank: "" };
+      }
+      
+      const example = currentWord.example.replace(/\\r\\n/g, ' ').trim();
+      const wordPattern = new RegExp(`\\b${currentWord.word}\\b`, 'i');
+      const match = wordPattern.exec(example);
+      
+      if (match) {
+        const beforeBlank = example.slice(0, match.index);
+        const afterBlank = example.slice(match.index + match[0].length);
+        return { beforeBlank, afterBlank };
+      }
+      
+      return { beforeBlank: "", afterBlank: "" };
+    }
+    
+    // sentence에서 ____ 찾기
+    const parts = sentence.split('____');
+    if (parts.length === 2) {
+      return { beforeBlank: parts[0], afterBlank: parts[1] };
+    }
+    
+    // ____ 대신 ___ 또는 다른 형식일 수도 있으니 확인
+    const blankPattern = /__+/;
+    const match = sentence.match(blankPattern);
+    
+    if (match && match.index !== undefined) {
+      const beforeBlank = sentence.slice(0, match.index);
+      const afterBlank = sentence.slice(match.index + match[0].length);
+      return { beforeBlank, afterBlank };
+    }
+    
+    return { beforeBlank: sentence, afterBlank: "" };
+  };
+
+  const { beforeBlank, afterBlank } = createSentenceWithBlank();
+
   return (
     <div className="game-card">
       <div className="game-card__meaning">{currentWord.meaning}</div>
+      
       <div className="game-card__word-display">
         <h2 className="game-card__word" ref={wordContainerRef}>
           {renderWord()}
@@ -64,30 +117,75 @@ const GameCard: FC<GameCardProps> = ({
           🔊
         </button>
       </div>
+      
       <div className="game-card__pronunciation">/{currentWord.pronunciation}/</div>
       <div className="game-card__syllables">{currentWord.syllables}</div>
       
-      {/* --- 품사(pos) 배지 렌더링 부분 --- */}
       {currentWord.partOfSpeech && (
         <div className="game-card__pos-badge">{currentWord.partOfSpeech}</div>
       )}
 
+      {/* 기존 예문 표시 */}
       <div className="game-card__example">
-        {currentWord.example}
+        {currentWord.example.replace(/\\r\\n/g, '\n')}
       </div>
-      <input
-        ref={inputRef}
-        type="text"
-        className="game-card__input"
-        placeholder="여기에 단어를 입력하세요..."
-        value={typedValue}
-        onChange={onInputChange}
-        onKeyDown={onKeyDown}
-        disabled={!isRunning}
-        autoCapitalize="off"
-        autoCorrect="off"
-        spellCheck="false"
-      />
+
+      {/* 빈칸 형식의 입력창 - 어두운 배경 */}
+      <div style={{
+        background: '#2c3e50',
+        color: '#ecf0f1',
+        padding: '1.5rem',
+        borderRadius: '8px',
+        fontSize: '1.3rem',
+        lineHeight: '1.8',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'baseline',
+        justifyContent: 'center',
+        gap: '0',
+        marginTop: '1rem'
+      }}>
+        <span>{beforeBlank}</span>
+        <span style={{
+          display: 'inline-block',
+          position: 'relative',
+          margin: '0 0.25rem'
+        }}>
+          <input
+            ref={inputRef}
+            type="text"
+            placeholder=""
+            value={typedValue}
+            onChange={onInputChange}
+            onKeyDown={onKeyDown}
+            disabled={!isRunning}
+            autoCapitalize="off"
+            autoCorrect="off"
+            spellCheck="false"
+            style={{
+              display: 'inline-block',
+              width: `${Math.max(4, currentWord.word.length + 1)}ch`,
+              textAlign: 'center',
+              border: 'none',
+              background: '#34495e',
+              backgroundColor: '#34495e',
+              color: '#ecf0f1',
+              fontSize: 'inherit',
+              padding: '0',
+              margin: '0',
+              outline: 'none',
+              fontFamily: 'inherit',
+              borderBottom: '2px solid #7f8c8d',
+              boxShadow: 'none',
+              WebkitAppearance: 'none',
+              MozAppearance: 'none',
+              appearance: 'none',
+              backgroundImage: 'none'
+            }}
+          />
+        </span>
+        <span>{afterBlank}</span>
+      </div>
     </div>
   );
 };

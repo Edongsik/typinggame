@@ -1,10 +1,9 @@
 import { FC, RefObject } from "react";
 import GameCard from "./GameCard";
-import Controls from "./Controls"; // 이제 Controls 하나만 사용합니다.
+import Controls from "./Controls";
 import type { PracticeWord } from "../lib/csv";
 import type { DayMeta, PracticeMode } from "../types";
 
-// Controls와 GameCard에 필요한 모든 props를 한 번에 정의합니다.
 type GameViewProps = {
   // Stats & Progress
   currentIndex: number;
@@ -24,31 +23,54 @@ type GameViewProps = {
   inputRef: RefObject<HTMLInputElement>;
   wordContainerRef: RefObject<HTMLHeadingElement>;
   
+  // 🆕 시도 횟수 관련 props 추가
+  currentAttempts: number;
+  currentScore: number | null;
+  showScoreFeedback: boolean;
+  
   // Controls
   onBackToList: () => void;
   onPrevious: () => void;
   onNext: () => void;
   isPreviousDisabled: boolean;
   isNextDisabled: boolean;
-  onReset: () => void; // ⭐ 추가
-  isResetDisabled: boolean; // ⭐ 추가
+  onReset: () => void;
+  isResetDisabled: boolean;
   onToggleTimer: () => void;
   isLoading: boolean;
   mode: PracticeMode;
   onModeChange: (mode: PracticeMode) => void;
   dayMeta: DayMeta | null;
   onStatsClick: () => void;
+  isReviewMode?: boolean;
 };
 
 const GameView: FC<GameViewProps> = (props) => {
   return (
     <>
-      {/* 1. 모든 기능이 통합된 Controls 컴포넌트 */}
+      {/* 1. Controls 컴포넌트 */}
       <Controls
-        {...props} // 필요한 모든 props를 한 번에 전달합니다.
+        onBackToList={props.onBackToList}
+        onPrevious={props.onPrevious}
+        onNext={props.onNext}
+        isPreviousDisabled={props.isPreviousDisabled}
+        isNextDisabled={props.isNextDisabled}
+        onReset={props.onReset}
+        isResetDisabled={props.isResetDisabled}
+        mode={props.mode}
+        onModeChange={props.onModeChange}
+        dayMeta={props.dayMeta}
+        isLoading={props.isLoading}
+        onToggleTimer={props.onToggleTimer}
+        timerEnabled={props.timerEnabled}
+        onStatsClick={props.onStatsClick}
+        onWordCountClick={props.onWordCountClick}
+        currentIndex={props.currentIndex}
+        totalWords={props.totalWords}
+        progress={props.progress}
       />
 
-      {/* 2. 타이머 (이전과 동일) */}
+      {/* 2. 타이머 */}
       {props.timerEnabled && (
         <div style={{
           textAlign: 'center',
@@ -74,6 +96,9 @@ const GameView: FC<GameViewProps> = (props) => {
         onPlayAudio={props.onPlayAudio}
         inputRef={props.inputRef}
         wordContainerRef={props.wordContainerRef}
+        currentAttempts={props.currentAttempts}
+        currentScore={props.currentScore}
+        showScoreFeedback={props.showScoreFeedback}
       />
     </>
   );
