@@ -555,62 +555,52 @@ const Game = () => {
     setQueueIndex(queueIndex + 1)
   }, [clearAutoAdvance, handleSessionComplete, isReviewMode, mode, queueIndex, sessionWords.length])
 
-  const handleCorrectWord = useCallback(async () => {
-    const current = sessionWords[queueIndex]
-    if (!current || !selectedDayId) return
+// Game.tsx의 handleCorrectWord 부분만 수정
 
-    clearAutoAdvance()
+const handleCorrectWord = useCallback(() => {
+  const current = sessionWords[queueIndex]
+  if (!current || !selectedDayId) return
 
-    // 통계 업데이트 먼저 실행
-    setScore((previous) => previous + 10 + streak * 2)
-    setStreak((previous) => {
-      const next = previous + 1
-      setMaxStreak((maxValue) => Math.max(maxValue, next))
-      return next
-    })
-    
-    const nextProgressIndex = !isReviewMode && mode === "sequence"
-      ? Math.min(current.orderIndex + 1, baseWords.length)
-      : currentStat.lastIndex
-    
-    markAnswer(selectedDayId, current.word, true, nextProgressIndex)
-    refreshStat(selectedDayId)
+  clearAutoAdvance()
 
-    // 사운드 재생
-    if (isInteracted) {
-      try {
-        await pronounceWord(current.word)
-      } catch (e) {
-        console.error("사운드 재생 실패:", e)
-      }
-    }
+  // 통계 업데이트
+  setScore((previous) => previous + 10 + streak * 2)
+  setStreak((previous) => {
+    const next = previous + 1
+    setMaxStreak((maxValue) => Math.max(maxValue, next))
+    return next
+  })
+  
+  const nextProgressIndex = !isReviewMode && mode === "sequence"
+    ? Math.min(current.orderIndex + 1, baseWords.length)
+    : currentStat.lastIndex
+  
+  markAnswer(selectedDayId, current.word, true, nextProgressIndex)
+  refreshStat(selectedDayId)
 
-    // 짧은 지연 후 다음 단어로 이동
-    await new Promise(resolve => setTimeout(resolve, 300))
-
-    // 다음 단어로 이동
+  // ✅ 사운드는 useWordInput에서 이미 재생했으므로 제거
+  
+  // ✅ 다음 단어로 자동 이동 (1.2초 후)
+  autoAdvanceRef.current = setTimeout(() => {
     if (isRunningRef.current) {
       handleNext()
     }
-  }, [
-    sessionWords,
-    queueIndex,
-    selectedDayId,
-    clearAutoAdvance,
-    streak,
-    setScore,
-    setStreak,
-    setMaxStreak,
-    isReviewMode,
-    mode,
-    baseWords.length,
-    currentStat.lastIndex,
-    markAnswer,
-    refreshStat,
-    isInteracted,
-    pronounceWord,
-    handleNext,
-  ])
+  }, 1200)
+}, [
+  sessionWords,
+  queueIndex,
+  selectedDayId,
+  clearAutoAdvance,
+  streak,
+  isReviewMode,
+  mode,
+  baseWords.length,
+  currentStat.lastIndex,
+  refreshStat,
+  handleNext,
+  autoAdvanceRef,
+  isRunningRef
+])
 
   const handleIncorrectAttempt = useCallback(() => {
     const current = sessionWords[queueIndex]

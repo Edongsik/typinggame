@@ -18,11 +18,26 @@ export function useWordInput(
   const [currentScore, setCurrentScore] = useState<number | null>(null)
   const [showScoreFeedback, setShowScoreFeedback] = useState(false)
 
-  // 새 단어로 넘어갈 때 시도 횟수 초기화
   const resetAttempts = useCallback(() => {
     setCurrentAttempts(0)
     setCurrentScore(null)
     setShowScoreFeedback(false)
+  }, [])
+
+  // ✅ 사운드 재생 헬퍼 함수 (사용자 제스처 내에서 호출)
+  const playWordSound = useCallback((word: string) => {
+    try {
+      // Web Speech API 시도
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel() // 이전 재생 중단
+        const utterance = new SpeechSynthesisUtterance(word)
+        utterance.lang = 'en-US'
+        utterance.rate = 0.95
+        window.speechSynthesis.speak(utterance)
+      }
+    } catch (error) {
+      console.warn('사운드 재생 실패:', error)
+    }
   }, [])
 
   const handleInputChange = useCallback(
@@ -37,27 +52,26 @@ export function useWordInput(
 
       setTypedValue(newValue)
 
-      // 정답 체크
+      // ✅ 정답 체크
       if (newValue === current.word && autoAdvanceRef.current == null) {
-        // 시도 횟수 증가
         const attempts = currentAttempts + 1
         setCurrentAttempts(attempts)
         
-        // 점수 계산
         const score = calculateScore(attempts)
         setCurrentScore(score)
         
-        // 시도 기록 저장
         if (selectedDayId) {
           recordAttempt(selectedDayId, current.word, attempts)
         }
         
-        // 점수 피드백 표시
+        // ✅ 사용자 입력 이벤트 내에서 즉시 사운드 재생 (모바일 대응)
+        playWordSound(current.word)
         
-        
-        // 점수 피드백을 잠깐 보여준 후 다음 단어로
-        onCorrectWord()
+        // ✅ 시도 횟수 초기화
         resetAttempts()
+        
+        // ✅ 정답 처리 콜백 호출
+        onCorrectWord()
       }
     },
     [
@@ -69,6 +83,7 @@ export function useWordInput(
       currentAttempts,
       selectedDayId,
       resetAttempts,
+      playWordSound, // ✅ 추가
     ]
   )
 
@@ -82,7 +97,6 @@ export function useWordInput(
       event.preventDefault()
       
       if (typedValue === current.word) {
-        // 정답 - handleInputChange에서 이미 처리됨
         if (autoAdvanceRef.current == null) {
           const attempts = currentAttempts + 1
           setCurrentAttempts(attempts)
@@ -92,13 +106,13 @@ export function useWordInput(
           
           recordAttempt(selectedDayId, current.word, attempts)
           
-          
+          // ✅ Enter 키 이벤트도 사용자 제스처이므로 여기서 사운드 재생
+          playWordSound(current.word)
           
           onCorrectWord()
           resetAttempts()
         }
       } else {
-        // 오답 - 시도 횟수만 증가하고 입력창 초기화
         setCurrentAttempts(prev => prev + 1)
         onIncorrectAttempt()
       }
@@ -114,6 +128,7 @@ export function useWordInput(
       onIncorrectAttempt,
       currentAttempts,
       resetAttempts,
+      playWordSound, // ✅ 추가
     ]
   )
 
