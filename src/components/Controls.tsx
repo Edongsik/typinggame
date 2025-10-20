@@ -73,13 +73,15 @@ const Controls: FC<ControlsProps> = (props) => {
           </button>
 
           {/* ✅ 자동 사운드 토글 버튼 추가 */}
-          <button 
-            className={clsx("btn btn--icon", { "btn--active": props.autoSoundEnabled })}
-            onClick={props.onToggleAutoSound}
-            title={props.autoSoundEnabled ? "자동 발음 끄기" : "자동 발음 켜기"}
-          >
-            🔊
-          </button>
+          {props.autoSoundEnabled !== undefined && props.onToggleAutoSound && (
+            <button 
+              className={clsx("btn btn--icon", { "btn--active": props.autoSoundEnabled })}
+              onClick={props.onToggleAutoSound}
+              title={props.autoSoundEnabled ? "자동 발음 끄기" : "자동 발음 켜기"}
+            >
+              🔊
+            </button>
+          )}
 
           <button 
             className="btn btn--reset"

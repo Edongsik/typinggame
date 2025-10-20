@@ -1,8 +1,18 @@
 // hooks/useWordInput.ts
 
-import { useState, useCallback, MutableRefObject } from "react"
-import type { PracticeWord } from "../types"
+import { useState, useCallback, MutableRefObject, useEffect } from "react"
 import { recordAttempt, calculateScore } from "../lib/attemptTracking"
+
+type PracticeWord = {
+  word: string;
+  meaning: string;
+  pronunciation: string;
+  syllables: string;
+  partOfSpeech: string;
+  example: string;
+  dayId: string;
+  orderIndex: number;
+}
 
 export function useWordInput(
   sessionWords: PracticeWord[],
@@ -11,7 +21,9 @@ export function useWordInput(
   isRunning: boolean,
   autoAdvanceRef: MutableRefObject<ReturnType<typeof setTimeout> | null>,
   onCorrectWord: () => void,
-  onIncorrectAttempt: () => void
+  onIncorrectAttempt: () => void,
+  clearAutoAdvance?: () => void,
+  speak?: (text: string) => void
 ) {
   const [typedValue, setTypedValue] = useState("")
   const [currentAttempts, setCurrentAttempts] = useState(0)
@@ -24,21 +36,13 @@ export function useWordInput(
     setShowScoreFeedback(false)
   }, [])
 
-  // ✅ 사운드 재생 헬퍼 함수 (사용자 제스처 내에서 호출)
-  const playWordSound = useCallback((word: string) => {
-    try {
-      // Web Speech API 시도
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel() // 이전 재생 중단
-        const utterance = new SpeechSynthesisUtterance(word)
-        utterance.lang = 'en-US'
-        utterance.rate = 0.95
-        window.speechSynthesis.speak(utterance)
-      }
-    } catch (error) {
-      console.warn('사운드 재생 실패:', error)
-    }
-  }, [])
+  // queueIndex가 변경될 때마다 입력값과 시도 횟수 즉시 초기화
+  useEffect(() => {
+    setTypedValue("")
+    setCurrentAttempts(0)
+    setCurrentScore(null)
+    setShowScoreFeedback(false)
+  }, [queueIndex])
 
   const handleInputChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,7 +56,7 @@ export function useWordInput(
 
       setTypedValue(newValue)
 
-      // ✅ 정답 체크
+      // 정답 체크 - autoAdvanceRef가 null일 때만 (중복 방지)
       if (newValue === current.word && autoAdvanceRef.current == null) {
         const attempts = currentAttempts + 1
         setCurrentAttempts(attempts)
@@ -64,14 +68,19 @@ export function useWordInput(
           recordAttempt(selectedDayId, current.word, attempts)
         }
         
-        // ✅ 사용자 입력 이벤트 내에서 즉시 사운드 재생 (모바일 대응)
-        playWordSound(current.word)
+        // 사운드 재생
+        if (speak) {
+          speak(current.word)
+        }
         
-        // ✅ 시도 횟수 초기화
-        resetAttempts()
-        
-        // ✅ 정답 처리 콜백 호출
+        // 정답 처리
         onCorrectWord()
+        
+        // 입력값 초기화는 약간의 지연 후
+        setTimeout(() => {
+          setTypedValue("")
+          resetAttempts()
+        }, 100)
       }
     },
     [
@@ -83,7 +92,7 @@ export function useWordInput(
       currentAttempts,
       selectedDayId,
       resetAttempts,
-      playWordSound, // ✅ 추가
+      speak
     ]
   )
 
@@ -96,26 +105,13 @@ export function useWordInput(
       
       event.preventDefault()
       
-      if (typedValue === current.word) {
-        if (autoAdvanceRef.current == null) {
-          const attempts = currentAttempts + 1
-          setCurrentAttempts(attempts)
-          
-          const score = calculateScore(attempts)
-          setCurrentScore(score)
-          
-          recordAttempt(selectedDayId, current.word, attempts)
-          
-          // ✅ Enter 키 이벤트도 사용자 제스처이므로 여기서 사운드 재생
-          playWordSound(current.word)
-          
-          onCorrectWord()
-          resetAttempts()
-        }
-      } else {
+      // 🔥 중요: 정답일 때는 handleInputChange에서 이미 처리했으므로 여기서는 오답만 처리
+      if (typedValue !== current.word) {
         setCurrentAttempts(prev => prev + 1)
+        setTypedValue("")
         onIncorrectAttempt()
       }
+      // 정답일 때는 아무것도 하지 않음 (handleInputChange에서 이미 처리됨)
     },
     [
       isRunning,
@@ -123,12 +119,7 @@ export function useWordInput(
       selectedDayId,
       sessionWords,
       typedValue,
-      autoAdvanceRef,
-      onCorrectWord,
       onIncorrectAttempt,
-      currentAttempts,
-      resetAttempts,
-      playWordSound, // ✅ 추가
     ]
   )
 

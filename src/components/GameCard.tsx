@@ -1,4 +1,4 @@
-import { FC, RefObject } from "react";
+import type { FC, RefObject } from "react";
 
 // Word 타입 확장 (sentence 필드 추가)
 type WordWithSentence = {
@@ -12,7 +12,7 @@ type WordWithSentence = {
 };
 
 type GameCardProps = {
-  currentWord: any | null;
+  currentWord: WordWithSentence | null;
   typedValue: string;
   isRunning: boolean;
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;

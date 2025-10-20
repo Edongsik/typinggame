@@ -13,6 +13,7 @@ type GameModalsProps = {
   onCloseCompletion: () => void
   onBeginReview: () => void
   onRetryFromCompletion: () => void
+  onOpenWordList?: () => void
   
   // Review Choice 모달
   showReviewChoiceModal: boolean
@@ -30,6 +31,7 @@ const GameModals: FC<GameModalsProps> = ({
   onRetryFromCompletion,
   showReviewChoiceModal,
   onFinalizeReview,
+  onOpenWordList,
 }) => {
   return (
     <>
@@ -82,7 +84,14 @@ const GameModals: FC<GameModalsProps> = ({
                 onClick={onCloseCompletion} 
                 className="game__summary-button"
               >
-                나중에
+                Day화면
+              </button>
+              <button
+                type="button"
+                onClick={onOpenWordList}
+                className="game__summary-button"
+              >
+                암기체크
               </button>
               <button
                 type="button"

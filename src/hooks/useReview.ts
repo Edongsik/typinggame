@@ -2,22 +2,40 @@
 
 import { useCallback } from "react"
 import { getStat, resetDay } from "../lib/progress"
-import type { PracticeWord, PracticeMode } from "../types"
+import { getCompletedWords } from "../lib/completedWords"
+import type { PracticeWord } from "../lib/csv"
 
-export function useReview(
-  selectedDayId: string | null,
-  baseWords: PracticeWord[],
-  resetScoreboard: () => void,
-  refreshStat: (dayId: string) => void,
-  initializeDay: (dayId: string, mode: PracticeMode) => Promise<void>,
-  mode: PracticeMode,
-  setIsReviewMode: (value: boolean) => void,
-  setSessionWords: (words: PracticeWord[]) => void,
-  setQueueIndex: (index: number) => void,
-  setAutoStartPending: (value: boolean) => void,
-  setShowCompletionModal: (value: boolean) => void,
+type PracticeMode = 'sequence' | 'random'
+
+type UseReviewParams = {
+  selectedDayId: string | null
+  baseWords: PracticeWord[]
+  resetScoreboard: () => void
+  refreshStat: (dayId: string) => void
+  initializeDay: (dayId: string, mode: PracticeMode, isReviewSession?: boolean) => Promise<void>
+  mode: PracticeMode
+  setIsReviewMode: (value: boolean) => void
+  setSessionWords: (words: PracticeWord[]) => void
+  setQueueIndex: (index: number) => void
+  setAutoStartPending: (value: boolean) => void
+  setShowCompletionModal: (value: boolean) => void
   setShowReviewChoiceModal: (value: boolean) => void
-) {
+}
+
+export function useReview({
+  selectedDayId,
+  baseWords,
+  resetScoreboard,
+  refreshStat,
+  initializeDay,
+  mode,
+  setIsReviewMode,
+  setSessionWords,
+  setQueueIndex,
+  setAutoStartPending,
+  setShowCompletionModal,
+  setShowReviewChoiceModal,
+}: UseReviewParams) {
   const beginReview = useCallback(() => {
     console.log("🔵 복습 시작!")
     
@@ -27,14 +45,18 @@ export function useReview(
       return
     }
     
-    const stat = getStat(selectedDayId)
-    console.log("📊 현재 stat:", stat)
-    console.log("❌ 틀린 단어들:", stat.wrongSet)
+    const currentStat = getStat(selectedDayId)
+    console.log("📊 현재 stat:", currentStat)
+    console.log("❌ 틀린 단어들:", currentStat.wrongSet)
     
-    const wrongWords = baseWords.filter((word) => stat.wrongSet.includes(word.word))
-    console.log("📝 복습할 단어 개수:", wrongWords.length)
+    const wrongWords = baseWords.filter((word) => currentStat.wrongSet.includes(word.word))
+    const completedList = selectedDayId ? getCompletedWords(selectedDayId) : []
+    const wrongFiltered = completedList.length
+      ? wrongWords.filter(w => !completedList.includes(w.word))
+      : wrongWords
+    console.log("🔍 복습할 단어 개수:", wrongWords.length)
     
-    if (wrongWords.length === 0) {
+    if (wrongFiltered.length === 0) {
       console.log("✅ 틀린 단어가 없음 - 복습 불필요")
       alert("틀린 단어가 없습니다! 완벽하게 학습했습니다! 🎉")
       setShowCompletionModal(false)
@@ -49,14 +71,16 @@ export function useReview(
     
     // 복습 모드 설정
     setIsReviewMode(true)
-    setSessionWords(wrongWords)
+    setSessionWords(wrongFiltered)
     setQueueIndex(0)
     
     // 통계 새로고침
     refreshStat(selectedDayId)
     
-    // 자동 시작
-    setAutoStartPending(true)
+    // 자동 시작 (약간의 지연)
+    setTimeout(() => {
+      setAutoStartPending(true)
+    }, 100)
     
     console.log("✅ 복습 모드 설정 완료!")
   }, [
@@ -84,7 +108,7 @@ export function useReview(
       
       // wrongSet 처리
       resetDay(selectedDayId, { keepWrongSet })
-      console.log(keepWrongSet ? "📝 wrongSet 유지됨" : "🗑️ wrongSet 비워짐")
+      console.log(keepWrongSet ? "📌 wrongSet 유지됨" : "🗑️ wrongSet 비워짐")
       
       // 통계 새로고침
       refreshStat(selectedDayId)

@@ -1,4 +1,17 @@
 ﻿word,meaning,pronunciation,syllables,partOfSpeech,example,sentence
+one-time,This is a one-time payment with no additional fees.,ˈwən-ˈtīm,one-time,"한때 ~였던, 이전의","'one-time'은 과거에는 그랬지만 지금은 더 이상 그렇지 않은, 즉 '한때 ~였던'이라는 의미를 가진 형용사입니다.",There is a ____ fee for account activation.
+ongoing,The ongoing investigation will take several months.,ˈȯn-ˌgō-iŋ,on-go-ing,계속 진행 중인,'ongoing'은 어떤 과정이나 상황이 끝나지 않고 '계속 진행 중인' 상태임을 나타내는 형용사입니다.,Please give an update on the ____ investigation.
+operational,The factory became fully operational last month.,ˌä-pə-ˈrā-sh(ə-)nəl,op-er-a-tion-al,"작동 가능한, 운영상의","'operational'은 시스템이나 장비가 사용될 준비가 되어 '작동 가능한' 상태임을 의미하며, 비즈니스의 '운영과 관련된'이라는 뜻으로도 쓰입니다.",The factory will be fully ____ by next Monday.
+opposing,The board members held opposing opinions on the issue.,ə-ˈpōz,op-pos-ing,반대하는,"'opposing'은 의견, 팀, 세력 등이 서로 '대립하는', '반대하는' 관계에 있음을 나타내는 형용사입니다.",The debate featured two strongly ____ opinions.
+optimal,We chose the optimal solution for the design problem.,ˈäp-tə-məl,op-ti-mal,최적의,"'optimal'은 주어진 조건 하에서 얻을 수 있는 가장 바람직하고 '최상의', '최적의' 상태를 묘사하는 형용사입니다.",We chose the ____ solution to balance cost and speed.
+outgoing,She has an outgoing personality and makes friends easily.,ˈau̇t-ˌgō-iŋ,out-go-ing,외향적인; 떠나가는,"'outgoing'은 사람들과 어울리기를 좋아하는 '외향적인' 성격을 묘사하며, 직책 등에서 '물러나는', '떠나가는' 사람을 나타내기도 합니다.",Please confirm the number of ____ shipments today.
+outstanding,He received an award for his outstanding performance.,au̇t-ˈstan-diŋ,out-stand-ing,뛰어난; 미지불된,"'outstanding'은 같은 종류의 다른 것들보다 훨씬 '뛰어난', '두드러진'이라는 긍정적인 의미와, 아직 지불되거나 처리되지 않은 '미결제의'라는 두 가지 주요 의미를 가집니다.",The intern received an award for ____ performance.
+overall,The overall result of the project was positive.,ˌō-vər-ˈȯl,over-all,전반적인,"'overall'은 개별적인 부분이 아닌 전체를 고려하는, 즉 '종합적인', '전반적인'이라는 의미의 형용사 및 부사입니다.",Our ____ revenue increased by 12% this quarter.
+overdue,The library charged a fee for overdue books.,ˌō-vər-ˈdü,over-due,기한이 지난,"'overdue'는 정해진 날짜나 시간을 넘긴, 즉 '반납 기한이 지난'(도서), '지불 기일이 지난'(요금) 상태를 나타내는 형용사입니다.",Your payment is ____ and must be settled immediately.
+overhead,The company reduced overhead costs by automating tasks.,ˌō-vər-ˈhed,over-head,머리 위의; 간접비,"'overhead'는 '머리 위의'라는 의미의 형용사 및 부사이며, 명사로는 사업 운영에 드는 '간접 경비'를 의미합니다.",Rising ____ costs have affected our profit margins.
+overnight,The package was sent by overnight delivery.,ˌō-vər-ˈnīt,over-night,밤사이에; 하룻밤의,"'overnight'는 '밤 동안', '밤사이에'라는 의미의 부사와, '하룻밤 동안의'라는 의미의 형용사로 쓰입니다. (예: overnight trip - 1박 여행)",The documents should arrive by ____ courier.
+overseas,The company opened an overseas branch in Singapore.,ˌō-vər-ˈsēz,over-seas,"해외의, 해외로","'overseas'는 바다 건너 다른 나라, 즉 '해외'를 의미하는 형용사 및 부사입니다.",The firm plans to open ____ offices next year.
+overwhelming,The students felt overwhelming pressure before the exam.,ˌō-vər-ˈ(h)wel-miŋ,over-whelm-ing,압도적인,"'overwhelming'은 수나 양, 힘, 감정 등이 너무나 강력하여 저항하거나 감당하기 힘든, 즉 '압도적인' 상태를 묘사하는 형용사입니다.",The product launch received an ____ response from customers.
 permanent,She applied for a permanent position at the firm.,ˈpər-mə-nənt,per-ma-nent,영구적인,"'permanent'는 일시적이거나 임시적인 것이 아니라, 앞으로 계속 변하지 않고 '영구적인' 또는 '영원한' 상태를 나타내는 형용사입니다.",She got a ____ job at the company.
 personal,Please share your personal information only with HR.,ˈpərs-nəl,per-son-al,"개인의, 사적인","'personal'은 특정 '개인의' 소유이거나 그와 관련된, 또는 공적인 것이 아닌 '사적인'이라는 의미의 형용사입니다.",Please keep your ____ items in a safe place.
 persuasive,She gave a persuasive argument during the debate.,pər-ˈswā-siv,per-sua-sive,설득력 있는,"'persuasive'는 다른 사람이 어떤 것을 믿거나 하도록 만드는 힘, 즉 '설득력 있는' 말이나 주장을 묘사하는 형용사입니다.",He made a ____ argument during the meeting.
@@ -29,37 +42,3 @@ rewarding,Teaching can be a rewarding career for many people.,ri-ˈwȯr-diŋ,re-
 rigid,The company maintains a rigid structure of hierarchy.,ˈri-jəd,rig-id,엄격한; 융통성 없는,"'rigid'는 규칙이나 방식이 매우 '엄격하여' 바뀌기 어려운 상태나, 생각이나 태도가 '융통성 없는' 경우를 묘사합니다.",The policy is too ____ to change.
 rigorous,The candidates went through a rigorous evaluation process.,ˈri-g(ə-)rəs,rig-or-ous,"엄격한, 철저한",'rigorous'는 규칙의 적용이나 검사 과정이 매우 '엄격하고 철저한' 상태를 나타내는 형용사입니다.,The exam has a ____ grading system.
 robust,We need a robust system to handle heavy traffic.,rō-ˈbəst,ro-bust,"튼튼한, 원기 왕성한","'robust'는 사람이나 시스템, 경제 등이 매우 '강건하고 튼튼한' 상태를 묘사하는 형용사입니다.",We need a ____ plan to improve the system.
-same,We received the same request from multiple clients.,ˈsām,same,똑같은,'same'은 두 개 이상의 대상이 모든 면에서 다르지 않고 '완전히 똑같다'는 것을 나타내는 형용사입니다.,Both teams got the ____ result.
-screened,Only screened participants can enter the facility.,screened,screened,"심사받은, 선별된",'screened'는 특정 기준에 따라 적합성 여부를 '심사받은' 또는 '선별된' 상태를 나타냅니다.,All visitors were ____ before entry.
-separate,We keep separate accounts for each department.,ˈse-pə-ˌrāt,sep-a-rate,"분리된, 별개의",'separate'는 다른 것과 연결되거나 섞이지 않고 '분리된' 또는 '별개의'라는 의미의 형용사입니다. 동사로는 '분리하다'는 뜻입니다.,Keep the two files ____.
-significant,There was a significant improvement in performance.,sig-ˈni-fi-kənt,sig-nif-i-cant,중요한; 상당한,"'significant'은 어떤 일에 큰 영향을 미칠 정도로 '중요한'이라는 의미와, 양이나 정도가 '상당한'이라는 두 가지 주요 의미를 가집니다.",The change was very ____.
-similar,They offer similar services at a lower cost.,ˈsi-mə-lər,sim-i-lar,비슷한,"'similar'는 완전히 똑같지는 않지만 많은 공통점을 가진, 즉 '유사한' 또는 '비슷한' 관계를 나타내는 형용사입니다.",Their ideas are ____.
-sincere,Please accept my sincere apology for the delay.,sin-ˈsir,sin-cere,"진실한, 진심 어린",'sincere'는 꾸밈이나 거짓이 없는 '진실된' 감정이나 태도를 묘사하는 형용사입니다.,She gave a ____ thank-you message.
-skilled,The factory needs skilled technicians for maintenance.,ˈskild,skilled,숙련된,"'skilled'는 많은 훈련과 경험을 통해 특정 기술에 '능숙한', '숙련된' 상태를 나타내는 형용사입니다.",He is a ____ worker with many skills.
-solar,The house uses solar energy for heating.,ˈsō-lər,so-lar,태양의,'solar'는 '태양의' 또는 '태양 에너지를 이용하는'이라는 의미를 가진 형용사입니다. (예: solar system - 태양계),We use ____ power for the building.
-solid,We have a solid plan for next year’s expansion.,ˈsä-ləd,sol-id,단단한; 견실한,"'solid'는 속이 비지 않고 '단단한' 물리적 상태와, 내용이 매우 '알찬', '믿을 수 있는'이라는 추상적인 의미로 모두 사용됩니다.",Our plan is on a ____ base.
-spacious,They moved into a spacious apartment downtown.,ˈspā-shəs,spa-cious,넓은,"'spacious'는 방, 집, 공간 등이 매우 '넓어서 쾌적한' 상태를 묘사하는 형용사입니다.",The room is bright and ____.
-specific,Please provide specific details about the issue.,spi-ˈsi-fik,spe-cif-ic,"구체적인, 특정한",'specific'은 일반적이거나 모호하지 않고 '구체적인' 또는 '특정한' 대상을 가리키는 형용사입니다.,Please give ____ information only.
-state-of-the-art,The company uses state-of-the-art equipment.,state-of-the-art,state-of-the-art,"최첨단의, 최신식의","'state-of-the-art'는 현재까지 개발된 기술 중 가장 높은 수준의, 즉 '최첨단의' 또는 '최신식의'라는 의미를 가진 형용사입니다.",The lab has ____ equipment.
-stationary,Please place the stationary objects on the shelf.,ˈstā-shə-ˌner-ē,sta-tion-ary,"움직이지 않는, 고정된",'stationary'는 한 장소에 '움직이지 않고' 머물러 있는 '고정된' 상태를 나타냅니다. '문구류'를 뜻하는 'stationery'와 철자가 비슷하여 주의해야 합니다.,Keep the printer ____ while fixing it.
-steady,He made steady progress throughout the training.,ˈste-dē,steady,"꾸준한, 안정된",'steady'는 큰 변화나 흔들림 없이 '꾸준하고 안정적인' 상태나 속도를 묘사하는 형용사입니다.,Sales grew at a ____ rate.
-strict,We follow strict rules about data protection.,ˈstrikt,strict,엄격한,'strict'는 규칙이나 규율을 매우 엄하게 적용하고 예외를 허용하지 않는 '엄격한' 태도를 묘사하는 형용사입니다.,He follows a ____ rule every day.
-subject,All employees are subject training to safety training.,ˈsəb-jikt,sub-ject,~의 영향을 받기 쉬운; ~에 따라,"'subject'는 'be subject to ~'의 형태로 쓰여, 어떤 규칙이나 조건의 '지배를 받거나' 또는 어떤 일의 '영향을 받기 쉬운' 상태를 나타냅니다.",This class is ____ to all students.
-subsequent,The subsequent events confirmed our decision.,ˈsəb-si-kwənt,sub-se-quent,그 다음의,"'subsequent'는 시간이나 순서상 어떤 일 다음에 일어나는, 즉 '그 후의', '다음의'라는 의미를 가진 격식 있는 단어입니다.",We will send a ____ notice later.
-sufficient,The company has sufficient funds for expansion.,sə-ˈfi-shənt,suf-fi-cient,충분한,'sufficient'은 어떤 목적이나 필요를 충족시키기에 '충분한' 양이나 정도를 나타내는 형용사입니다. 'enough'와 유사한 의미입니다.,There is ____ data to prove this.
-superior,Our product quality is superior standard to competitors.,su̇-ˈpir-ē-ər,su-pe-ri-or,"우수한, 상급의","'superior'는 다른 것보다 품질이나 수준이 더 높은 '우수한' 상태나, 지위가 더 높은 '상급의' 위치를 나타내는 형용사입니다. 'be superior to'는 '~보다 우수하다'는 의미입니다.",Our service is ____ to others.
-surrounding,The surrounding area is known for its natural beauty.,sə-ˈrau̇nd,sur-round-ing,주변의,"'surrounding'은 어떤 것의 주위에 있는, 즉 '인근의', '주변의'라는 의미를 가진 형용사입니다.",They live in the ____ area.
-tentative,We made a tentative plan for next month’s schedule.,ˈten-tə-tiv,ten-ta-tive,"잠정적인, 임시의","'tentative'는 아직 확정되지 않아 변경될 가능성이 있는, 즉 '잠정적인' 또는 '임시의'라는 의미의 형용사입니다.",The date is still ____.
-traditional,The restaurant serves traditional dishes from Korea.,trə-ˈdi-sh(ə-)nəl,tra-di-tion-al,전통적인,"'traditional'은 오래전부터 이어져 내려오는 방식이나 신념, 즉 '전통의' 또는 '전통적인'이라는 의미의 형용사입니다.",She wore a ____ Korean dress.
-tremendous,The company made a tremendous effort to reduce costs.,tri-ˈmen-dəs,tre-men-dous,"엄청난, 굉장한","'tremendous'는 양, 크기, 정도 등이 '엄청나게 큰' 또는 '굉장히 좋은'이라는 긍정적인 의미를 강조할 때 사용하는 형용사입니다.",The concert was a ____ success.
-unanimous,The board reached a unanimous decision on the proposal.,yu̇-ˈna-nə-məs,unan-i-mous,만장일치의,"'unanimous'는 모든 관련자들이 완전히 동의하는, 즉 '만장일치의'라는 의미의 형용사입니다.",The team made a ____ decision.
-unforeseen,We faced unforeseen difficulties during construction.,ˌən-fȯr-ˈsēn,un-fore-seen,예측하지 못한,"'unforeseen'은 미리 예상하거나 내다볼 수 없었던, 즉 '예기치 않은' 사건이나 문제를 묘사하는 형용사입니다.",The company faced an ____ problem.
-unique,She has a unique style of teaching.,yu̇-ˈnēk,unique,"독특한, 유일한",'unique'는 다른 어떤 것과도 같지 않고 '유일무이한' 또는 매우 특별하고 '독특한'이라는 의미의 형용사입니다.,Your idea is ____.
-unprecedented,The company achieved unprecedented success last year.,ˌən-ˈpre-sə-ˌden-təd,un-prec-e-dent-ed,전례 없는,"'unprecedented'는 과거에는 한 번도 일어난 적이 없는, 즉 '전례 없는' 또는 '유례없는' 사건이나 상황을 묘사하는 형용사입니다.",This event is ____.
-urban,The city is developing new urban areas for housing.,ˈər-bən,ur-ban,도시의,'urban'은 '도시의' 또는 '도시에 사는'이라는 의미를 가진 형용사입니다. 'rural'(시골의)의 반대말입니다.,Many people live in ____ areas.
-urgent,Please respond to this urgent request immediately.,ˈɜːdʒənt,ur-gent,긴급한,"'urgent'는 즉각적인 관심이나 조치가 필요한, 즉 '긴급한' 또는 '시급한' 상황을 나타내는 형용사입니다.",This issue is very ____.
-vacant,There are several vacant positions in the department.,ˈvā-kənt,va-cant,비어 있는,"'vacant'은 집, 방, 좌석, 일자리 등이 아무도 사용하거나 차지하고 있지 않은, 즉 '비어 있는' 상태를 나타내는 형용사입니다.",Several seats are still ____.
-valid,Please show a valid ID at the entrance.,ˈva-ləd,val-id,유효한; 타당한,"'valid'는 계약, 표, 문서 등이 법적으로나 공식적으로 '효력이 있는', '유효한' 상태를 의미하며, 이유나 주장이 논리적으로 '타당한' 경우에도 사용됩니다.",Your visa is ____ for six months.
-valued,She is one of our most valued employees.,ˈval-(ˌ)yüd,val-ued,"소중한, 귀중한","'valued'는 매우 중요하고 높이 평가받는, 즉 '소중한' 또는 '귀중한' 사람이나 사물을 묘사하는 형용사입니다.",You are a ____ customer.
-versatile,He is a versatile musician who plays many instruments.,ˈvər-sə-tᵊl,ver-sa-tile,"다재다능한, 다용도의","'versatile'은 사람이 여러 다른 기술이나 분야에 '능숙한', '다재다능한'이라는 의미와, 사물이 여러 다른 목적으로 사용될 수 있는 '다용도의'라는 의미로 모두 사용됩니다.",This tool is ____ and easy to use.
-vulnerable,Young children are vulnerable groups in emergencies.,ˈvəl-n(ə-)rə-bəl,vul-ner-a-ble,취약한,"'vulnerable'은 신체적 또는 정신적으로 상처받기 쉽거나 공격받기 쉬운, 즉 '취약한' 상태를 나타내는 형용사입니다.",Old people are ____ to online scams.

@@ -289,9 +289,7 @@ button {
  * CHARACTER STYLES (글자 색상 변경 스타일)
  * =============================================
  */
-.game-card__word span {
-  transition: color 0.2s ease-in-out;
-}
+
 
 /* 아직 타이핑되지 않은 글자 스타일 */
 .char-neutral {

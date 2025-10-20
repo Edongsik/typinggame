@@ -1,7 +1,6 @@
 import { FC, RefObject } from "react";
 import GameCard from "./GameCard";
 import Controls from "./Controls";
-import type { PracticeWord } from "../lib/csv";
 import type { DayMeta, PracticeMode } from "../types";
 
 type GameViewProps = {
@@ -12,9 +11,14 @@ type GameViewProps = {
   onWordCountClick: () => void;
   timerEnabled: boolean;
   timeLeft: number;
+  score?: number;
+  accuracy?: number;
+  wpm?: number;
+  streak?: number;
+  maxStreak?: number;
   
   // Card
-  currentWord: PracticeWord | null;
+  currentWord: any | null;
   typedValue: string;
   isRunning: boolean;
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;

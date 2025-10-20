@@ -1,5 +1,6 @@
 import { FC, useState, useEffect } from "react"
 import { addCustomWord, getCustomWords, removeCustomWord, exportCustomWordsAsCSV } from "../lib/customWords"
+import { invalidateDayCache } from "../lib/csv"
 
 type Word = {
   word: string
@@ -17,7 +18,8 @@ type AddWordProps = {
   onWordAdded?: (word: Word) => void
 }
 
-const API_BASE = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+const MERRIAM_WEBSTER_API_KEY = "703c15c0-d467-4c09-8733-bf73ff270fbc"
+const API_BASE = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/"
 
 function syllabify(word: string): string {
   const cleaned = word.toLowerCase().replace(/[^a-z]/g, "")
@@ -43,7 +45,9 @@ function syllabify(word: string): string {
 }
 
 async function fetchWordDetails(word: string): Promise<Word> {
-  const endpoint = `${API_BASE}${encodeURIComponent(word)}`
+  const endpoint = `${API_BASE}${encodeURIComponent(word)}?key=${MERRIAM_WEBSTER_API_KEY}`
+  console.log('🌐 Merriam-Webster API 요청:', endpoint)
+  
   const response = await fetch(endpoint)
   
   if (!response.ok) {
@@ -51,52 +55,78 @@ async function fetchWordDetails(word: string): Promise<Word> {
   }
   
   const payload = await response.json()
+  console.log('📦 API 응답:', payload)
+  
   if (!Array.isArray(payload) || payload.length === 0) {
     throw new Error("단어를 찾을 수 없습니다")
   }
-
+  
+  // Merriam-Webster는 제안 단어를 문자열 배열로 반환할 수 있음
+  if (typeof payload[0] === 'string') {
+    throw new Error(`단어를 찾을 수 없습니다. 혹시 이런 단어를 찾으셨나요? ${payload.slice(0, 3).join(', ')}`)
+  }
+  
   const entry = payload[0]
-  const phonetics = Array.isArray(entry.phonetics) ? entry.phonetics : []
-  const meanings = Array.isArray(entry.meanings) ? entry.meanings : []
-
-  const pronunciation = phonetics.find(
-    (item: any) => item && typeof item.text === "string" && item.text.trim().length > 0
-  )?.text ?? (typeof entry.phonetic === "string" ? entry.phonetic : "")
-
-  let partOfSpeech = ""
+  
+  // 발음 추출
+  let pronunciation = ""
+  if (entry.hwi?.prs?.[0]?.mw) {
+    pronunciation = entry.hwi.prs[0].mw
+  }
+  
+  // 품사 추출
+  const partOfSpeech = entry.fl || ""
+  
+  // 뜻 추출
   let meaning = ""
   let example = ""
-
-  for (const meaningEntry of meanings) {
-    if (!meaningEntry || typeof meaningEntry !== "object") continue
-    
-    if (!partOfSpeech && typeof meaningEntry.partOfSpeech === "string") {
-      partOfSpeech = meaningEntry.partOfSpeech
-    }
-    
-    const definitions = Array.isArray(meaningEntry.definitions) ? meaningEntry.definitions : []
-    for (const definition of definitions) {
-      if (!definition || typeof definition !== "object") continue
-      
-      if (!meaning && typeof definition.definition === "string") {
-        meaning = definition.definition
-      }
-      if (!example && typeof definition.example === "string") {
-        example = definition.example
-      }
-      if (meaning && example) break
-    }
-    if (meaning && example && partOfSpeech) break
+  
+  if (entry.shortdef && Array.isArray(entry.shortdef) && entry.shortdef.length > 0) {
+    meaning = entry.shortdef[0]
   }
-
-  return {
-    word,
+  
+  // 예문 추출
+  if (entry.def && Array.isArray(entry.def)) {
+    for (const def of entry.def) {
+      if (def.sseq && Array.isArray(def.sseq)) {
+        for (const sseq of def.sseq) {
+          if (Array.isArray(sseq)) {
+            for (const item of sseq) {
+              if (Array.isArray(item) && item[1]?.dt) {
+                for (const dt of item[1].dt) {
+                  if (Array.isArray(dt) && dt[0] === 'vis' && Array.isArray(dt[1])) {
+                    for (const vis of dt[1]) {
+                      if (vis.t) {
+                        // {bc} 같은 태그 제거
+                        example = vis.t.replace(/\{[^}]+\}/g, '').trim()
+                        break
+                      }
+                    }
+                  }
+                  if (example) break
+                }
+              }
+              if (example) break
+            }
+          }
+          if (example) break
+        }
+      }
+      if (example) break
+    }
+  }
+  
+  const result = {
+    word: entry.meta?.id?.split(':')[0] || word,
     meaning,
     pronunciation,
-    syllables: syllabify(word),
+    syllables: entry.hwi?.hw?.replace(/\*/g, '-') || syllabify(word),
     partOfSpeech,
     example,
   }
+  
+  console.log('✅ 최종 결과:', result)
+  return result
 }
 
 const AddWord: FC<AddWordProps> = ({ dayId, dayLabel, onBack, onWordAdded }) => {
@@ -106,7 +136,6 @@ const AddWord: FC<AddWordProps> = ({ dayId, dayLabel, onBack, onWordAdded }) => 
   const [fetchedWord, setFetchedWord] = useState<Word | null>(null)
   const [savedWords, setSavedWords] = useState<Word[]>([])
 
-  // 저장된 단어 불러오기
   useEffect(() => {
     setSavedWords(getCustomWords(dayId))
   }, [dayId])
@@ -135,15 +164,16 @@ const AddWord: FC<AddWordProps> = ({ dayId, dayLabel, onBack, onWordAdded }) => 
 
   const handleAdd = () => {
     if (fetchedWord) {
-      // localStorage에 자동 저장
       addCustomWord(dayId, fetchedWord)
       setSavedWords(getCustomWords(dayId))
+      invalidateDayCache(dayId)
       
       if (onWordAdded) {
         onWordAdded(fetchedWord)
       }
       
       setFetchedWord(null)
+      alert(`✅ "${fetchedWord.word}" 단어가 추가되었습니다!`)
     }
   }
 
@@ -151,6 +181,8 @@ const AddWord: FC<AddWordProps> = ({ dayId, dayLabel, onBack, onWordAdded }) => 
     if (confirm(`"${wordText}" 단어를 삭제하시겠습니까?`)) {
       removeCustomWord(dayId, wordText)
       setSavedWords(getCustomWords(dayId))
+      invalidateDayCache(dayId)
+      alert(`✅ "${wordText}" 단어가 삭제되었습니다!`)
     }
   }
 
@@ -355,35 +387,29 @@ const AddWord: FC<AddWordProps> = ({ dayId, dayLabel, onBack, onWordAdded }) => 
                 key={index}
                 style={{ 
                   padding: "1rem", 
-                  background: index % 2 === 0 ? "#f8f9fa" : "#fff",
-                  borderRadius: "4px",
-                  marginBottom: "0.5rem",
+                  background: index % 2 === 0 ? "#f9f9f9" : "#fff",
+                  borderBottom: "1px solid #eee",
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center"
                 }}
               >
                 <div>
-                  <strong style={{ fontSize: "1.1rem", color: "#2c3e50" }}>
-                    {word.word}
-                  </strong>
-                  <span style={{ marginLeft: "1rem", color: "#7f8c8d" }}>
-                    {word.meaning}
-                  </span>
+                  <div style={{ fontWeight: "600", marginBottom: "0.25rem" }}>{word.word}</div>
+                  <div style={{ fontSize: "0.9rem", color: "#666" }}>{word.meaning}</div>
                 </div>
                 <button
                   onClick={() => handleDelete(word.word)}
                   style={{
                     padding: "0.5rem 1rem",
                     background: "#e74c3c",
-                    color: "white",
+                    color: "#fff",
                     border: "none",
                     borderRadius: "6px",
-                    cursor: "pointer",
-                    fontSize: "0.9rem"
+                    cursor: "pointer"
                   }}
                 >
-                  🗑️ 삭제
+                  삭제
                 </button>
               </div>
             ))}
