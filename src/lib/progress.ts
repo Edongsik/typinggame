@@ -92,6 +92,14 @@ export function markDayCompleted(dayId: string) {
   writeState(state)
 }
 
+export function setLastIndex(dayId: string, index: number) {
+  const state = readState()
+  const stat = normalizeStat(state[dayId])
+  stat.lastIndex = Math.max(0, index)
+  state[dayId] = stat
+  writeState(state)
+}
+
 export function resetDay(dayId: string, options: { keepWrongSet?: boolean } = {}) {
   const state = readState()
   const current = normalizeStat(state[dayId])

@@ -85,9 +85,13 @@ const Wordbook: FC<WordbookProps> = ({ days, wordCounts, completedCounts, onDayS
           const stat = getStat(day.id)
           const completedToday = stat.completedDates.includes(today)
           const totalWords = wordCounts[day.id] || day.total
-          const completed = completedCounts?.[day.id] ?? 0
-          const progressCurrent = Math.min(completed, totalWords)
+          // show input progress (lastIndex) on the bar
+          const progressCurrent = Math.min(getStat(day.id).lastIndex, totalWords)
           const progressPercent = totalWords > 0 ? (progressCurrent / totalWords) * 100 : 0
+          // percent badge should reflect memorized words (completed)
+          const memorizedCount = completedCounts?.[day.id] ?? 0
+          const memorizedPercent = totalWords > 0 ? Math.round((memorizedCount / totalWords) * 100) : 0
+          const practiceCount = (stat.reviewCount || 0) + (stat.completedDates?.length || 0)
           const dayNumber = index + 1
           const partOfSpeech = DAY_PARTS_OF_SPEECH[dayNumber] || "단어"
 
@@ -103,7 +107,7 @@ const Wordbook: FC<WordbookProps> = ({ days, wordCounts, completedCounts, onDayS
               onMouseEnter={() => setHovered(index)}
               onMouseLeave={() => setHovered(null)}
             >
-              <div style={styles.percentBadge}>{Math.round(progressPercent)}%</div>
+              <div style={styles.percentBadge}>{memorizedPercent}%</div>
               {/* 완료 칩 제거 */}
               <div style={styles.cardContent}>
                 {/* Day 라벨 */}
@@ -124,7 +128,7 @@ const Wordbook: FC<WordbookProps> = ({ days, wordCounts, completedCounts, onDayS
                 
                 {/* 완료/전체 표시 */}
                 <div style={styles.progressText}>
-                  {progressCurrent}/{totalWords}
+                  연습 완료 {practiceCount}회
                 </div>
               </div>
             </button>

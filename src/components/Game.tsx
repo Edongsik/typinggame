@@ -8,7 +8,7 @@ import WordListPage from "./WordListPage"
 import Statistics from "./Statistics"
 import { loadDays, loadManifest, type PracticeWord } from "../lib/csv"
 import { getCompletedWords } from "../lib/completedWords"
-import { getStat, resetDay } from "../lib/progress"
+import { getStat, resetDay, setLastIndex } from "../lib/progress"
 import { updateCustomWord } from "../lib/customWords"
 import { useReview } from "../hooks/useReview"
 import { useWordInput } from "../hooks/useWordInput"
@@ -17,6 +17,8 @@ import { useModalState } from "../hooks/useModalState"
 import { useViewNavigation } from "../hooks/useViewNavigation"
 import { useSpeech } from "../hooks/useSpeech"
 import type { DayMeta, PracticeMode, Word as AddWordType } from "../types"
+import { getPendingTarget, clearPendingTarget } from "../lib/pendingTarget"
+import { getLastWord, setLastWord } from "../lib/lastPosition"
 
 function calculateWpm(correct: number, elapsedMs: number): number {
   if (elapsedMs <= 0) return 0
@@ -46,6 +48,9 @@ const Game = () => {
   const [wordCounts, setWordCounts] = useState<Record<string, number>>({})
   const [completedCounts, setCompletedCounts] = useState<Record<string, number>>({})
   const [pendingWord, setPendingWord] = useState<string | null>(null)
+  const pendingWordRef = useRef<string | null>(null)
+  const resetOnNextEnterRef = useRef(false)
+  const [pendingStartIndex, setPendingStartIndex] = useState<number | null>(null)
   
   const initializeDay = useCallback(
     async (dayId: string, selectedMode: PracticeMode, isReviewSession: boolean = false) => {
@@ -70,21 +75,82 @@ const Game = () => {
           ? loaded.filter(w => !completedList.includes(w.word))
           : loaded
         
+        const stat = getStat(dayId)
+        let startIndex = 0
+        // Determine resume target by explicit pending target (from WordList) or saved lastIndex
+        const pending = getPendingTarget()
+        const safeLast = Math.max(0, Math.min(stat.lastIndex, Math.max(loaded.length - 1, 0)))
+        const lastSavedWord = getLastWord(dayId)
+        const lastWord = loaded[safeLast]?.word
+        const desiredWord = (pending && pending.dayId === dayId)
+          ? pending.word
+          : (pendingWordRef.current || lastSavedWord || lastWord || null)
+        if (pending && pending.dayId === dayId) {
+          pendingWordRef.current = pending.word
+          clearPendingTarget()
+        }
         if (isReviewSession) {
-          const stat = getStat(dayId)
           const wrongWords = loaded.filter(w => stat.wrongSet.includes(w.word))
           const wrongFiltered = completedList.length
             ? wrongWords.filter(w => !completedList.includes(w.word))
             : wrongWords
-          if (wrongFiltered.length === 0) {
-            setSessionWords(filteredLoaded)
+          let workingList = wrongFiltered.length === 0 ? filteredLoaded : wrongFiltered
+
+          // Ensure desired target exists in session when resuming or starting at a specific word
+          if (desiredWord && !workingList.some(w => w.word === desiredWord)) {
+            const targetItem = loaded.find(w => w.word === desiredWord)
+            if (targetItem) {
+              workingList = [targetItem, ...workingList]
+            }
+          }
+          setSessionWords(workingList)
+
+          if (resetOnNextEnterRef.current) {
+            startIndex = 0
+            resetOnNextEnterRef.current = false
           } else {
-            setSessionWords(wrongFiltered)
+            const last = Math.max(0, stat.lastIndex)
+            if (last >= loaded.length) {
+              startIndex = 0
+            } else {
+              if (desiredWord) {
+                const idx = workingList.findIndex(w => w.word === desiredWord)
+                startIndex = idx >= 0 ? idx : 0
+              } else {
+                const candidate = workingList.findIndex(w => (w as any).orderIndex >= last)
+                startIndex = candidate >= 0 ? candidate : 0
+              }
+            }
           }
         } else {
-          setSessionWords(filteredLoaded)
+          let workingList = filteredLoaded
+          if (desiredWord && !workingList.some(w => w.word === desiredWord)) {
+            const targetItem = loaded.find(w => w.word === desiredWord)
+            if (targetItem) {
+              workingList = [targetItem, ...workingList]
+            }
+          }
+          setSessionWords(workingList)
+          // resume from lastIndex unless we just completed a session
+          if (resetOnNextEnterRef.current) {
+            startIndex = 0
+            resetOnNextEnterRef.current = false
+          } else {
+            const last = Math.max(0, stat.lastIndex)
+            if (last >= loaded.length) {
+              startIndex = 0
+            } else if (desiredWord) {
+              const idx = workingList.findIndex(w => w.word === desiredWord)
+              startIndex = idx >= 0 ? idx : 0
+            } else {
+              const candidate = workingList.findIndex(w => (w as any).orderIndex >= last)
+              startIndex = candidate >= 0 ? candidate : 0
+            }
+          }
         }
-        
+
+        // defer applying starting index until words are set
+        setPendingStartIndex(startIndex)
         setAutoStartPending(true)
       } catch (error) {
         setWordsError(error instanceof Error ? error.message : "단어를 불러오지 못했습니다.")
@@ -105,13 +171,26 @@ const Game = () => {
     baseWords
   )
   
-  // 🔥 새로운 Day를 선택할 때마다 queueIndex와 점수 초기화
+  // Apply pending start index once sessionWords are ready
   useEffect(() => {
-    if (viewNav.selectedDayId && sessionWords.length > 0) {
-      gameLogic.setQueueIndex(0)
+    if (pendingStartIndex != null && sessionWords.length > 0) {
+      gameLogic.setQueueIndex(Math.max(0, Math.min(pendingStartIndex, sessionWords.length - 1)))
       gameLogic.resetScoreboard()
+      setPendingStartIndex(null)
     }
-  }, [viewNav.selectedDayId, sessionWords.length])
+  }, [pendingStartIndex, sessionWords.length, gameLogic])
+
+  // Persist current position to resume exactly on the same word
+  useEffect(() => {
+    if (!viewNav.selectedDayId) return
+    const current = sessionWords[gameLogic.queueIndex]
+    if (!current) return
+    setLastIndex(viewNav.selectedDayId, current.orderIndex)
+    setLastWord(viewNav.selectedDayId, current.word)
+  }, [gameLogic.queueIndex, viewNav.selectedDayId, sessionWords])
+  
+  // 🔥 새로운 Day를 선택할 때마다 queueIndex와 점수 초기화
+  // initializeDay sets start index and resets scoreboard
   
   const dayMeta = useMemo(
     () => manifest.find(d => d.id === viewNav.selectedDayId) ?? null,
@@ -172,6 +251,9 @@ const Game = () => {
       setTimeout(() => modalState.openCompletionModal(), 100)
     }
     
+    // Next entry should start from first word (post-completion)
+    resetOnNextEnterRef.current = true
+
     setIsReviewMode(false)
   }, [gameLogic, refreshStat, modalState])
   
@@ -409,7 +491,10 @@ const Game = () => {
       try {
         const words = await loadDays([dayId], 'sequence')
         const target = words[wordIndex]?.word
-        if (target) setPendingWord(target)
+        if (target) {
+          setPendingWord(target)
+          pendingWordRef.current = target
+        }
       } catch {}
       // Day 선택 후 게임 화면으로 이동 (initializeDay가 세션을 준비)
       viewNav.handleDaySelect(dayId, "sequence")
@@ -425,6 +510,7 @@ const Game = () => {
         gameLogic.setQueueIndex(idx)
       }
       setPendingWord(null)
+      pendingWordRef.current = null
     }
   }, [pendingWord, sessionWords, gameLogic])
 

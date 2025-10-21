@@ -1,8 +1,9 @@
-import { FC, useState, useEffect } from "react"
+﻿import { FC, useState, useEffect } from "react"
 import type { PracticeWord } from "../lib/csv"
 import type { DayMeta } from "../types"
 import { isWordCompleted, toggleWordCompleted, getCompletedWords } from "../lib/completedWords"
 import { loadDays } from "../lib/csv"
+import { setPendingTarget } from "../lib/pendingTarget"
 import { useSpeech } from "../hooks/useSpeech"
 
 type WordListPageProps = {
@@ -57,7 +58,7 @@ const WordListPage: FC<WordListPageProps> = (props) => {
     ? selectedDay?.label || "" 
     : (props.dayLabel || "")
   
-  // standalone 모드: Day 변경 시 단어 로드
+  // standalone 모드: Day 변경시 단어 로드
   useEffect(() => {
     if (headerType !== "standalone" || !selectedDayId) return
 
@@ -89,9 +90,9 @@ const WordListPage: FC<WordListPageProps> = (props) => {
     setCompletedWords(getCompletedWords(dayId))
     
     if (newState) {
-      console.log(`✅ "${word}" 학습 완료 처리됨`)
+      console.log(`Marked "${word}" as completed`)
     } else {
-      console.log(`❌ "${word}" 학습 완료 취소됨`)
+      console.log(`Unmarked "${word}" as completed`)
     }
   }
 
@@ -121,7 +122,11 @@ const WordListPage: FC<WordListPageProps> = (props) => {
 
   const handleJumpClick = (index: number) => {
     if (headerType === "standalone" && props.onStartGameAtWord) {
-      // 전체 단어집 모드: 해당 단어로 게임 시작
+      // 전체 단어장 모드: 해당 단어로 게임 시작
+      const target = words[index]
+      if (target) {
+        setPendingTarget(dayId, target.word)
+      }
       props.onStartGameAtWord(dayId, index)
     } else {
       // 게임 중 모드: 해당 단어로 이동하고 게임으로 돌아가기
@@ -144,7 +149,7 @@ const WordListPage: FC<WordListPageProps> = (props) => {
       {headerType === "standalone" && (
         <div style={styles.header}>
           <button onClick={props.onBackToWordbook} style={styles.backButton}>
-            ← DAY페이지로
+            ← DAY 페이지로
           </button>
 
           <h1 style={styles.title}>암기장</h1>
@@ -184,20 +189,20 @@ const WordListPage: FC<WordListPageProps> = (props) => {
       {/* 컨텐츠 영역 */}
       <div style={headerType === "standalone" ? styles.content : styles.contentGame}>
         {isLoading ? (
-          <div style={styles.loading}>단어 또는 목록 검색...</div>
+          <div style={styles.loading}>단어 암기장 목록 검색중..</div>
         ) : (
           <div style={styles.wordListContainer}>
             {/* game 모드: 헤더 */}
             {headerType === "game" && (
               <div style={{ marginBottom: "2rem" }}>
                 <button onClick={props.onBack} className="back-to-list-button">
-                  ← 연습장
+                  ← 연습으로
                 </button>
                 <h2 style={{ marginTop: "1rem", marginBottom: "0.5rem", color: "#1f2937" }}>
                   {dayLabel} - 전체 단어 목록
                 </h2>
                 <p style={{ color: "#6b7280", fontSize: "0.95rem" }}>
-                  이 {words.length}개의 단어 | 현재 {currentIndex + 1}번째 단어 | 
+                  총 {words.length}개의 단어 | 현재 {currentIndex + 1}번째 단어 | 
                   암기 완료 {completedWords.length}개
                 </p>
               </div>
@@ -207,7 +212,7 @@ const WordListPage: FC<WordListPageProps> = (props) => {
             {headerType === "standalone" && (
               <div style={{ marginBottom: "1.5rem" }}>
                 <p style={{ color: "#6b7280", fontSize: "0.95rem" }}>
-                  이 {words.length}개의 단어 | 암기 완료 {completedWords.length}개
+                  총 {words.length}개의 단어 | 암기 완료 {completedWords.length}개
                 </p>
               </div>
             )}
@@ -216,7 +221,7 @@ const WordListPage: FC<WordListPageProps> = (props) => {
             <div style={styles.searchBox}>
               <input
                 type="text"
-                placeholder="단어 또는 뜻 검색..."
+                placeholder="단어 또는 뜻 검색.."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 style={styles.searchInput}
@@ -311,7 +316,7 @@ const WordListPage: FC<WordListPageProps> = (props) => {
                               onClick={() => startEdit(originalIndex, word)}
                               style={{ ...styles.button, ...styles.buttonWarning }}
                             >
-                              수정
+                              편집
                             </button>
                           </>
                         )}
@@ -322,7 +327,7 @@ const WordListPage: FC<WordListPageProps> = (props) => {
                       {isEditing ? (
                         <>
                           <div>
-                            <strong>예문:</strong>
+                            <strong>의미:</strong>
                             <input
                               type="text"
                               value={editForm.meaning ?? word.meaning}
@@ -358,7 +363,7 @@ const WordListPage: FC<WordListPageProps> = (props) => {
                             />
                           </div>
                           <div>
-                            <strong>뜻:</strong>
+                            <strong>예문:</strong>
                             <textarea
                               value={editForm.example ?? word.example}
                               onChange={(e) => setEditForm({ ...editForm, example: e.target.value })}
@@ -369,11 +374,11 @@ const WordListPage: FC<WordListPageProps> = (props) => {
                         </>
                       ) : (
                         <>
-                          <div><strong>예문:</strong> {word.meaning}</div>
+                          <div><strong>의미:</strong> {word.meaning}</div>
                           {word.pronunciation && <div><strong>발음:</strong> {word.pronunciation}</div>}
                           {word.syllables && <div><strong>음절:</strong> {word.syllables}</div>}
                           {word.partOfSpeech && <div><strong>품사:</strong> {word.partOfSpeech}</div>}
-                          {word.example && <div><strong>뜻:</strong> {word.example}</div>}
+                          {word.example && <div><strong>예문:</strong> {word.example}</div>}
                         </>
                       )}
                     </div>
@@ -388,7 +393,7 @@ const WordListPage: FC<WordListPageProps> = (props) => {
   )
 }
 
-// 🔥 중요: styles 객체를 컴포넌트 외부에서 정의 (React.CSSProperties 타입 사용)
+// 매우 중요: styles 객체를 컴포넌트 밖에서 정의 (React.CSSProperties 타입 사용)
 const styles: Record<string, React.CSSProperties> = {
   container: {
     display: 'flex',
@@ -490,7 +495,7 @@ const styles: Record<string, React.CSSProperties> = {
   wordListContainer: {
     maxWidth: '1000px',
     margin: '0 auto',
-    padding: '2rem'  // ✅ 여기서 headerType 참조 제거!
+    padding: '2rem'
   },
   loading: {
     textAlign: 'center',
